@@ -1,2 +1,2 @@
 # gestorLollapalooza
-# by lospibespiolas
+
