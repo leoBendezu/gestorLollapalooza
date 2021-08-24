@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gestorLollapalooza
-{
+{   
     public partial class Form1 : Form
     {
-        // comentario de ignacio
+        // Comentario de Leonel 
         public Form1()
         {
             InitializeComponent();
-
-            
         }
+
+
     }
 }
