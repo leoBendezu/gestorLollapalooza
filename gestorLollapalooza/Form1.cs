@@ -14,6 +14,7 @@ namespace gestorLollapalooza
     {
         // Comentario de Leonel 
         // comentario de ignacio
+        // comentario de ignacio prueba 2
         public Form1()
         {
             InitializeComponent();
