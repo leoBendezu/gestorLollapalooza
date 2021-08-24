@@ -13,6 +13,7 @@ namespace gestorLollapalooza
     public partial class Form1 : Form
     {
         // Comentario de Leonel 
+        // comentario de ignacio
         public Form1()
         {
             InitializeComponent();
