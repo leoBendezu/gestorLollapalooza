@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FestivalFolklore
+namespace gestorLollapalooza
 {
     public partial class frmLogin : Form
     {
@@ -49,13 +49,13 @@ namespace FestivalFolklore
 
         private void botonFacha1_Click(object sender, EventArgs e)
         {
-            if ((frmTextBoxFacha1.Text == ""));
+            if ((frmTextBoxFacha1.Text == ""))
             {
                 MessageBox.Show("Se debe ingresar al menos un nombre de usuario valido");
                 return;
             }
 
-            if ((frmTextBoxFachaPswd.Text == ""));
+            if ((frmTextBoxFachaPswd.Text == ""))
             {
                 MessageBox.Show("Se debe ingresar al menos una contraseña valida");
                 return;
