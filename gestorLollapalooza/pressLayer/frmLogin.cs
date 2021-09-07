@@ -7,11 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.Common;
+using System.Data.OleDB;
+using System.Data.SqlClient;
+
+
 
 namespace gestorLollapalooza
 {
     public partial class frmLogin : Form
     {
+        public bool ValidarCredenciales(string pUsuario, string pPassword)
+        {
+            bool usuarioValido = false
+            SqlConnection cnn = new SqlConnection();
+            cnn.ConnectionString = "Data Source=SQL5103.site4now.net;Initial Catalog=db_a79729_dynamiteteam;User Id=db_a79729_dynamiteteam_admin;Password=dt123456"
+            
+            try
+            {
+                cnn.Open();
+                String query = "SELECT userId FROM Users where userName = '" + pUsuario + "' AND password = '" + pPassword;
+                SqlCommand cmd = new SqlCommand(query, cnn);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                usuarioValido = (dt.Rows.Count == 1);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de base de datos" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (cnn.State == ConnectionState.Open)
+                    cnn.Close();
+            }
+            return usuarioValido;
+            }
+        
+            
         public frmLogin()
         {
             InitializeComponent();
@@ -49,19 +83,7 @@ namespace gestorLollapalooza
 
         private void botonFacha1_Click(object sender, EventArgs e)
         {
-            if ((frmTextBoxFacha1.Text == ""))
-            {
-                MessageBox.Show("Se debe ingresar al menos un nombre de usuario valido");
-                return;
-            }
-
-            if ((frmTextBoxFachaPswd.Text == ""))
-            {
-                MessageBox.Show("Se debe ingresar al menos una contraseña valida");
-                return;
-            }
-
-            MessageBox.Show("Usted ingreso al sistema ;)");
+           
 
         }
 
