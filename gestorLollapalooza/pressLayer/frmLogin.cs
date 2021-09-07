@@ -22,7 +22,7 @@ namespace gestorLollapalooza
         {
             bool usuarioValido = false
             SqlConnection cnn = new SqlConnection();
-            cnn.ConnectionString = "Data Source=SQL5103.site4now.net;Initial Catalog=db_a79729_dynamiteteam;User Id=db_a79729_dynamiteteam_admin;Password=dt123456"
+            cnn.ConnectionString = "Data Source=SQL5103.site4now.net;Initial Catalog=db_a79729_dynamiteteam;User Id=db_a79729_dynamiteteam_admin;Password=dt123456";
             
             try
             {
