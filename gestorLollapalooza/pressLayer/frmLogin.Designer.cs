@@ -184,6 +184,7 @@ namespace gestorLollapalooza
             this.botonFacha2.Text = "Salir";
             this.botonFacha2.TextColor = System.Drawing.Color.White;
             this.botonFacha2.UseVisualStyleBackColor = false;
+            this.botonFacha2.Click += new System.EventHandler(this.botonFacha2_Click);
             // 
             // frmLogin
             // 

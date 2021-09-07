@@ -74,5 +74,10 @@ namespace gestorLollapalooza
         {
 
         }
+
+        private void botonFacha2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
