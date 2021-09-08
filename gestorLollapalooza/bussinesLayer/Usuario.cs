@@ -35,7 +35,7 @@ namespace gestorLollapalooza.bussinesLayer
             BDConexion sql = new BDConexion();
             string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
                 "From Usuarios u, Perfiles p where (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil)";
-            return sql.ConsultaSQL(consulta);
+            return sql.EjecutarSQL(consulta);
 
         }
 
@@ -53,7 +53,7 @@ namespace gestorLollapalooza.bussinesLayer
             if (!string.IsNullOrEmpty(idPerfil))
                 consulta += " and p.idPerfil =" + idPerfil ;
             
-            return sql.ConsultaSQL(consulta);
+            return sql.EjecutarSQL(consulta);
         }
 
         

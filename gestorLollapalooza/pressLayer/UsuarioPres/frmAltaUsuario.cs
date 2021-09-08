@@ -51,15 +51,16 @@ namespace gestorLollapalooza.pressLayer
             if (cbPerfil.SelectedIndex == -1)
                 MessageBox.Show("Seleccionar Perfil", "Alerta");
 
-            if ((string.IsNullOrEmpty(this.txtbUsuario.Text)) && (string.IsNullOrEmpty(this.txtbContraseña.Text)) &&
+            if (!((string.IsNullOrEmpty(this.txtbUsuario.Text)) && (string.IsNullOrEmpty(this.txtbContraseña.Text)) &&
                 (string.IsNullOrEmpty(this.txtbEmail.Text)) && (string.IsNullOrEmpty(this.txtbNombre.Text)) &&
-                (string.IsNullOrEmpty(this.txtbApellido.Text)) && (cbPerfil.SelectedIndex != -1))
+                (string.IsNullOrEmpty(this.txtbApellido.Text)) && (cbPerfil.SelectedIndex == -1)))
             {
                 BDConexion sql = new BDConexion();
-                string consulta = "INSERT [dbo].[usuarios] ([idPerfil], [usuario],[password], [nombre], [apellido], [email]) " +
-                    "VALUES (2, 'Prueba', 'prueba123','puto','elquelee','putoelquelee@gmail.com');";
+                string consulta = $"INSERT [dbo].[usuarios] ([idPerfil], [usuario],[password], [nombre], [apellido], [email]) " +
+                    "VALUES ("+cbPerfil.SelectedValue.ToString()+", '"+this.txtbUsuario.Text+"', '"+ this.txtbContraseña.Text + "'" +
+                    ",'"+ this.txtbNombre.Text + "','"+ this.txtbApellido.Text + "','"+ this.txtbEmail.Text + "');";
                 
-                sql.ConsultaSQL(consulta);
+                MessageBox.Show("Filas afectadas: "+sql.EjecutarSQL(consulta),"Info");
             }
         }
     }

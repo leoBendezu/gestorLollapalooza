@@ -84,5 +84,10 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
         {
 
         }
+
+        private void txtbUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

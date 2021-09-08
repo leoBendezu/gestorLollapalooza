@@ -22,7 +22,7 @@ namespace gestorLollapalooza.bussinesLayer
         {
             string consulta = " Select * From perfiles where borradoLogico = 0 ";
             BDConexion oDatos = new BDConexion();
-            return oDatos.ConsultaSQL(consulta);
+            return oDatos.EjecutarSQL(consulta);
         }
     }
 }

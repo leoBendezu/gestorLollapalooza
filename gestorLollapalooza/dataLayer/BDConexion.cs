@@ -81,7 +81,7 @@ namespace gestorLollapalooza.dataLayer
         }
 
 
-        public DataTable ConsultaSQL(string strSql)
+        public DataTable EjecutarSQL(string strSql)
         {
             SqlConnection cnn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
@@ -158,7 +158,7 @@ namespace gestorLollapalooza.dataLayer
 
         public DataTable ConsultarTabla(string tabla)
         {
-            return this.ConsultaSQL("Select * from " + tabla);
+            return this.EjecutarSQL("Select * from " + tabla);
         }
     }
 }
