@@ -29,131 +29,166 @@ namespace gestorLollapalooza.pressLayer.Usuario
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.gxBajaUsuario = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
+            this.btnEliminar = new gestorLollapalooza.BotonFacha();
+            this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.txtbApelido = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.gxBajaUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(41, 42);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(41, 74);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(41, 106);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(47, 13);
-            this.lblApellido.TabIndex = 2;
-            this.lblApellido.Text = "Apellido:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(93, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(93, 103);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 5;
-            // 
             // gxBajaUsuario
             // 
-            this.gxBajaUsuario.Controls.Add(this.comboBox1);
-            this.gxBajaUsuario.Controls.Add(this.comboBox3);
-            this.gxBajaUsuario.Controls.Add(this.lblUsuario);
-            this.gxBajaUsuario.Controls.Add(this.comboBox2);
-            this.gxBajaUsuario.Controls.Add(this.lblNombre);
-            this.gxBajaUsuario.Controls.Add(this.lblApellido);
+            this.gxBajaUsuario.Controls.Add(this.txtbApelido);
+            this.gxBajaUsuario.Controls.Add(this.txtbNombre);
+            this.gxBajaUsuario.Controls.Add(this.txtbContraseña);
+            this.gxBajaUsuario.Controls.Add(this.txtbUsuario);
             this.gxBajaUsuario.Location = new System.Drawing.Point(12, 12);
             this.gxBajaUsuario.Name = "gxBajaUsuario";
-            this.gxBajaUsuario.Size = new System.Drawing.Size(233, 154);
+            this.gxBajaUsuario.Size = new System.Drawing.Size(233, 198);
             this.gxBajaUsuario.TabIndex = 6;
             this.gxBajaUsuario.TabStop = false;
             this.gxBajaUsuario.Text = "Ingrese los valores del usuario a eliminar";
             this.gxBajaUsuario.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtbUsuario
+            // 
+            this.txtbUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbUsuario.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbUsuario.BorderSize = 2;
+            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.Location = new System.Drawing.Point(44, 30);
+            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbUsuario.Multiline = false;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbUsuario.PasswordChar = false;
+            this.txtbUsuario.Size = new System.Drawing.Size(138, 31);
+            this.txtbUsuario.TabIndex = 4;
+            this.txtbUsuario.Texts = "Usuario";
+            this.txtbUsuario.UnderlinedStyle = false;
+            // 
+            // txtbContraseña
+            // 
+            this.txtbContraseña.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbContraseña.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbContraseña.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbContraseña.BorderSize = 2;
+            this.txtbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbContraseña.Location = new System.Drawing.Point(44, 69);
+            this.txtbContraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbContraseña.Multiline = false;
+            this.txtbContraseña.Name = "txtbContraseña";
+            this.txtbContraseña.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbContraseña.PasswordChar = false;
+            this.txtbContraseña.Size = new System.Drawing.Size(138, 31);
+            this.txtbContraseña.TabIndex = 9;
+            this.txtbContraseña.Texts = "Contraseña";
+            this.txtbContraseña.UnderlinedStyle = false;
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(170, 205);
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar.BorderRadius = 20;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(157, 237);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Size = new System.Drawing.Size(88, 44);
+            this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(12, 205);
+            this.btnSalir.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSalir.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSalir.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSalir.BorderRadius = 20;
+            this.btnSalir.BorderSize = 0;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(12, 237);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Size = new System.Drawing.Size(88, 44);
+            this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.TextColor = System.Drawing.Color.White;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
+            // txtbApelido
+            // 
+            this.txtbApelido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbApelido.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbApelido.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbApelido.BorderSize = 2;
+            this.txtbApelido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbApelido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbApelido.Location = new System.Drawing.Point(44, 147);
+            this.txtbApelido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbApelido.Multiline = false;
+            this.txtbApelido.Name = "txtbApelido";
+            this.txtbApelido.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbApelido.PasswordChar = false;
+            this.txtbApelido.Size = new System.Drawing.Size(138, 31);
+            this.txtbApelido.TabIndex = 19;
+            this.txtbApelido.Texts = "Apellido";
+            this.txtbApelido.UnderlinedStyle = false;
+            // 
+            // txtbNombre
+            // 
+            this.txtbNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbNombre.BorderSize = 2;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbNombre.Location = new System.Drawing.Point(44, 108);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbNombre.Multiline = false;
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbNombre.PasswordChar = false;
+            this.txtbNombre.Size = new System.Drawing.Size(138, 31);
+            this.txtbNombre.TabIndex = 18;
+            this.txtbNombre.Texts = "Nombre";
+            this.txtbNombre.UnderlinedStyle = false;
             // 
             // frmBajaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 241);
+            this.ClientSize = new System.Drawing.Size(260, 293);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.gxBajaUsuario);
             this.Name = "frmBajaUsuario";
             this.Text = "frmBajaUsuario";
             this.gxBajaUsuario.ResumeLayout(false);
-            this.gxBajaUsuario.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.GroupBox gxBajaUsuario;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
+        private frmTextBoxFacha txtbContraseña;
+        private frmTextBoxFacha txtbUsuario;
+        private BotonFacha btnEliminar;
+        private BotonFacha btnSalir;
+        private frmTextBoxFacha txtbApelido;
+        private frmTextBoxFacha txtbNombre;
     }
 }

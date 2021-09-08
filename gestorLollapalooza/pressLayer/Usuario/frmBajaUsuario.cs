@@ -22,14 +22,14 @@ namespace gestorLollapalooza.pressLayer.Usuario
 
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Esta seguro que desa eliminar este usuario?", "Advertencia");
+            MessageBox.Show("Se eliminara este usuario", "Advertencia");
         }
     }
 }

@@ -30,237 +30,222 @@ namespace gestorLollapalooza.pressLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtbUsuario = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtbContraseña = new System.Windows.Forms.TextBox();
-            this.txtbNombre = new System.Windows.Forms.TextBox();
-            this.txtbApellido = new System.Windows.Forms.TextBox();
-            this.txtbDni = new System.Windows.Forms.TextBox();
-            this.txtbNombrePerfil = new System.Windows.Forms.TextBox();
-            this.txtbDescripcion = new System.Windows.Forms.TextBox();
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
             this.gbxPerfil = new System.Windows.Forms.GroupBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblNombrePerfil = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnCrear = new gestorLollapalooza.BotonFacha();
+            this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbEmail = new gestorLollapalooza.frmTextBoxFacha();
+            this.cbPerfil = new System.Windows.Forms.ComboBox();
+            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbApelido = new gestorLollapalooza.frmTextBoxFacha();
             this.gbxUsuario.SuspendLayout();
             this.gbxPerfil.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtbUsuario
-            // 
-            this.txtbUsuario.Location = new System.Drawing.Point(87, 35);
-            this.txtbUsuario.Name = "txtbUsuario";
-            this.txtbUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtbUsuario.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txtbContraseña
-            // 
-            this.txtbContraseña.Location = new System.Drawing.Point(87, 76);
-            this.txtbContraseña.Name = "txtbContraseña";
-            this.txtbContraseña.Size = new System.Drawing.Size(100, 20);
-            this.txtbContraseña.TabIndex = 2;
-            // 
-            // txtbNombre
-            // 
-            this.txtbNombre.Location = new System.Drawing.Point(87, 117);
-            this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtbNombre.TabIndex = 3;
-            // 
-            // txtbApellido
-            // 
-            this.txtbApellido.Location = new System.Drawing.Point(87, 158);
-            this.txtbApellido.Name = "txtbApellido";
-            this.txtbApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtbApellido.TabIndex = 4;
-            // 
-            // txtbDni
-            // 
-            this.txtbDni.Location = new System.Drawing.Point(87, 199);
-            this.txtbDni.Name = "txtbDni";
-            this.txtbDni.Size = new System.Drawing.Size(100, 20);
-            this.txtbDni.TabIndex = 5;
-            // 
-            // txtbNombrePerfil
-            // 
-            this.txtbNombrePerfil.Location = new System.Drawing.Point(85, 39);
-            this.txtbNombrePerfil.Name = "txtbNombrePerfil";
-            this.txtbNombrePerfil.Size = new System.Drawing.Size(100, 20);
-            this.txtbNombrePerfil.TabIndex = 6;
-            // 
-            // txtbDescripcion
-            // 
-            this.txtbDescripcion.Location = new System.Drawing.Point(85, 72);
-            this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtbDescripcion.TabIndex = 7;
-            // 
             // gbxUsuario
             // 
-            this.gbxUsuario.Controls.Add(this.lblDni);
-            this.gbxUsuario.Controls.Add(this.lblApellido);
-            this.gbxUsuario.Controls.Add(this.lblNombre);
-            this.gbxUsuario.Controls.Add(this.lblContraseña);
-            this.gbxUsuario.Controls.Add(this.lblUsuario);
-            this.gbxUsuario.Controls.Add(this.txtbApellido);
-            this.gbxUsuario.Controls.Add(this.txtbUsuario);
-            this.gbxUsuario.Controls.Add(this.txtbContraseña);
-            this.gbxUsuario.Controls.Add(this.txtbDni);
+            this.gbxUsuario.Controls.Add(this.txtbApelido);
             this.gbxUsuario.Controls.Add(this.txtbNombre);
+            this.gbxUsuario.Controls.Add(this.txtbEmail);
+            this.gbxUsuario.Controls.Add(this.txtbContraseña);
+            this.gbxUsuario.Controls.Add(this.txtbUsuario);
             this.gbxUsuario.Location = new System.Drawing.Point(12, 8);
             this.gbxUsuario.Name = "gbxUsuario";
-            this.gbxUsuario.Size = new System.Drawing.Size(228, 249);
+            this.gbxUsuario.Size = new System.Drawing.Size(168, 253);
             this.gbxUsuario.TabIndex = 8;
             this.gbxUsuario.TabStop = false;
             this.gbxUsuario.Text = "Usuario";
             // 
             // gbxPerfil
             // 
-            this.gbxPerfil.Controls.Add(this.lblNombrePerfil);
-            this.gbxPerfil.Controls.Add(this.lblDescripcion);
-            this.gbxPerfil.Controls.Add(this.txtbNombrePerfil);
-            this.gbxPerfil.Controls.Add(this.txtbDescripcion);
-            this.gbxPerfil.Location = new System.Drawing.Point(246, 12);
+            this.gbxPerfil.Controls.Add(this.cbPerfil);
+            this.gbxPerfil.Location = new System.Drawing.Point(186, 12);
             this.gbxPerfil.Name = "gbxPerfil";
-            this.gbxPerfil.Size = new System.Drawing.Size(206, 146);
+            this.gbxPerfil.Size = new System.Drawing.Size(206, 92);
             this.gbxPerfil.TabIndex = 9;
             this.gbxPerfil.TabStop = false;
             this.gbxPerfil.Text = "Perfil";
             // 
-            // lblUsuario
+            // btnCrear
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(24, 38);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 10;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblContraseña
-            // 
-            this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(6, 79);
-            this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(64, 13);
-            this.lblContraseña.TabIndex = 11;
-            this.lblContraseña.Text = "Contraseña:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(23, 120);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(23, 161);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(47, 13);
-            this.lblApellido.TabIndex = 13;
-            this.lblApellido.Text = "Apellido:";
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(41, 202);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(29, 13);
-            this.lblDni.TabIndex = 14;
-            this.lblDni.Text = "DNI:";
-            // 
-            // lblNombrePerfil
-            // 
-            this.lblNombrePerfil.AutoSize = true;
-            this.lblNombrePerfil.Location = new System.Drawing.Point(34, 42);
-            this.lblNombrePerfil.Name = "lblNombrePerfil";
-            this.lblNombrePerfil.Size = new System.Drawing.Size(47, 13);
-            this.lblNombrePerfil.TabIndex = 15;
-            this.lblNombrePerfil.Text = "Nombre:";
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(13, 75);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(66, 13);
-            this.lblDescripcion.TabIndex = 16;
-            this.lblDescripcion.Text = "Descripcion:";
+            this.btnCrear.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCrear.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCrear.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCrear.BorderRadius = 20;
+            this.btnCrear.BorderSize = 0;
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.ForeColor = System.Drawing.Color.White;
+            this.btnCrear.Location = new System.Drawing.Point(301, 220);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(91, 41);
+            this.btnCrear.TabIndex = 11;
+            this.btnCrear.Text = "Crear";
+            this.btnCrear.TextColor = System.Drawing.Color.White;
+            this.btnCrear.UseVisualStyleBackColor = false;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(262, 200);
+            this.btnSalir.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSalir.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSalir.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSalir.BorderRadius = 20;
+            this.btnSalir.BorderSize = 0;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(204, 220);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Size = new System.Drawing.Size(91, 41);
+            this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.TextColor = System.Drawing.Color.White;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // btnCrear
+            // txtbUsuario
             // 
-            this.btnCrear.Location = new System.Drawing.Point(356, 200);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(75, 23);
-            this.btnCrear.TabIndex = 11;
-            this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.txtbUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbUsuario.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbUsuario.BorderSize = 2;
+            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.Location = new System.Drawing.Point(15, 29);
+            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbUsuario.Multiline = false;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbUsuario.PasswordChar = false;
+            this.txtbUsuario.Size = new System.Drawing.Size(123, 31);
+            this.txtbUsuario.TabIndex = 13;
+            this.txtbUsuario.Tag = "";
+            this.txtbUsuario.Texts = "Usuario";
+            this.txtbUsuario.UnderlinedStyle = false;
+            // 
+            // txtbContraseña
+            // 
+            this.txtbContraseña.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbContraseña.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbContraseña.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbContraseña.BorderSize = 2;
+            this.txtbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbContraseña.Location = new System.Drawing.Point(15, 75);
+            this.txtbContraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbContraseña.Multiline = false;
+            this.txtbContraseña.Name = "txtbContraseña";
+            this.txtbContraseña.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbContraseña.PasswordChar = false;
+            this.txtbContraseña.Size = new System.Drawing.Size(123, 31);
+            this.txtbContraseña.TabIndex = 15;
+            this.txtbContraseña.Tag = "";
+            this.txtbContraseña.Texts = "Contraseña";
+            this.txtbContraseña.UnderlinedStyle = false;
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbEmail.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbEmail.BorderSize = 2;
+            this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbEmail.Location = new System.Drawing.Point(15, 118);
+            this.txtbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbEmail.Multiline = false;
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbEmail.PasswordChar = false;
+            this.txtbEmail.Size = new System.Drawing.Size(123, 31);
+            this.txtbEmail.TabIndex = 16;
+            this.txtbEmail.Tag = "";
+            this.txtbEmail.Texts = "Email";
+            this.txtbEmail.UnderlinedStyle = false;
+            // 
+            // cbPerfil
+            // 
+            this.cbPerfil.FormattingEnabled = true;
+            this.cbPerfil.Location = new System.Drawing.Point(50, 35);
+            this.cbPerfil.Name = "cbPerfil";
+            this.cbPerfil.Size = new System.Drawing.Size(121, 21);
+            this.cbPerfil.TabIndex = 0;
+            // 
+            // txtbNombre
+            // 
+            this.txtbNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbNombre.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbNombre.BorderSize = 2;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbNombre.Location = new System.Drawing.Point(15, 157);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbNombre.Multiline = false;
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbNombre.PasswordChar = false;
+            this.txtbNombre.Size = new System.Drawing.Size(123, 31);
+            this.txtbNombre.TabIndex = 13;
+            this.txtbNombre.Texts = "Nombre";
+            this.txtbNombre.UnderlinedStyle = false;
+            // 
+            // txtbApelido
+            // 
+            this.txtbApelido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbApelido.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbApelido.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbApelido.BorderSize = 2;
+            this.txtbApelido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbApelido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbApelido.Location = new System.Drawing.Point(15, 196);
+            this.txtbApelido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbApelido.Multiline = false;
+            this.txtbApelido.Name = "txtbApelido";
+            this.txtbApelido.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbApelido.PasswordChar = false;
+            this.txtbApelido.Size = new System.Drawing.Size(123, 31);
+            this.txtbApelido.TabIndex = 17;
+            this.txtbApelido.Texts = "Apellido";
+            this.txtbApelido.UnderlinedStyle = false;
             // 
             // frmAltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 269);
+            this.ClientSize = new System.Drawing.Size(413, 273);
             this.ControlBox = false;
-            this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.gbxPerfil);
             this.Controls.Add(this.gbxUsuario);
             this.Name = "frmAltaUsuario";
             this.Text = "Alta Usuario";
             this.gbxUsuario.ResumeLayout(false);
-            this.gbxUsuario.PerformLayout();
             this.gbxPerfil.ResumeLayout(false);
-            this.gbxPerfil.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtbUsuario;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox txtbContraseña;
-        private System.Windows.Forms.TextBox txtbNombre;
-        private System.Windows.Forms.TextBox txtbApellido;
-        private System.Windows.Forms.TextBox txtbDni;
-        private System.Windows.Forms.TextBox txtbNombrePerfil;
-        private System.Windows.Forms.TextBox txtbDescripcion;
         private System.Windows.Forms.GroupBox gbxUsuario;
-        private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.GroupBox gbxPerfil;
-        private System.Windows.Forms.Label lblNombrePerfil;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnCrear;
+        private frmTextBoxFacha txtbEmail;
+        private frmTextBoxFacha txtbContraseña;
+        private frmTextBoxFacha txtbUsuario;
+        private System.Windows.Forms.ComboBox cbPerfil;
+        private BotonFacha btnCrear;
+        private BotonFacha btnSalir;
+        private frmTextBoxFacha txtbApelido;
+        private frmTextBoxFacha txtbNombre;
     }
 }
