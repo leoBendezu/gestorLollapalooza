@@ -80,7 +80,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbApellido.PasswordChar = false;
             this.txtbApellido.Size = new System.Drawing.Size(123, 31);
             this.txtbApellido.TabIndex = 17;
-            this.txtbApellido.Texts = "Apellido";
+            this.txtbApellido.Text = "Apellido";
             this.txtbApellido.UnderlinedStyle = false;
             // 
             // txtbNombre
@@ -99,7 +99,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(123, 31);
             this.txtbNombre.TabIndex = 13;
-            this.txtbNombre.Texts = "Nombre";
+            this.txtbNombre.Text = "Nombre";
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // txtbEmail
@@ -119,7 +119,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbEmail.Size = new System.Drawing.Size(123, 31);
             this.txtbEmail.TabIndex = 16;
             this.txtbEmail.Tag = "";
-            this.txtbEmail.Texts = "Email";
+            this.txtbEmail.Text = "Email";
             this.txtbEmail.UnderlinedStyle = false;
             // 
             // txtbContraseña
@@ -139,7 +139,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbContraseña.Size = new System.Drawing.Size(123, 31);
             this.txtbContraseña.TabIndex = 15;
             this.txtbContraseña.Tag = "";
-            this.txtbContraseña.Texts = "Contraseña";
+            this.txtbContraseña.Text = "Contraseña";
             this.txtbContraseña.UnderlinedStyle = false;
             // 
             // txtbUsuario
@@ -159,7 +159,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbUsuario.Size = new System.Drawing.Size(123, 31);
             this.txtbUsuario.TabIndex = 13;
             this.txtbUsuario.Tag = "";
-            this.txtbUsuario.Texts = "Usuario";
+            this.txtbUsuario.Text = "Usuario";
             this.txtbUsuario.UnderlinedStyle = false;
             // 
             // gbxPerfil

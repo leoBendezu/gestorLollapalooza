@@ -34,25 +34,25 @@ namespace gestorLollapalooza.bussinesLayer
 
             BDConexion sql = new BDConexion();
             string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
-                "From Usuarios u join Perfiles p on (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil)";
+                "From Usuarios u, Perfiles p where (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil)";
             return sql.ConsultaSQL(consulta);
 
         }
 
-        public DataTable RecuperarFiltrados(string usuario, string nombre, string apellido, string nombrePerfil)
+        public DataTable RecuperarFiltrados(string usuario, string nombre, string apellido, string idPerfil)
         {
             BDConexion sql = new BDConexion();
             string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
-                "From Usuarios u join Perfiles p on (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil";
+                "From Usuarios u, Perfiles p where u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil";
             if (!string.IsNullOrEmpty(usuario))
-                consulta += " and u.idUsuario=" + usuario;
+                consulta += " and u.usuario =" +  usuario ;
             if (!string.IsNullOrEmpty(nombre))
-                consulta += " and u.nombre=" + nombre;
-            if (!string.IsNullOrEmpty(usuario))
-                consulta += " and u.apellido=" + apellido;
-            if (!string.IsNullOrEmpty(nombrePerfil))
-                consulta += " and p.nombrePerfil=" + nombrePerfil;
-            consulta += ")";
+                consulta += " and u.nombre =" + nombre  ;
+            if (!string.IsNullOrEmpty(apellido))
+                consulta += " and u.apellido=" + apellido ;
+            if (!string.IsNullOrEmpty(idPerfil))
+                consulta += " and p.idPerfil =" + idPerfil ;
+            
             return sql.ConsultaSQL(consulta);
         }
 

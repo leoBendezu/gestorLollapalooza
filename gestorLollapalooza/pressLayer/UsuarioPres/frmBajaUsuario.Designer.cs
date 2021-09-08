@@ -69,7 +69,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbUsuario.PasswordChar = false;
             this.txtbUsuario.Size = new System.Drawing.Size(138, 31);
             this.txtbUsuario.TabIndex = 4;
-            this.txtbUsuario.Texts = "Usuario";
+            this.txtbUsuario.Text = "Usuario";
             this.txtbUsuario.UnderlinedStyle = false;
             // 
             // txtbContraseña
@@ -88,7 +88,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbContraseña.PasswordChar = false;
             this.txtbContraseña.Size = new System.Drawing.Size(138, 31);
             this.txtbContraseña.TabIndex = 9;
-            this.txtbContraseña.Texts = "Contraseña";
+            this.txtbContraseña.Text = "Contraseña";
             this.txtbContraseña.UnderlinedStyle = false;
             // 
             // btnEliminar
@@ -145,7 +145,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbApellido.PasswordChar = false;
             this.txtbApellido.Size = new System.Drawing.Size(138, 31);
             this.txtbApellido.TabIndex = 19;
-            this.txtbApellido.Texts = "Apellido";
+            this.txtbApellido.Text = "Apellido";
             this.txtbApellido.UnderlinedStyle = false;
             // 
             // txtbNombre
@@ -164,7 +164,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(138, 31);
             this.txtbNombre.TabIndex = 18;
-            this.txtbNombre.Texts = "Nombre";
+            this.txtbNombre.Text = "Nombre";
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // frmBajaUsuario

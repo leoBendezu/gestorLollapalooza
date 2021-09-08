@@ -38,26 +38,26 @@ namespace gestorLollapalooza.pressLayer
         private void btnCrear_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(this.txtbUsuario.Texts))
+            if (string.IsNullOrEmpty(this.txtbUsuario.Text))
                 MessageBox.Show("Completar Usuario", "Alerta");
-            if (string.IsNullOrEmpty(this.txtbContraseña.Texts))
+            if (string.IsNullOrEmpty(this.txtbContraseña.Text))
                 MessageBox.Show("Completar Contraseña", "Alerta");
-            if (string.IsNullOrEmpty(this.txtbEmail.Texts))
+            if (string.IsNullOrEmpty(this.txtbEmail.Text))
                 MessageBox.Show("Completar Email", "Alerta");
-            if (string.IsNullOrEmpty(this.txtbNombre.Texts))
+            if (string.IsNullOrEmpty(this.txtbNombre.Text))
                 MessageBox.Show("Completar Nombre", "Alerta");
-            if (string.IsNullOrEmpty(this.txtbApellido.Texts))
+            if (string.IsNullOrEmpty(this.txtbApellido.Text))
                 MessageBox.Show("Completar Apellido", "Alerta");
             if (cbPerfil.SelectedIndex == -1)
                 MessageBox.Show("Seleccionar Perfil", "Alerta");
 
-            if ((string.IsNullOrEmpty(this.txtbUsuario.Texts)) && (string.IsNullOrEmpty(this.txtbContraseña.Texts)) &&
-                (string.IsNullOrEmpty(this.txtbEmail.Texts)) && (string.IsNullOrEmpty(this.txtbNombre.Texts)) &&
-                (string.IsNullOrEmpty(this.txtbApellido.Texts)) && (cbPerfil.SelectedIndex != -1))
+            if ((string.IsNullOrEmpty(this.txtbUsuario.Text)) && (string.IsNullOrEmpty(this.txtbContraseña.Text)) &&
+                (string.IsNullOrEmpty(this.txtbEmail.Text)) && (string.IsNullOrEmpty(this.txtbNombre.Text)) &&
+                (string.IsNullOrEmpty(this.txtbApellido.Text)) && (cbPerfil.SelectedIndex != -1))
             {
                 BDConexion sql = new BDConexion();
                 string consulta = "INSERT [dbo].[usuarios] ([idPerfil], [usuario],[password], [nombre], [apellido], [email]) " +
-                    "VALUES (1, 'Prueba', 'prueba123','puto','elquelee','putoelquelee@gmail.com');";
+                    "VALUES (2, 'Prueba', 'prueba123','puto','elquelee','putoelquelee@gmail.com');";
                 
                 sql.ConsultaSQL(consulta);
             }

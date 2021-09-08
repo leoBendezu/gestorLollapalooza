@@ -140,7 +140,7 @@ namespace gestorLollapalooza
             this.frmTextBoxFachaPswd.PasswordChar = true;
             this.frmTextBoxFachaPswd.Size = new System.Drawing.Size(157, 29);
             this.frmTextBoxFachaPswd.TabIndex = 11;
-            this.frmTextBoxFachaPswd.Texts = "";
+            this.frmTextBoxFachaPswd.Text = "";
             this.frmTextBoxFachaPswd.UnderlinedStyle = true;
             this.frmTextBoxFachaPswd.Load += new System.EventHandler(this.frmTextBoxFachaPswd_Load);
             // 
@@ -160,7 +160,7 @@ namespace gestorLollapalooza
             this.frmTextBoxFacha1.PasswordChar = false;
             this.frmTextBoxFacha1.Size = new System.Drawing.Size(157, 29);
             this.frmTextBoxFacha1.TabIndex = 10;
-            this.frmTextBoxFacha1.Texts = "";
+            this.frmTextBoxFacha1.Text = "";
             this.frmTextBoxFacha1.UnderlinedStyle = true;
             this.frmTextBoxFacha1.Load += new System.EventHandler(this.frmTextBoxFacha1_Load);
             // 

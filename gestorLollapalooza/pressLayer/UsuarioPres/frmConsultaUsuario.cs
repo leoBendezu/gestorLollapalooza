@@ -57,20 +57,21 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
         private void botonFacha1_Click(object sender, EventArgs e)
         {
             Usuario oUsuario = new Usuario();
-            string _usuario, _nombre, _apellido, _nombrePerfil;
-            _usuario = _nombre = _apellido = _nombrePerfil = string.Empty;
+            string _usuario, _nombre, _apellido, _idPerfil;
+            _usuario = _nombre = _apellido = _idPerfil = string.Empty;
 
-            if (!string.IsNullOrEmpty(this.txtbUsuario.Texts))
-                _usuario = this.txtbUsuario.Texts;
-            if (!string.IsNullOrEmpty(this.txtbNombre.Texts))
-                _nombre = this.txtbNombre.Texts;
-            if (!string.IsNullOrEmpty(this.txtbApellido.Texts))
-                _apellido = this.txtbApellido.Texts;
+            if (!string.IsNullOrEmpty(this.txtbUsuario.Text))
+                _usuario = this.txtbUsuario.Text;
+            if (!string.IsNullOrEmpty(this.txtbNombre.Text))
+                _nombre = this.txtbNombre.Text;
+            if (!string.IsNullOrEmpty(this.txtbApellido.Text))
+                _apellido = this.txtbApellido.Text;
             if (cbPerfil.SelectedIndex != -1)
-                _nombrePerfil = cbPerfil.SelectedValue.ToString();
+                _idPerfil = cbPerfil.SelectedValue.ToString();
 
-            this.cargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
-            //this.cargarGrilla(dgvUsuarios, oUsuario.RecuperarFiltrados(_usuario, _nombre, _apellido, _nombrePerfil));
+
+            //this.cargarGrilla(dgvUsuarios, oUsuario.RecuperarTodos());
+            this.cargarGrilla(dgvUsuarios, oUsuario.RecuperarFiltrados(_usuario, _nombre, _apellido, _idPerfil));
 
         }
 
