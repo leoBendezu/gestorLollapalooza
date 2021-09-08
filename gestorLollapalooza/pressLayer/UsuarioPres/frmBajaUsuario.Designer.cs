@@ -1,5 +1,5 @@
 ﻿
-namespace gestorLollapalooza.pressLayer.Usuario
+namespace gestorLollapalooza.pressLayer.UsuarioPres
 {
     partial class frmBajaUsuario
     {
@@ -34,14 +34,14 @@ namespace gestorLollapalooza.pressLayer.Usuario
             this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
-            this.txtbApelido = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbApellido = new gestorLollapalooza.frmTextBoxFacha();
             this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.gxBajaUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // gxBajaUsuario
             // 
-            this.gxBajaUsuario.Controls.Add(this.txtbApelido);
+            this.gxBajaUsuario.Controls.Add(this.txtbApellido);
             this.gxBajaUsuario.Controls.Add(this.txtbNombre);
             this.gxBajaUsuario.Controls.Add(this.txtbContraseña);
             this.gxBajaUsuario.Controls.Add(this.txtbUsuario);
@@ -129,24 +129,24 @@ namespace gestorLollapalooza.pressLayer.Usuario
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // txtbApelido
+            // txtbApellido
             // 
-            this.txtbApelido.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbApelido.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtbApelido.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbApelido.BorderSize = 2;
-            this.txtbApelido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbApelido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbApelido.Location = new System.Drawing.Point(44, 147);
-            this.txtbApelido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtbApelido.Multiline = false;
-            this.txtbApelido.Name = "txtbApelido";
-            this.txtbApelido.Padding = new System.Windows.Forms.Padding(7);
-            this.txtbApelido.PasswordChar = false;
-            this.txtbApelido.Size = new System.Drawing.Size(138, 31);
-            this.txtbApelido.TabIndex = 19;
-            this.txtbApelido.Texts = "Apellido";
-            this.txtbApelido.UnderlinedStyle = false;
+            this.txtbApellido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbApellido.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtbApellido.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbApellido.BorderSize = 2;
+            this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbApellido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbApellido.Location = new System.Drawing.Point(44, 147);
+            this.txtbApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtbApellido.Multiline = false;
+            this.txtbApellido.Name = "txtbApellido";
+            this.txtbApellido.Padding = new System.Windows.Forms.Padding(7);
+            this.txtbApellido.PasswordChar = false;
+            this.txtbApellido.Size = new System.Drawing.Size(138, 31);
+            this.txtbApellido.TabIndex = 19;
+            this.txtbApellido.Texts = "Apellido";
+            this.txtbApellido.UnderlinedStyle = false;
             // 
             // txtbNombre
             // 
@@ -188,7 +188,7 @@ namespace gestorLollapalooza.pressLayer.Usuario
         private frmTextBoxFacha txtbUsuario;
         private BotonFacha btnEliminar;
         private BotonFacha btnSalir;
-        private frmTextBoxFacha txtbApelido;
+        private frmTextBoxFacha txtbApellido;
         private frmTextBoxFacha txtbNombre;
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gestorLollapalooza.pressLayer.Usuario
+namespace gestorLollapalooza.pressLayer.UsuarioPres
 {
     public partial class frmBajaUsuario : Form
     {

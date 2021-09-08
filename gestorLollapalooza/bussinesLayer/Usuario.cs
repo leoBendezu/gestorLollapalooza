@@ -33,11 +33,29 @@ namespace gestorLollapalooza.bussinesLayer
         {
 
             BDConexion sql = new BDConexion();
-            string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombre From Usuarios u Perfiles p where u.borrado = 0 and p.borrado = 0 and u.idPerfil = p.idPerfil";
+            string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
+                "From Usuarios u join Perfiles p on (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil)";
             return sql.ConsultaSQL(consulta);
 
         }
 
-        public DataTable
+        public DataTable RecuperarFiltrados(string usuario, string nombre, string apellido, string nombrePerfil)
+        {
+            BDConexion sql = new BDConexion();
+            string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
+                "From Usuarios u join Perfiles p on (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil";
+            if (!string.IsNullOrEmpty(usuario))
+                consulta += " and u.idUsuario=" + usuario;
+            if (!string.IsNullOrEmpty(nombre))
+                consulta += " and u.nombre=" + nombre;
+            if (!string.IsNullOrEmpty(usuario))
+                consulta += " and u.apellido=" + apellido;
+            if (!string.IsNullOrEmpty(nombrePerfil))
+                consulta += " and p.nombrePerfil=" + nombrePerfil;
+            consulta += ")";
+            return sql.ConsultaSQL(consulta);
+        }
+
+        
     }
 }

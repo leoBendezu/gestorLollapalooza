@@ -11,16 +11,16 @@ namespace gestorLollapalooza.bussinesLayer
     class Perfil
     {
         private int idPerfil;
-        private string nombre;
+        private string nombrePerfil;
         private int borrado;
 
         public int IdPerfil { get => idPerfil; set => idPerfil = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string Nombre { get => nombrePerfil; set => nombrePerfil = value; }
         public int Borrado { get => borrado; set => borrado = value; }
 
         public DataTable RecuperarTodos()
         {
-            string consulta = " Select * From Perfiles where borrado = 0 ";
+            string consulta = " Select * From perfiles where borradoLogico = 0 ";
             BDConexion oDatos = new BDConexion();
             return oDatos.ConsultaSQL(consulta);
         }

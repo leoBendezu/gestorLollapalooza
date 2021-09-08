@@ -52,10 +52,10 @@
     <Compile Include="pressLayer\BotonFacha.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmAltaUsuario.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmAltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmAltaUsuario.Designer.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmAltaUsuario.Designer.cs">
       <DependentUpon>frmAltaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="pressLayer\frmLogin.cs">
@@ -76,16 +76,16 @@
     <Compile Include="pressLayer\frmTextBoxFacha.Designer.cs">
       <DependentUpon>frmTextBoxFacha.cs</DependentUpon>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmBajaUsuario.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmBajaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmBajaUsuario.Designer.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmBajaUsuario.Designer.cs">
       <DependentUpon>frmBajaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmConsultaUsuario.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmConsultaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="pressLayer\Usuario\frmConsultaUsuario.Designer.cs">
+    <Compile Include="pressLayer\UsuarioPres\frmConsultaUsuario.Designer.cs">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -99,13 +99,13 @@
     <EmbeddedResource Include="pressLayer\frmTextBoxFacha.resx">
       <DependentUpon>frmTextBoxFacha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pressLayer\Usuario\frmAltaUsuario.resx">
+    <EmbeddedResource Include="pressLayer\UsuarioPres\frmAltaUsuario.resx">
       <DependentUpon>frmAltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pressLayer\Usuario\frmBajaUsuario.resx">
+    <EmbeddedResource Include="pressLayer\UsuarioPres\frmBajaUsuario.resx">
       <DependentUpon>frmBajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="pressLayer\Usuario\frmConsultaUsuario.resx">
+    <EmbeddedResource Include="pressLayer\UsuarioPres\frmConsultaUsuario.resx">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
