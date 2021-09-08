@@ -25,7 +25,7 @@ namespace gestorLollapalooza.pressLayer
 
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAltaUsuario altaUsuario = new frmAltaUsuario();
+            frmRegistrarUsuario altaUsuario = new frmRegistrarUsuario();
             altaUsuario.ShowDialog();
         }
 
@@ -49,7 +49,7 @@ namespace gestorLollapalooza.pressLayer
 
         private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAltaUsuario altaUsuario = new frmAltaUsuario();
+            frmRegistrarUsuario altaUsuario = new frmRegistrarUsuario();
             altaUsuario.ShowDialog();
         }
 
@@ -62,8 +62,9 @@ namespace gestorLollapalooza.pressLayer
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             
-            frmLogin Login = new frmLogin();
-            Login.ShowDialog();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+            login.Dispose();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace gestorLollapalooza.pressLayer
 {
-    public partial class frmAltaUsuario : Form
+    public partial class frmRegistrarUsuario : Form
     {
-        public frmAltaUsuario()
+        public frmRegistrarUsuario()
         {
             InitializeComponent();
             Perfil oPerfil = new Perfil();
@@ -63,6 +63,29 @@ namespace gestorLollapalooza.pressLayer
                 sql.EjecutarSQL(consulta);
                 MessageBox.Show("Usuario creado", "info");
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void ckbContraseña_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (this.ckbContraseña.CheckState == CheckState.Checked)
+            {
+                this.txtbContraseña.PasswordChar = false;
+            }
+            else
+            {
+                this.txtbContraseña.PasswordChar = true;
+            }
+            
+        }
+
+        private void frmRegistrarUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
