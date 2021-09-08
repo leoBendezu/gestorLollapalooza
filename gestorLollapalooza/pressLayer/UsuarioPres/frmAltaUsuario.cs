@@ -60,7 +60,8 @@ namespace gestorLollapalooza.pressLayer
                     "VALUES ("+cbPerfil.SelectedValue.ToString()+", '"+this.txtbUsuario.Text+"', '"+ this.txtbContraseña.Text + "'" +
                     ",'"+ this.txtbNombre.Text + "','"+ this.txtbApellido.Text + "','"+ this.txtbEmail.Text + "');";
                 
-                MessageBox.Show("Filas afectadas: "+sql.EjecutarSQL(consulta),"Info");
+                sql.EjecutarSQL(consulta);
+                MessageBox.Show("Usuario creado", "info");
             }
         }
     }
