@@ -32,16 +32,16 @@ namespace gestorLollapalooza
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.botonFacha2 = new gestorLollapalooza.BotonFacha();
             this.botonFacha1 = new gestorLollapalooza.BotonFacha();
             this.frmTextBoxFachaPswd = new gestorLollapalooza.frmTextBoxFacha();
             this.frmTextBoxFacha1 = new gestorLollapalooza.frmTextBoxFacha();
-            this.botonFacha2 = new gestorLollapalooza.BotonFacha();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,16 +70,15 @@ namespace gestorLollapalooza
             this.label2.TabIndex = 6;
             this.label2.Text = "Usuario";
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 267);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox3.Location = new System.Drawing.Point(45, 41);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(182, 164);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -92,15 +91,38 @@ namespace gestorLollapalooza
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBox1
             // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(45, 41);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(182, 164);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 267);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // botonFacha2
+            // 
+            this.botonFacha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.botonFacha2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.botonFacha2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.botonFacha2.BorderRadius = 14;
+            this.botonFacha2.BorderSize = 0;
+            this.botonFacha2.FlatAppearance.BorderSize = 0;
+            this.botonFacha2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonFacha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
+            this.botonFacha2.ForeColor = System.Drawing.Color.White;
+            this.botonFacha2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.botonFacha2.Location = new System.Drawing.Point(45, 388);
+            this.botonFacha2.Margin = new System.Windows.Forms.Padding(2);
+            this.botonFacha2.Name = "botonFacha2";
+            this.botonFacha2.Size = new System.Drawing.Size(80, 35);
+            this.botonFacha2.TabIndex = 14;
+            this.botonFacha2.Text = "Salir";
+            this.botonFacha2.TextColor = System.Drawing.Color.White;
+            this.botonFacha2.UseVisualStyleBackColor = false;
+            this.botonFacha2.Click += new System.EventHandler(this.botonFacha2_Click);
             // 
             // botonFacha1
             // 
@@ -140,7 +162,6 @@ namespace gestorLollapalooza
             this.frmTextBoxFachaPswd.PasswordChar = true;
             this.frmTextBoxFachaPswd.Size = new System.Drawing.Size(157, 29);
             this.frmTextBoxFachaPswd.TabIndex = 11;
-            this.frmTextBoxFachaPswd.Text = "";
             this.frmTextBoxFachaPswd.UnderlinedStyle = true;
             this.frmTextBoxFachaPswd.Load += new System.EventHandler(this.frmTextBoxFachaPswd_Load);
             // 
@@ -160,31 +181,8 @@ namespace gestorLollapalooza
             this.frmTextBoxFacha1.PasswordChar = false;
             this.frmTextBoxFacha1.Size = new System.Drawing.Size(157, 29);
             this.frmTextBoxFacha1.TabIndex = 10;
-            this.frmTextBoxFacha1.Text = "";
             this.frmTextBoxFacha1.UnderlinedStyle = true;
             this.frmTextBoxFacha1.Load += new System.EventHandler(this.frmTextBoxFacha1_Load);
-            // 
-            // botonFacha2
-            // 
-            this.botonFacha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.botonFacha2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.botonFacha2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonFacha2.BorderRadius = 14;
-            this.botonFacha2.BorderSize = 0;
-            this.botonFacha2.FlatAppearance.BorderSize = 0;
-            this.botonFacha2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonFacha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.botonFacha2.ForeColor = System.Drawing.Color.White;
-            this.botonFacha2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.botonFacha2.Location = new System.Drawing.Point(45, 388);
-            this.botonFacha2.Margin = new System.Windows.Forms.Padding(2);
-            this.botonFacha2.Name = "botonFacha2";
-            this.botonFacha2.Size = new System.Drawing.Size(80, 35);
-            this.botonFacha2.TabIndex = 14;
-            this.botonFacha2.Text = "Salir";
-            this.botonFacha2.TextColor = System.Drawing.Color.White;
-            this.botonFacha2.UseVisualStyleBackColor = false;
-            this.botonFacha2.Click += new System.EventHandler(this.botonFacha2_Click);
             // 
             // frmLogin
             // 
@@ -205,12 +203,12 @@ namespace gestorLollapalooza
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

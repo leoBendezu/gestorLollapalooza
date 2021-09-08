@@ -16,8 +16,6 @@ namespace gestorLollapalooza.pressLayer
         public frmPrincipal()
         {
             InitializeComponent();
-            frmLogin Login = new frmLogin();
-            Login.ShowDialog();
         }
 
         private void aBMCUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,6 +39,51 @@ namespace gestorLollapalooza.pressLayer
         {
             frmBajaUsuario bajaUsuario = new frmBajaUsuario();
             bajaUsuario.ShowDialog();
+        }
+
+        private void consultarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaUsuario consultaUsuario = new frmConsultaUsuario();
+            consultaUsuario.ShowDialog();
+        }
+
+        private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaUsuario altaUsuario = new frmAltaUsuario();
+            altaUsuario.ShowDialog();
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBajaUsuario bajaUsuario = new frmBajaUsuario();
+            bajaUsuario.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            
+            frmLogin Login = new frmLogin();
+            Login.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                this.Close();
+            }
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Esta seguro de abandonar la aplicación?", "SALIENDO DE LA APLICACIÓN",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) 
+            {
+                e.Cancel = false;
+            } 
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -90,7 +90,11 @@ namespace gestorLollapalooza
 
         private void botonFacha2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Esta seguro de abandonar la aplicación?", "SALIENDO DE LA APLICACIÓN",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
