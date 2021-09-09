@@ -18,11 +18,11 @@ namespace gestorLollapalooza
             try
             {
                 cnn.Open();
-                String query = "SELECT userId FROM Users where userName = '" + pUsuario + "' AND password = '" + pPassword;
+                String query = "SELECT idUsuario FROM Usuarios where nombre = '" + pUsuario + "' AND password = '" + pPassword+"'";
                 SqlCommand cmd = new SqlCommand(query, cnn);
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
-                usuarioValido = (dt.Rows.Count == 1);
+                usuarioValido = (dt.Rows.Count != 0);
             }
             catch (SqlException ex)
             {
@@ -33,6 +33,7 @@ namespace gestorLollapalooza
                 if (cnn.State == ConnectionState.Open)
                     cnn.Close();
             }
+            //MessageBox.Show("hola: " + usuarioValido.ToString());
             return usuarioValido;
             }
         
@@ -74,7 +75,16 @@ namespace gestorLollapalooza
 
         private void botonFacha1_Click(object sender, EventArgs e)
         {
-           
+            if (string.IsNullOrEmpty(this.txtbUsuario.Text) || string.IsNullOrEmpty(this.txtbPassword.Text))
+            {
+                MessageBox.Show("Complete todos los campos del Login porfavor...");
+            } else {
+                if (ValidarCredenciales(this.txtbUsuario.Text, this.txtbPassword.Text))
+                {
+                    this.Close();
+                }
+                   
+                   }
 
         }
 

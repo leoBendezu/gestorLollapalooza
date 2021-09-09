@@ -46,6 +46,9 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.lblPerfil = new System.Windows.Forms.Label();
             this.btnConsultar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gbxFiltros.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +120,9 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             // 
             // gbxFiltros
             // 
+            this.gbxFiltros.Controls.Add(this.label3);
+            this.gbxFiltros.Controls.Add(this.label2);
+            this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.txtbApellido);
             this.gbxFiltros.Controls.Add(this.txtbNombre);
             this.gbxFiltros.Controls.Add(this.txtbUsuario);
@@ -125,7 +131,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.gbxFiltros.Controls.Add(this.lblPerfil);
             this.gbxFiltros.Location = new System.Drawing.Point(598, 12);
             this.gbxFiltros.Name = "gbxFiltros";
-            this.gbxFiltros.Size = new System.Drawing.Size(190, 200);
+            this.gbxFiltros.Size = new System.Drawing.Size(190, 273);
             this.gbxFiltros.TabIndex = 1;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
@@ -138,7 +144,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbApellido.BorderSize = 2;
             this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbApellido.Location = new System.Drawing.Point(13, 124);
+            this.txtbApellido.Location = new System.Drawing.Point(19, 186);
             this.txtbApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtbApellido.Multiline = false;
             this.txtbApellido.Name = "txtbApellido";
@@ -156,7 +162,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbNombre.BorderSize = 2;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbNombre.Location = new System.Drawing.Point(13, 85);
+            this.txtbNombre.Location = new System.Drawing.Point(19, 128);
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
@@ -174,7 +180,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.txtbUsuario.BorderSize = 2;
             this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbUsuario.Location = new System.Drawing.Point(13, 46);
+            this.txtbUsuario.Location = new System.Drawing.Point(19, 72);
             this.txtbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtbUsuario.Multiline = false;
             this.txtbUsuario.Name = "txtbUsuario";
@@ -188,7 +194,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             // cbPerfil
             // 
             this.cbPerfil.FormattingEnabled = true;
-            this.cbPerfil.Location = new System.Drawing.Point(63, 162);
+            this.cbPerfil.Location = new System.Drawing.Point(63, 246);
             this.cbPerfil.Name = "cbPerfil";
             this.cbPerfil.Size = new System.Drawing.Size(121, 21);
             this.cbPerfil.TabIndex = 6;
@@ -205,7 +211,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             // lblPerfil
             // 
             this.lblPerfil.AutoSize = true;
-            this.lblPerfil.Location = new System.Drawing.Point(24, 170);
+            this.lblPerfil.Location = new System.Drawing.Point(24, 254);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(33, 13);
             this.lblPerfil.TabIndex = 5;
@@ -222,7 +228,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(671, 218);
+            this.btnConsultar.Location = new System.Drawing.Point(671, 291);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(111, 40);
             this.btnConsultar.TabIndex = 3;
@@ -249,6 +255,34 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Usuario:";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Nombre:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Apellido:";
             // 
             // frmConsultaUsuario
             // 
@@ -288,5 +322,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPerfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmContrasena;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

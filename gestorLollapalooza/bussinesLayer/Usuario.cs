@@ -52,10 +52,16 @@ namespace gestorLollapalooza.bussinesLayer
                 consulta += " and u.apellido=" + apellido ;
             if (!string.IsNullOrEmpty(idPerfil))
                 consulta += " and p.idPerfil =" + idPerfil ;
-            
+
+
+
             return sql.EjecutarSQL(consulta);
+            
+
         }
 
-        
+
+
+
     }
 }

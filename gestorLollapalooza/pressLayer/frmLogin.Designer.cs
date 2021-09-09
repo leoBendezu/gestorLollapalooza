@@ -37,8 +37,8 @@ namespace gestorLollapalooza
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.botonFacha2 = new gestorLollapalooza.BotonFacha();
             this.botonFacha1 = new gestorLollapalooza.BotonFacha();
-            this.frmTextBoxFachaPswd = new gestorLollapalooza.frmTextBoxFacha();
-            this.frmTextBoxFacha1 = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbPassword = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -146,43 +146,43 @@ namespace gestorLollapalooza
             this.botonFacha1.UseVisualStyleBackColor = false;
             this.botonFacha1.Click += new System.EventHandler(this.botonFacha1_Click);
             // 
-            // frmTextBoxFachaPswd
+            // txtbPassword
             // 
-            this.frmTextBoxFachaPswd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.frmTextBoxFachaPswd.BorderColor = System.Drawing.Color.DimGray;
-            this.frmTextBoxFachaPswd.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.frmTextBoxFachaPswd.BorderSize = 2;
-            this.frmTextBoxFachaPswd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.frmTextBoxFachaPswd.ForeColor = System.Drawing.Color.DimGray;
-            this.frmTextBoxFachaPswd.Location = new System.Drawing.Point(70, 329);
-            this.frmTextBoxFachaPswd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.frmTextBoxFachaPswd.Multiline = false;
-            this.frmTextBoxFachaPswd.Name = "frmTextBoxFachaPswd";
-            this.frmTextBoxFachaPswd.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.frmTextBoxFachaPswd.PasswordChar = true;
-            this.frmTextBoxFachaPswd.Size = new System.Drawing.Size(157, 29);
-            this.frmTextBoxFachaPswd.TabIndex = 11;
-            this.frmTextBoxFachaPswd.UnderlinedStyle = true;
-            this.frmTextBoxFachaPswd.Load += new System.EventHandler(this.frmTextBoxFachaPswd_Load);
+            this.txtbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbPassword.BorderColor = System.Drawing.Color.DimGray;
+            this.txtbPassword.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbPassword.BorderSize = 2;
+            this.txtbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtbPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbPassword.Location = new System.Drawing.Point(70, 329);
+            this.txtbPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbPassword.Multiline = false;
+            this.txtbPassword.Name = "txtbPassword";
+            this.txtbPassword.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtbPassword.PasswordChar = true;
+            this.txtbPassword.Size = new System.Drawing.Size(157, 29);
+            this.txtbPassword.TabIndex = 11;
+            this.txtbPassword.UnderlinedStyle = true;
+            this.txtbPassword.Load += new System.EventHandler(this.frmTextBoxFachaPswd_Load);
             // 
-            // frmTextBoxFacha1
+            // txtbUsuario
             // 
-            this.frmTextBoxFacha1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.frmTextBoxFacha1.BorderColor = System.Drawing.Color.DimGray;
-            this.frmTextBoxFacha1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.frmTextBoxFacha1.BorderSize = 2;
-            this.frmTextBoxFacha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.frmTextBoxFacha1.ForeColor = System.Drawing.Color.DimGray;
-            this.frmTextBoxFacha1.Location = new System.Drawing.Point(70, 261);
-            this.frmTextBoxFacha1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.frmTextBoxFacha1.Multiline = false;
-            this.frmTextBoxFacha1.Name = "frmTextBoxFacha1";
-            this.frmTextBoxFacha1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.frmTextBoxFacha1.PasswordChar = false;
-            this.frmTextBoxFacha1.Size = new System.Drawing.Size(157, 29);
-            this.frmTextBoxFacha1.TabIndex = 10;
-            this.frmTextBoxFacha1.UnderlinedStyle = true;
-            this.frmTextBoxFacha1.Load += new System.EventHandler(this.frmTextBoxFacha1_Load);
+            this.txtbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbUsuario.BorderColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbUsuario.BorderSize = 2;
+            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.Location = new System.Drawing.Point(70, 261);
+            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtbUsuario.Multiline = false;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtbUsuario.PasswordChar = false;
+            this.txtbUsuario.Size = new System.Drawing.Size(157, 29);
+            this.txtbUsuario.TabIndex = 10;
+            this.txtbUsuario.UnderlinedStyle = true;
+            this.txtbUsuario.Load += new System.EventHandler(this.frmTextBoxFacha1_Load);
             // 
             // frmLogin
             // 
@@ -193,8 +193,8 @@ namespace gestorLollapalooza
             this.Controls.Add(this.botonFacha2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.botonFacha1);
-            this.Controls.Add(this.frmTextBoxFachaPswd);
-            this.Controls.Add(this.frmTextBoxFacha1);
+            this.Controls.Add(this.txtbPassword);
+            this.Controls.Add(this.txtbUsuario);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -219,8 +219,8 @@ namespace gestorLollapalooza
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private frmTextBoxFacha frmTextBoxFacha1;
-        private frmTextBoxFacha frmTextBoxFachaPswd;
+        private frmTextBoxFacha txtbUsuario;
+        private frmTextBoxFacha txtbPassword;
         private BotonFacha botonFacha1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private BotonFacha botonFacha2;
