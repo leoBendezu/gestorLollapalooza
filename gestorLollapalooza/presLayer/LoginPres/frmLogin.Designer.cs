@@ -163,7 +163,7 @@ namespace gestorLollapalooza
             this.txtbPassword.Size = new System.Drawing.Size(157, 29);
             this.txtbPassword.TabIndex = 11;
             this.txtbPassword.UnderlinedStyle = true;
-            this.txtbPassword.Load += new System.EventHandler(this.frmTextBoxFachaPswd_Load);
+
             // 
             // txtbUsuario
             // 
@@ -182,7 +182,6 @@ namespace gestorLollapalooza
             this.txtbUsuario.Size = new System.Drawing.Size(157, 29);
             this.txtbUsuario.TabIndex = 10;
             this.txtbUsuario.UnderlinedStyle = true;
-            this.txtbUsuario.Load += new System.EventHandler(this.frmTextBoxFacha1_Load);
             // 
             // frmLogin
             // 
@@ -205,7 +204,7 @@ namespace gestorLollapalooza
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

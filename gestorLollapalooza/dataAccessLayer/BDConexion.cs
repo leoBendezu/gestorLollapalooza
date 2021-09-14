@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace gestorLollapalooza.dataLayer
+namespace gestorLollapalooza.dataAccessLayer
 {
     class BDConexion
     {
@@ -63,14 +63,14 @@ namespace gestorLollapalooza.dataLayer
                 //Commit de transacción...
                 t.Commit();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 if (t != null)
                 {
                     t.Rollback();
                     afectadas = 0;
                 }
-                throw ex;
+                throw (ex);
             }
             finally
             {

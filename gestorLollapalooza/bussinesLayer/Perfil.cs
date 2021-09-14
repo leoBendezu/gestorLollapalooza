@@ -1,4 +1,4 @@
-﻿using gestorLollapalooza.dataLayer;
+﻿using gestorLollapalooza.dataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,19 +10,21 @@ namespace gestorLollapalooza.bussinesLayer
 {
     class Perfil
     {
-        private int idPerfil;
-        private string nombrePerfil;
-        private int borrado;
 
-        public int IdPerfil { get => idPerfil; set => idPerfil = value; }
-        public string Nombre { get => nombrePerfil; set => nombrePerfil = value; }
-        public int Borrado { get => borrado; set => borrado = value; }
+        public int IdPerfil { get; set; }
+        public string NombrePerfil { get; set; }
+        public int BorradoLogico { get; set; }
 
-        public DataTable RecuperarTodos()
+        private PerfilDao oPerfil;
+
+        public Perfil()
         {
-            string consulta = " Select * From perfiles where borradoLogico = 0 ";
-            BDConexion oDatos = new BDConexion();
-            return oDatos.EjecutarSQL(consulta);
+            this.oPerfil = new PerfilDao();
+        }
+
+        public IList<Perfil> RecuperarTodos()
+        {
+            return this.oPerfil.obtenerTodos();
         }
     }
 }

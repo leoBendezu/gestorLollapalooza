@@ -4,60 +4,70 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using gestorLollapalooza.dataLayer;
+using gestorLollapalooza.dataAccessLayer;
 
 namespace gestorLollapalooza.bussinesLayer
 {
     class Usuario
     {
-        private int id_usuario;
-        private int id_perfil;
-        private string usuarionombre;
-        private string contrasena;
-        private string email;
-        private string nombre;
-        private string apelido;
-        private int borrado;
 
-        public int Id_usuario { get => id_usuario; set => id_usuario = value; }
-        public int Id_perfil { get => id_perfil; set => id_perfil = value; }
-        public string Usuarionombre { get => usuarionombre; set => usuarionombre = value; }
-        public string Contrasena { get => contrasena; set => contrasena = value; }
-        public string Email { get => email; set => email = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apelido { get => apelido; set => apelido = value; }
-        public int Borrado { get => borrado; set => borrado = value; }
+        public int IdUsuario { get; set; }
+        public Perfil PerfilUsuario { get; set; }
 
+        public string UsuarioNombre { get; set; }
 
-        public DataTable RecuperarTodos()
+        public string Contrasena { get; set; }
+
+        public string Email { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int BorradoLogico { get; set; }
+
+        private UsuarioDao oUsuario;
+
+        
+        public Usuario()
         {
+            this.oUsuario = new UsuarioDao();
+        }
+                            
 
-            BDConexion sql = new BDConexion();
-            string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
-                "From Usuarios u, Perfiles p where (u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil)";
-            return sql.EjecutarSQL(consulta);
+        public Usuario ValidarCredenciales(string nombreUsuario, string contrasena)
+        {
+            Usuario usuarioRecuperado = oUsuario.recuperarUsuario(nombreUsuario);
+            
+            if(usuarioRecuperado != null && usuarioRecuperado.Contrasena.Equals(contrasena))
+            {
+                return usuarioRecuperado;
+            } else
+            {
+                return null;
+            }
+        }
+
+
+        public IList<Usuario> RecuperarTodos()
+        {
+            IList<Usuario> usuariosAll = oUsuario.obtenerTodos();
+            return usuariosAll;
 
         }
 
-        public DataTable RecuperarFiltrados(string usuario, string nombre, string apellido, string idPerfil)
+
+        public bool PersistirUsuario(Usuario usuario)
         {
-            BDConexion sql = new BDConexion();
-            string consulta = " Select u.idUsuario, u.usuario, u.password, u.email, u.nombre, u.apellido, p.nombrePerfil " +
-                "From Usuarios u, Perfiles p where u.borradoLogico = 0 and p.borradoLogico = 0 and u.idPerfil = p.idPerfil";
-            if (!string.IsNullOrEmpty(usuario))
-                consulta += " and u.usuario =" +  usuario ;
-            if (!string.IsNullOrEmpty(nombre))
-                consulta += " and u.nombre =" + nombre  ;
-            if (!string.IsNullOrEmpty(apellido))
-                consulta += " and u.apellido=" + apellido ;
-            if (!string.IsNullOrEmpty(idPerfil))
-                consulta += " and p.idPerfil =" + idPerfil ;
+            return oUsuario.persistirUsuario(usuario);
+        }
 
 
+        public bool ExisteUsuario(string nombreUsuario)
+        {
+            return (oUsuario.recuperarUsuario(nombreUsuario) != null);
+        }
 
-            return sql.EjecutarSQL(consulta);
-            
-
+        public IList<Usuario> obtenerFiltados(String filtros)
+        {
+            return oUsuario.recuperarFiltrados(filtros);
         }
 
 
