@@ -65,33 +65,41 @@ namespace gestorLollapalooza.pressLayer
             
             frmLogin login = new frmLogin();
             login.ShowDialog();
+
+            if(login.UsuarioLoggeado == null) { this.Close(); } 
+
             login.Dispose();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             {
-                this.Close();
+                this.salirConConfrimacion();
             }
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro de abandonar la aplicación?", "SALIENDO DE LA APLICACIÓN",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) 
-            {
-                e.Cancel = false;
-            } 
-            else
-            {
-                e.Cancel = true;
-            }
+///
         }
 
         private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmModificacionUsuario modificacionUsuario = new frmModificacionUsuario();
             modificacionUsuario.ShowDialog();
+        }
+
+        private void salirConConfrimacion()
+        {
+            if (MessageBox.Show("¿Esta seguro de abandonar la aplicación?", "SALIENDO DE LA APLICACIÓN",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                
+            }
         }
     }
 }

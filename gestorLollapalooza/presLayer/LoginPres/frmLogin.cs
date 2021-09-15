@@ -10,7 +10,9 @@ namespace gestorLollapalooza
     {
 
         private Usuario usuarioLoggeado;
-            
+
+        internal Usuario UsuarioLoggeado { get => usuarioLoggeado; set => usuarioLoggeado = value; }
+
         public frmLogin()
         {
             InitializeComponent();
@@ -65,5 +67,7 @@ namespace gestorLollapalooza
             this.txtbPassword.Text = String.Empty;
             this.txtbUsuario.Focus();
         }
+
+        
     }
 }
