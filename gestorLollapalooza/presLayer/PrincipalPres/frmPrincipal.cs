@@ -1,4 +1,5 @@
-﻿using gestorLollapalooza.pressLayer.UsuarioPres;
+﻿using gestorLollapalooza.presLayer.UsuarioPres;
+using gestorLollapalooza.pressLayer.UsuarioPres;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,6 +86,12 @@ namespace gestorLollapalooza.pressLayer
             {
                 e.Cancel = true;
             }
+        }
+
+        private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModificacionUsuario modificacionUsuario = new frmModificacionUsuario();
+            modificacionUsuario.ShowDialog();
         }
     }
 }

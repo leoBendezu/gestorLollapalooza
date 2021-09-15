@@ -161,6 +161,8 @@ namespace gestorLollapalooza.pressLayer
 
         private void LimpiarTxt()
         {
+            // Limpia los campos de texto
+
             this.txtbUsuario.Text = String.Empty;
             this.txtbContraseña.Text = String.Empty;
             this.txtbApellido.Text = String.Empty;
@@ -171,6 +173,8 @@ namespace gestorLollapalooza.pressLayer
 
         private void resetearColor()
         {
+            // Devuelve el color original a los campos que hayan sido cmabiados por COmprobar()
+
             this.txtbUsuario.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbContraseña.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));

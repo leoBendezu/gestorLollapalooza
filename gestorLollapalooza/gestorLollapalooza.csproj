@@ -90,6 +90,12 @@
     <Compile Include="presLayer\UsuarioPres\frmConsultaUsuario.Designer.cs">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\UsuarioPres\frmModificacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\UsuarioPres\frmModificacionUsuario.Designer.cs">
+      <DependentUpon>frmModificacionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="presLayer\LoginPres\frmLogin.resx">
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\UsuarioPres\frmConsultaUsuario.resx">
       <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\UsuarioPres\frmModificacionUsuario.resx">
+      <DependentUpon>frmModificacionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

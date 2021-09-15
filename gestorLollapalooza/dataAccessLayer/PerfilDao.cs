@@ -12,6 +12,12 @@ namespace gestorLollapalooza.dataAccessLayer
     {
         public IList<Perfil> obtenerTodos()
         {
+
+            // Metodo encargado de recuperar todos los usuarios de la Base de datos, no recibe parametros
+            // Se conecta con el BDhelper para ejecutar la consulta strSql.
+            // Recorre el resultado de la consulta convirtiendo cada fila en un objeto perfil mediante el metodo
+            // MapearPerfil(), luego retorna una lista con los perfiles.
+
             List<Perfil> perfiles = new List<Perfil>();
 
             var strSql = "SELECT p.idPerfil, p.nombrePerfil " +
@@ -31,6 +37,9 @@ namespace gestorLollapalooza.dataAccessLayer
     
         public Perfil MapearPerfil(DataRow row)
         {
+
+            // Metodo encargado de convertir una fila en un objeto perfil
+
             int idPerfil = Convert.ToInt32(row["idPerfil"].ToString());
             string nombre = row["nombrePerfil"].ToString();
 

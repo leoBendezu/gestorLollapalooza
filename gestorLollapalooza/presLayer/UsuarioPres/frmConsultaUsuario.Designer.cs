@@ -38,10 +38,15 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaUsuario));
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
+            this.chbTodos = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtbEmail = new gestorLollapalooza.frmTextBoxFacha();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtbApellido = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
             this.cbPerfil = new System.Windows.Forms.ComboBox();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.dvgUsuarios = new System.Windows.Forms.DataGridView();
@@ -50,13 +55,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.clmNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chbTodos = new System.Windows.Forms.CheckBox();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
             this.btnConsultar = new gestorLollapalooza.BotonFacha();
-            this.txtbEmail = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbApellido = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
             this.gbxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +84,18 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
             // 
+            // chbTodos
+            // 
+            this.chbTodos.AutoSize = true;
+            this.chbTodos.Location = new System.Drawing.Point(25, 378);
+            this.chbTodos.Name = "chbTodos";
+            this.chbTodos.Size = new System.Drawing.Size(130, 20);
+            this.chbTodos.TabIndex = 25;
+            this.chbTodos.Text = "Consultar Todos";
+            this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chbTodos.UseVisualStyleBackColor = true;
+            this.chbTodos.CheckedChanged += new System.EventHandler(this.chbTodos_CheckedChanged);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -93,6 +105,24 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 24;
             this.label4.Text = "Email:";
+            // 
+            // txtbEmail
+            // 
+            this.txtbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbEmail.BorderSize = 2;
+            this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbEmail.Location = new System.Drawing.Point(25, 270);
+            this.txtbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbEmail.Multiline = false;
+            this.txtbEmail.Name = "txtbEmail";
+            this.txtbEmail.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbEmail.PasswordChar = false;
+            this.txtbEmail.Size = new System.Drawing.Size(228, 35);
+            this.txtbEmail.TabIndex = 23;
+            this.txtbEmail.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -123,6 +153,60 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 20;
             this.label1.Text = "Usuario:";
+            // 
+            // txtbApellido
+            // 
+            this.txtbApellido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbApellido.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbApellido.BorderSize = 2;
+            this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbApellido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbApellido.Location = new System.Drawing.Point(25, 194);
+            this.txtbApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbApellido.Multiline = false;
+            this.txtbApellido.Name = "txtbApellido";
+            this.txtbApellido.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbApellido.PasswordChar = false;
+            this.txtbApellido.Size = new System.Drawing.Size(228, 35);
+            this.txtbApellido.TabIndex = 19;
+            this.txtbApellido.UnderlinedStyle = false;
+            // 
+            // txtbNombre
+            // 
+            this.txtbNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbNombre.BorderSize = 2;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbNombre.Location = new System.Drawing.Point(25, 123);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNombre.Multiline = false;
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbNombre.PasswordChar = false;
+            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
+            this.txtbNombre.TabIndex = 18;
+            this.txtbNombre.UnderlinedStyle = false;
+            // 
+            // txtbUsuario
+            // 
+            this.txtbUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbUsuario.BorderSize = 2;
+            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.Location = new System.Drawing.Point(25, 54);
+            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbUsuario.Multiline = false;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbUsuario.PasswordChar = false;
+            this.txtbUsuario.Size = new System.Drawing.Size(228, 35);
+            this.txtbUsuario.TabIndex = 4;
+            this.txtbUsuario.UnderlinedStyle = false;
             // 
             // cbPerfil
             // 
@@ -235,18 +319,6 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.clmEmail.ReadOnly = true;
             this.clmEmail.Width = 250;
             // 
-            // chbTodos
-            // 
-            this.chbTodos.AutoSize = true;
-            this.chbTodos.Location = new System.Drawing.Point(25, 378);
-            this.chbTodos.Name = "chbTodos";
-            this.chbTodos.Size = new System.Drawing.Size(130, 20);
-            this.chbTodos.TabIndex = 25;
-            this.chbTodos.Text = "Consultar Todos";
-            this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chbTodos.UseVisualStyleBackColor = true;
-            this.chbTodos.CheckedChanged += new System.EventHandler(this.chbTodos_CheckedChanged);
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
@@ -287,78 +359,6 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.botonFacha1_Click);
             // 
-            // txtbEmail
-            // 
-            this.txtbEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbEmail.BorderSize = 2;
-            this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbEmail.Location = new System.Drawing.Point(25, 270);
-            this.txtbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbEmail.Multiline = false;
-            this.txtbEmail.Name = "txtbEmail";
-            this.txtbEmail.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbEmail.PasswordChar = false;
-            this.txtbEmail.Size = new System.Drawing.Size(228, 35);
-            this.txtbEmail.TabIndex = 23;
-            this.txtbEmail.UnderlinedStyle = false;
-            // 
-            // txtbApellido
-            // 
-            this.txtbApellido.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbApellido.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbApellido.BorderSize = 2;
-            this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbApellido.Location = new System.Drawing.Point(25, 194);
-            this.txtbApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbApellido.Multiline = false;
-            this.txtbApellido.Name = "txtbApellido";
-            this.txtbApellido.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbApellido.PasswordChar = false;
-            this.txtbApellido.Size = new System.Drawing.Size(228, 35);
-            this.txtbApellido.TabIndex = 19;
-            this.txtbApellido.UnderlinedStyle = false;
-            // 
-            // txtbNombre
-            // 
-            this.txtbNombre.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbNombre.BorderSize = 2;
-            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbNombre.Location = new System.Drawing.Point(25, 123);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbNombre.Multiline = false;
-            this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombre.TabIndex = 18;
-            this.txtbNombre.UnderlinedStyle = false;
-            // 
-            // txtbUsuario
-            // 
-            this.txtbUsuario.BackColor = System.Drawing.SystemColors.Window;
-            this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbUsuario.BorderSize = 2;
-            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbUsuario.Location = new System.Drawing.Point(25, 54);
-            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbUsuario.Multiline = false;
-            this.txtbUsuario.Name = "txtbUsuario";
-            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbUsuario.PasswordChar = false;
-            this.txtbUsuario.Size = new System.Drawing.Size(228, 35);
-            this.txtbUsuario.TabIndex = 4;
-            this.txtbUsuario.UnderlinedStyle = false;
-            // 
             // frmConsultaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,7 +378,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.MaximizeBox = false;
             this.Name = "frmConsultaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmConsultaUsuario";
+            this.Text = "Consulta Usuario";
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();

@@ -35,6 +35,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
 
         private void cargarGrilla(DataGridView grilla, IList<Usuario> fuente)
         {
+            // Carga los usuarios recuperados en la grilla
+
             grilla.Rows.Clear();
             foreach(Usuario usuario in fuente)
             {
@@ -49,8 +51,13 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
         private void botonFacha1_Click(object sender, EventArgs e)
         {
             
-            string _usuario, _nombre, _apellido, _email ,_idPerfil, _consulta;
-            _usuario = _nombre = _apellido = _idPerfil = _email = _consulta = string.Empty;
+            string  _consulta;
+             _consulta = string.Empty;
+
+            // Comprueba si el checkbox de todos esta selecionado, en caso de estarlo recupera todos los 
+            // usuarios y los carga en la grilla.
+            // en caso de no estarlo comprueba cada campo si esta vacio o es nulo y va agregando informacion a la consulta
+            // si es necesario.
 
             if (!chbTodos.Checked)
             {
@@ -76,6 +83,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
                 {
                     _consulta += "AND u.idPerfil =" + cbPerfil.SelectedValue.ToString();
                 }
+
+                // Si la consulta no es nula ni vacia carga la grilla con los usuarios filtrados
 
                 if(!string.IsNullOrEmpty(_consulta))
                 {
@@ -117,7 +126,6 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
                 this.cbPerfil.Enabled = true;
             }
         }
-
 
     }
 }
