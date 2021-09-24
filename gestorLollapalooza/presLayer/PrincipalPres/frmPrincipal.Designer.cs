@@ -39,6 +39,8 @@ namespace gestorLollapalooza.pressLayer
             this.registrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -75,7 +77,8 @@ namespace gestorLollapalooza.pressLayer
             // soporteToolStripMenuItem
             // 
             this.soporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionUsuariosToolStripMenuItem});
+            this.gestionUsuariosToolStripMenuItem,
+            this.gestionGruposMusicalesToolStripMenuItem});
             this.soporteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
@@ -91,7 +94,7 @@ namespace gestorLollapalooza.pressLayer
             this.eliminarUsuarioToolStripMenuItem});
             this.gestionUsuariosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.gestionUsuariosToolStripMenuItem.Name = "gestionUsuariosToolStripMenuItem";
-            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             // 
             // consultarUsuarioToolStripMenuItem
@@ -129,6 +132,21 @@ namespace gestorLollapalooza.pressLayer
             this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
             this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
+            // 
+            // gestionGruposMusicalesToolStripMenuItem
+            // 
+            this.gestionGruposMusicalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem});
+            this.gestionGruposMusicalesToolStripMenuItem.Name = "gestionGruposMusicalesToolStripMenuItem";
+            this.gestionGruposMusicalesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.gestionGruposMusicalesToolStripMenuItem.Text = "Gestion Grupos Musicales";
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.consultarToolStripMenuItem.Text = "Consultar Grupos Musicales";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -184,5 +202,7 @@ namespace gestorLollapalooza.pressLayer
         private System.Windows.Forms.ToolStripMenuItem venderEntradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem festivalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionGruposMusicalesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }

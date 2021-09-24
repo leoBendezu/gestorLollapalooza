@@ -1,4 +1,5 @@
-﻿using gestorLollapalooza.presLayer.UsuarioPres;
+﻿using gestorLollapalooza.presLayer.GrupoMusicalPres;
+using gestorLollapalooza.presLayer.UsuarioPres;
 using gestorLollapalooza.pressLayer.UsuarioPres;
 using System;
 using System.Collections.Generic;
@@ -64,9 +65,9 @@ namespace gestorLollapalooza.pressLayer
         {
             
             frmLogin login = new frmLogin();
-            login.ShowDialog();
+            //login.ShowDialog();
 
-            if(login.UsuarioLoggeado == null) { this.Close(); } 
+            //if(login.UsuarioLoggeado == null) { this.Close(); } 
 
             login.Dispose();
         }
@@ -100,6 +101,12 @@ namespace gestorLollapalooza.pressLayer
             {
                 
             }
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaGrupoMusical consultaGrupoMusical = new frmConsultaGrupoMusical();
+            consultaGrupoMusical.ShowDialog();
         }
     }
 }

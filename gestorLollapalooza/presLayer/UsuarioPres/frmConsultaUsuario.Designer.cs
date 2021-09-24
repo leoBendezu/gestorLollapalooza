@@ -365,7 +365,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1033, 543);
+            this.ClientSize = new System.Drawing.Size(1026, 528);
             this.ControlBox = false;
             this.Controls.Add(this.dvgUsuarios);
             this.Controls.Add(this.btnSalir);
