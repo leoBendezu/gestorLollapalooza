@@ -1,7 +1,8 @@
 ﻿
-namespace gestorLollapalooza.pressLayer
+
+namespace gestorLollapalooza.presLayer.UsuarioPres
 {
-    partial class frmRegistrarUsuario
+    partial class frmAltaUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,25 +31,25 @@ namespace gestorLollapalooza.pressLayer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaUsuario));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
+            this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
+            this.lblPerfil = new System.Windows.Forms.Label();
             this.ckbContraseña = new System.Windows.Forms.CheckBox();
+            this.cbPerfil = new System.Windows.Forms.ComboBox();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblContraseña = new System.Windows.Forms.Label();
             this.txtbApellido = new gestorLollapalooza.frmTextBoxFacha();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.txtbEmail = new gestorLollapalooza.frmTextBoxFacha();
             this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
             this.btnCrear = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
-            this.cbPerfil = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblPerfil = new System.Windows.Forms.Label();
             this.gbxUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,31 +61,76 @@ namespace gestorLollapalooza.pressLayer
             // 
             // gbxUsuario
             // 
-            this.gbxUsuario.Controls.Add(this.ckbContraseña);
-            this.gbxUsuario.Controls.Add(this.label2);
-            this.gbxUsuario.Controls.Add(this.label1);
-            this.gbxUsuario.Controls.Add(this.lblNombre);
-            this.gbxUsuario.Controls.Add(this.lblContraseña);
-            this.gbxUsuario.Controls.Add(this.txtbApellido);
-            this.gbxUsuario.Controls.Add(this.lblUsuario);
-            this.gbxUsuario.Controls.Add(this.txtbEmail);
-            this.gbxUsuario.Controls.Add(this.txtbNombre);
-            this.gbxUsuario.Controls.Add(this.txtbUsuario);
             this.gbxUsuario.Controls.Add(this.txtbContraseña);
+            this.gbxUsuario.Controls.Add(this.txtbUsuario);
+            this.gbxUsuario.Controls.Add(this.lblPerfil);
+            this.gbxUsuario.Controls.Add(this.ckbContraseña);
+            this.gbxUsuario.Controls.Add(this.cbPerfil);
+            this.gbxUsuario.Controls.Add(this.lblContraseña);
+            this.gbxUsuario.Controls.Add(this.lblUsuario);
             this.gbxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.gbxUsuario.Location = new System.Drawing.Point(16, 10);
+            this.gbxUsuario.Location = new System.Drawing.Point(29, 273);
             this.gbxUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.gbxUsuario.Name = "gbxUsuario";
             this.gbxUsuario.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxUsuario.Size = new System.Drawing.Size(338, 324);
+            this.gbxUsuario.Size = new System.Drawing.Size(209, 252);
             this.gbxUsuario.TabIndex = 8;
             this.gbxUsuario.TabStop = false;
-            this.gbxUsuario.Text = "Datos del Usuario";
+            this.gbxUsuario.Text = "Datos de Usuario";
+            // 
+            // txtbContraseña
+            // 
+            this.txtbContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbContraseña.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbContraseña.BorderSize = 2;
+            this.txtbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtbContraseña.Location = new System.Drawing.Point(20, 121);
+            this.txtbContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbContraseña.Multiline = false;
+            this.txtbContraseña.Name = "txtbContraseña";
+            this.txtbContraseña.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbContraseña.PasswordChar = true;
+            this.txtbContraseña.Size = new System.Drawing.Size(164, 35);
+            this.txtbContraseña.TabIndex = 5;
+            this.txtbContraseña.Tag = "";
+            this.txtbContraseña.UnderlinedStyle = false;
+            // 
+            // txtbUsuario
+            // 
+            this.txtbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbUsuario.BorderSize = 2;
+            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtbUsuario.Location = new System.Drawing.Point(20, 52);
+            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbUsuario.Multiline = false;
+            this.txtbUsuario.Name = "txtbUsuario";
+            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbUsuario.PasswordChar = false;
+            this.txtbUsuario.Size = new System.Drawing.Size(164, 35);
+            this.txtbUsuario.TabIndex = 4;
+            this.txtbUsuario.Tag = "";
+            this.txtbUsuario.UnderlinedStyle = false;
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblPerfil.Location = new System.Drawing.Point(17, 186);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(123, 19);
+            this.lblPerfil.TabIndex = 0;
+            this.lblPerfil.Text = "Perfil (*) ";
+            this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ckbContraseña
             // 
             this.ckbContraseña.AutoSize = true;
-            this.ckbContraseña.Location = new System.Drawing.Point(136, 270);
+            this.ckbContraseña.Location = new System.Drawing.Point(20, 162);
             this.ckbContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.ckbContraseña.Name = "ckbContraseña";
             this.ckbContraseña.Size = new System.Drawing.Size(153, 20);
@@ -92,51 +138,71 @@ namespace gestorLollapalooza.pressLayer
             this.ckbContraseña.Text = "Mostrar Contraseña";
             this.ckbContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ckbContraseña.UseVisualStyleBackColor = true;
-            this.ckbContraseña.CheckStateChanged += new System.EventHandler(this.ckbContraseña_CheckStateChanged);
+            this.ckbContraseña.CheckedChanged += new System.EventHandler(this.ckbContraseña_CheckedChanged);
             // 
-            // label2
+            // cbPerfil
             // 
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 130);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "        Email  : ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Apellido (*) :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(38, 37);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(90, 38);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre (*) : ";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbPerfil.FormattingEnabled = true;
+            this.cbPerfil.Location = new System.Drawing.Point(17, 209);
+            this.cbPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPerfil.Name = "cbPerfil";
+            this.cbPerfil.Size = new System.Drawing.Size(167, 24);
+            this.cbPerfil.TabIndex = 7;
             // 
             // lblContraseña
             // 
-            this.lblContraseña.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(10, 223);
+            this.lblContraseña.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblContraseña.Location = new System.Drawing.Point(20, 92);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(118, 38);
+            this.lblContraseña.Size = new System.Drawing.Size(120, 25);
             this.lblContraseña.TabIndex = 0;
-            this.lblContraseña.Text = "Contraseña (*) : ";
-            this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblContraseña.Text = "Contraseña (*)";
+            this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblUsuario.Location = new System.Drawing.Point(20, 22);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(86, 25);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuario (*) : ";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.label2.Location = new System.Drawing.Point(20, 168);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Email";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.label1.Location = new System.Drawing.Point(20, 100);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Apellido (*)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblNombre.Location = new System.Drawing.Point(20, 30);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(104, 25);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre (*) ";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtbApellido
             // 
@@ -146,7 +212,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbApellido.BorderSize = 2;
             this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbApellido.ForeColor = System.Drawing.Color.White;
-            this.txtbApellido.Location = new System.Drawing.Point(136, 88);
+            this.txtbApellido.Location = new System.Drawing.Point(20, 129);
             this.txtbApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbApellido.Multiline = false;
             this.txtbApellido.Name = "txtbApellido";
@@ -156,17 +222,6 @@ namespace gestorLollapalooza.pressLayer
             this.txtbApellido.TabIndex = 2;
             this.txtbApellido.UnderlinedStyle = false;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(38, 178);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(90, 38);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "Usuario (*) : ";
-            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtbEmail
             // 
             this.txtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
@@ -175,7 +230,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbEmail.BorderSize = 2;
             this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbEmail.ForeColor = System.Drawing.Color.White;
-            this.txtbEmail.Location = new System.Drawing.Point(136, 133);
+            this.txtbEmail.Location = new System.Drawing.Point(20, 199);
             this.txtbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbEmail.Multiline = false;
             this.txtbEmail.Name = "txtbEmail";
@@ -194,7 +249,7 @@ namespace gestorLollapalooza.pressLayer
             this.txtbNombre.BorderSize = 2;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombre.ForeColor = System.Drawing.Color.White;
-            this.txtbNombre.Location = new System.Drawing.Point(136, 40);
+            this.txtbNombre.Location = new System.Drawing.Point(20, 60);
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
@@ -203,44 +258,6 @@ namespace gestorLollapalooza.pressLayer
             this.txtbNombre.Size = new System.Drawing.Size(164, 35);
             this.txtbNombre.TabIndex = 1;
             this.txtbNombre.UnderlinedStyle = false;
-            // 
-            // txtbUsuario
-            // 
-            this.txtbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbUsuario.BorderSize = 2;
-            this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtbUsuario.Location = new System.Drawing.Point(136, 178);
-            this.txtbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbUsuario.Multiline = false;
-            this.txtbUsuario.Name = "txtbUsuario";
-            this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbUsuario.PasswordChar = false;
-            this.txtbUsuario.Size = new System.Drawing.Size(164, 35);
-            this.txtbUsuario.TabIndex = 4;
-            this.txtbUsuario.Tag = "";
-            this.txtbUsuario.UnderlinedStyle = false;
-            // 
-            // txtbContraseña
-            // 
-            this.txtbContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.txtbContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbContraseña.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbContraseña.BorderSize = 2;
-            this.txtbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtbContraseña.Location = new System.Drawing.Point(136, 226);
-            this.txtbContraseña.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbContraseña.Multiline = false;
-            this.txtbContraseña.Name = "txtbContraseña";
-            this.txtbContraseña.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbContraseña.PasswordChar = true;
-            this.txtbContraseña.Size = new System.Drawing.Size(164, 35);
-            this.txtbContraseña.TabIndex = 5;
-            this.txtbContraseña.Tag = "";
-            this.txtbContraseña.UnderlinedStyle = false;
             // 
             // btnCrear
             // 
@@ -252,15 +269,15 @@ namespace gestorLollapalooza.pressLayer
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(215, 463);
+            this.btnCrear.Location = new System.Drawing.Point(149, 533);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(139, 57);
+            this.btnCrear.Size = new System.Drawing.Size(89, 44);
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = "Crear";
             this.btnCrear.TextColor = System.Drawing.Color.White;
             this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click_1);
             // 
             // btnSalir
             // 
@@ -272,56 +289,41 @@ namespace gestorLollapalooza.pressLayer
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(16, 463);
+            this.btnSalir.Location = new System.Drawing.Point(29, 533);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(139, 57);
+            this.btnSalir.Size = new System.Drawing.Size(89, 44);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
-            // 
-            // cbPerfil
-            // 
-            this.cbPerfil.FormattingEnabled = true;
-            this.cbPerfil.Location = new System.Drawing.Point(155, 34);
-            this.cbPerfil.Margin = new System.Windows.Forms.Padding(4);
-            this.cbPerfil.Name = "cbPerfil";
-            this.cbPerfil.Size = new System.Drawing.Size(163, 24);
-            this.cbPerfil.TabIndex = 7;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblPerfil);
-            this.groupBox1.Controls.Add(this.cbPerfil);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtbApellido);
+            this.groupBox1.Controls.Add(this.txtbEmail);
+            this.groupBox1.Controls.Add(this.txtbNombre);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(16, 353);
+            this.groupBox1.Location = new System.Drawing.Point(29, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(338, 91);
+            this.groupBox1.Size = new System.Drawing.Size(209, 252);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Perfil del Usuario";
+            this.groupBox1.Text = "Datos Personales";
             // 
-            // lblPerfil
-            // 
-            this.lblPerfil.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(20, 26);
-            this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(127, 38);
-            this.lblPerfil.TabIndex = 0;
-            this.lblPerfil.Text = "Perfil (*) :  ";
-            this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // frmRegistrarUsuario
+            // frmAltaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(370, 538);
+            this.ClientSize = new System.Drawing.Size(268, 600);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
@@ -331,7 +333,9 @@ namespace gestorLollapalooza.pressLayer
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmRegistrarUsuario";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmAltaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registrar Usuario";
             this.gbxUsuario.ResumeLayout(false);

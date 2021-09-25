@@ -1,5 +1,6 @@
 ﻿using gestorLollapalooza.bussinesLayer;
 using gestorLollapalooza.dataAccessLayer;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,18 +11,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gestorLollapalooza.pressLayer
+namespace gestorLollapalooza.presLayer.UsuarioPres
 {
-    public partial class frmRegistrarUsuario : Form
+    public partial class frmAltaUsuario : Form
     {
-        private Usuario usuarioObj;
-        private Perfil perfilObj;
+        private UsuarioService usuarioObj;
+        private PerfilService perfilObj;
 
-        public frmRegistrarUsuario()
+        public frmAltaUsuario()
         {
             InitializeComponent();
-            this.usuarioObj = new Usuario();
-            this.perfilObj = new Perfil();
+            this.usuarioObj = new UsuarioService();
+            this.perfilObj = new PerfilService();
             this.CargarCombo(cbPerfil, perfilObj.RecuperarTodos(), "idPerfil", "nombrePerfil");
         }
 
@@ -34,12 +35,12 @@ namespace gestorLollapalooza.pressLayer
         }
 
 
-        private void btnSalir_Click_1(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
+        private void btnCrear_Click_1(object sender, EventArgs e)
         {
 
             if (this.Comprobar())
@@ -65,7 +66,7 @@ namespace gestorLollapalooza.pressLayer
 
                     // Se instancia el nuevo usuario
 
-                    Usuario usuarioN = new Usuario()
+                    Usuario usuarioNuevo = new Usuario()
                     {
                         UsuarioNombre = nombreUsuario,
                         Contrasena = password,
@@ -78,7 +79,7 @@ namespace gestorLollapalooza.pressLayer
                     // Se intenta persistir el usuario en caso de lograrlo se informa y se limpian los txtBox
                     
 
-                    if(usuarioObj.PersistirUsuario(usuarioN))
+                    if(usuarioObj.PersistirUsuario(usuarioNuevo))
                     {
                         MessageBox.Show("Usuario Creado con exito", "info");
                         this.LimpiarTxt();
@@ -143,21 +144,6 @@ namespace gestorLollapalooza.pressLayer
 
         }
 
-        private void ckbContraseña_CheckStateChanged(object sender, EventArgs e)
-        {
-
-            // Permite visualizar la contraseña
-
-            if (this.ckbContraseña.CheckState == CheckState.Checked)
-            {
-                this.txtbContraseña.PasswordChar = false;
-            }
-            else
-            {
-                this.txtbContraseña.PasswordChar = true;
-            }
-            
-        }
 
         private void LimpiarTxt()
         {
@@ -181,5 +167,22 @@ namespace gestorLollapalooza.pressLayer
             this.txtbApellido.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.lblPerfil.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
         }
+
+
+
+        private void ckbContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            // Permite visualizar la contraseña
+
+            if (this.ckbContraseña.CheckState == CheckState.Checked)
+            {
+                this.txtbContraseña.PasswordChar = false;
+            }
+            else
+            {
+                this.txtbContraseña.PasswordChar = true;
+            }
+        }
+
     }
 }

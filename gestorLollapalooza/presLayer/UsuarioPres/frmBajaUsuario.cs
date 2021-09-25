@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,19 +10,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gestorLollapalooza.pressLayer.UsuarioPres
+namespace gestorLollapalooza.presLayer.UsuarioPres
 {
     public partial class frmBajaUsuario : Form
     {
 
-        private Usuario usuarioObj;
-        private Usuario usuarioSelecionado;
+        private UsuarioService usuarioObj;
+        private Usuario usuarioSeleccionado;
 
-        public frmBajaUsuario()
+        public frmBajaUsuario(string usuarioSeleccionado)
         {
             InitializeComponent();
-            this.usuarioObj = new Usuario();
-            CargarCombo(cbUsuario, usuarioObj.RecuperarTodos(), "usuarioNombre", "usuarioNombre");
+            this.usuarioObj = new UsuarioService();
+            this.usuarioSeleccionado = usuarioObj.recuperarUsuario(usuarioSeleccionado);
+            this.CargarDatosUsuario();
+        }
+
+
+        private void CargarDatosUsuario()
+        {
+            this.txtbUsuario.Text = usuarioSeleccionado.UsuarioNombre;
+            this.txtbApellido.Text = usuarioSeleccionado.Apellido;
+            this.txtbEmail.Text = usuarioSeleccionado.Email;
+            this.txtbNombre.Text = usuarioSeleccionado.Nombre;
+            this.txtbPerfil.Text = usuarioSeleccionado.PerfilUsuario.NombrePerfil;
         }
 
 
@@ -32,65 +44,18 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
+            
+            MessageBox.Show("Se eliminara este usuario", "Advertencia");
 
-            // Comprueba que se haya selecionado un usuario
-            if (cbUsuario.SelectedIndex != -1)
+            // intenta realizar la baja, de lograrlo avisa, recarga el comboBox cbUsuario y
+            // limpia los campos
+
+            if (this.usuarioObj.borrarLogicamente(this.usuarioSeleccionado.UsuarioNombre))
             {
-                MessageBox.Show("Se eliminara este usuario", "Advertencia");
-
-                // intenta realizar la baja, de lograrlo avisa, recarga el comboBox cbUsuario y
-                // limpia los campos
-
-                if (this.usuarioObj.borrarLogicamente(this.usuarioSelecionado.UsuarioNombre))
-                {
-                    MessageBox.Show("Se elimino el usuario de forma correcta", "Advertencia");
-                    CargarCombo(cbUsuario, usuarioObj.RecuperarTodos(), "usuarioNombre", "usuarioNombre");
-                    LimpiarTxt();
-                }
-            } else
-            {
-                MessageBox.Show("Debe seleccionar el usuario a eliminar", "Advertencia");
+                MessageBox.Show("Se elimino el usuario de forma correcta", "Advertencia");
             }
-        }
 
-        private void CargarCombo(ComboBox combo, Object fuente, string campoValor, string campoMostrar)
-        {
-            combo.DataSource = fuente;
-            combo.DisplayMember = campoMostrar;
-            combo.ValueMember = campoValor;
-            combo.SelectedIndex = -1;
-        }
+        } 
 
-        private void cbUsuario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Comprueba que se haya selecionado un usuario
-
-            if (cbUsuario.SelectedIndex != -1)
-            {
-                // Recupera y carga los datos del usuario selecionado
-
-                string nombreUsuario = cbUsuario.SelectedValue.ToString();
-                this.usuarioSelecionado = usuarioObj.recuperarUsuario(nombreUsuario);
-                if (usuarioSelecionado!= null)
-                {
-                    this.txtbUsuario.Text = usuarioSelecionado.UsuarioNombre;
-                    this.txtbApellido.Text = usuarioSelecionado.Apellido;
-                    this.txtbEmail.Text = usuarioSelecionado.Email;
-                    this.txtbNombre.Text = usuarioSelecionado.Nombre;
-                    this.txtbPerfil.Text = usuarioSelecionado.PerfilUsuario.NombrePerfil;
-                }
-               
-            }
-        }
-        private void LimpiarTxt()
-        {
-            // Limpia los campos de texto
-
-            this.txtbUsuario.Text = String.Empty;
-            this.txtbApellido.Text = String.Empty;
-            this.txtbEmail.Text = String.Empty;
-            this.txtbNombre.Text = String.Empty;
-            this.txtbPerfil.Text = String.Empty;
-        }
     }
 }

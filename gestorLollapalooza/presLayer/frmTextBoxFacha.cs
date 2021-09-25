@@ -121,6 +121,7 @@ namespace gestorLollapalooza
             }
         }
 
+
         [Category("RJ Code Advance")]
         public string Text
         {
