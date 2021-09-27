@@ -1,14 +1,7 @@
 ﻿using gestorLollapalooza.presLayer.GrupoMusicalPres;
+using gestorLollapalooza.presLayer.LoginPres;
 using gestorLollapalooza.presLayer.UsuarioPres;
-using gestorLollapalooza.pressLayer.UsuarioPres;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gestorLollapalooza.pressLayer
@@ -25,49 +18,28 @@ namespace gestorLollapalooza.pressLayer
 
         }
 
-        private void altaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmRegistrarUsuario altaUsuario = new frmRegistrarUsuario();
-            altaUsuario.ShowDialog();
-        }
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaUsuario consultaUsuario = new frmConsultaUsuario();
+            frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
             consultaUsuario.ShowDialog();
         }
 
-        private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmBajaUsuario bajaUsuario = new frmBajaUsuario();
-            bajaUsuario.ShowDialog();
-        }
 
         private void consultarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaUsuario consultaUsuario = new frmConsultaUsuario();
+            frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
             consultaUsuario.ShowDialog();
         }
 
-        private void registrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmRegistrarUsuario altaUsuario = new frmRegistrarUsuario();
-            altaUsuario.ShowDialog();
-        }
-
-        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmBajaUsuario bajaUsuario = new frmBajaUsuario();
-            bajaUsuario.ShowDialog();
-        }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             
             frmLogin login = new frmLogin();
-            //login.ShowDialog();
+            login.ShowDialog();
 
-            //if(login.UsuarioLoggeado == null) { this.Close(); } 
+            if(login.UsuarioLoggeado == null) { this.Close(); } 
 
             login.Dispose();
         }
@@ -84,11 +56,6 @@ namespace gestorLollapalooza.pressLayer
 ///
         }
 
-        private void modificarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmModificacionUsuario modificacionUsuario = new frmModificacionUsuario();
-            modificacionUsuario.ShowDialog();
-        }
 
         private void salirConConfrimacion()
         {
@@ -107,6 +74,12 @@ namespace gestorLollapalooza.pressLayer
         {
             frmConsultaGrupoMusical consultaGrupoMusical = new frmConsultaGrupoMusical();
             consultaGrupoMusical.ShowDialog();
+        }
+
+        private void gestionUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
+            consultaUsuario.ShowDialog();
         }
     }
 }

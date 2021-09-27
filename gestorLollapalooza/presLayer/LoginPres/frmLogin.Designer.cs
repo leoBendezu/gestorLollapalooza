@@ -1,5 +1,5 @@
 ﻿
-namespace gestorLollapalooza
+namespace gestorLollapalooza.presLayer.LoginPres
 {
     partial class frmLogin
     {

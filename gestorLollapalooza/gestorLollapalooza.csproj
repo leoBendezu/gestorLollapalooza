@@ -110,11 +110,11 @@
     <Compile Include="presLayer\UsuarioPres\frmBajaUsuario.Designer.cs">
       <DependentUpon>frmBajaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="presLayer\UsuarioPres\frmConsultaUsuario.cs">
+    <Compile Include="presLayer\UsuarioPres\frmGestionarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presLayer\UsuarioPres\frmConsultaUsuario.Designer.cs">
-      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    <Compile Include="presLayer\UsuarioPres\frmGestionarUsuario.Designer.cs">
+      <DependentUpon>frmGestionarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="presLayer\UsuarioPres\frmModificacionUsuario.cs">
       <SubType>Form</SubType>
@@ -125,6 +125,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\GrupoMusicalService.cs" />
+    <Compile Include="Service\PerfilService.cs" />
+    <Compile Include="Service\UsuarioService.cs" />
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +154,8 @@
     <EmbeddedResource Include="presLayer\UsuarioPres\frmBajaUsuario.resx">
       <DependentUpon>frmBajaUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presLayer\UsuarioPres\frmConsultaUsuario.resx">
-      <DependentUpon>frmConsultaUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="presLayer\UsuarioPres\frmGestionarUsuario.resx">
+      <DependentUpon>frmGestionarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\UsuarioPres\frmModificacionUsuario.resx">
       <DependentUpon>frmModificacionUsuario.cs</DependentUpon>

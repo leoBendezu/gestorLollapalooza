@@ -3,19 +3,21 @@ using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.Service;
 
-namespace gestorLollapalooza
+namespace gestorLollapalooza.presLayer.LoginPres
 {
     public partial class frmLogin : Form
     {
 
-        private Usuario usuarioLoggeado;
+        private UsuarioService usuarioObj;
 
-        internal Usuario UsuarioLoggeado { get => usuarioLoggeado; set => usuarioLoggeado = value; }
+        internal Usuario UsuarioLoggeado { get; set; }
 
         public frmLogin()
         {
             InitializeComponent();
+            this.usuarioObj = new UsuarioService();
         }
 
 
@@ -27,9 +29,9 @@ namespace gestorLollapalooza
             } 
             else 
             {
-                Usuario usuarioObj = new Usuario();
-                this.usuarioLoggeado = usuarioObj.ValidarCredenciales(this.txtbUsuario.Text, this.txtbPassword.Text);
-                if (this.usuarioLoggeado != null)
+               
+                this.UsuarioLoggeado = usuarioObj.ValidarCredenciales(this.txtbUsuario.Text, this.txtbPassword.Text);
+                if (this.UsuarioLoggeado != null)
                 {
                     this.Close();
                 }

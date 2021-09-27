@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,18 +10,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gestorLollapalooza.pressLayer.UsuarioPres
+namespace gestorLollapalooza.presLayer.UsuarioPres
 {
-    public partial class frmConsultaUsuario : Form
+    public partial class frmGestionarUsuario : Form
     {
-        private Perfil perfilObj;
-        private Usuario usuarioObj;
+        private PerfilService perfilObj;
+        private UsuarioService usuarioObj;
+        private String usuarioNomSeleccionado;
 
-        public frmConsultaUsuario()
+        public frmGestionarUsuario()
         {
             InitializeComponent();
-            this.usuarioObj = new Usuario();
-            this.perfilObj = new Perfil();
+            this.usuarioObj = new UsuarioService();
+            this.perfilObj = new PerfilService();
+
             this.CargarCombo(cbPerfil, perfilObj.RecuperarTodos(), "idPerfil", "nombrePerfil");
         }
 
@@ -38,7 +41,7 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
             // Carga los usuarios recuperados en la grilla
 
             grilla.Rows.Clear();
-            foreach(Usuario usuario in fuente)
+            foreach (Usuario usuario in fuente)
             {
                 grilla.Rows.Add(usuario.UsuarioNombre, usuario.PerfilUsuario.NombrePerfil,
                                 usuario.Nombre, usuario.Apellido, usuario.Email);
@@ -50,9 +53,9 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
 
         private void botonFacha1_Click(object sender, EventArgs e)
         {
-            
-            string  _consulta;
-             _consulta = string.Empty;
+
+            string _consulta;
+            _consulta = string.Empty;
 
             // Comprueba si el checkbox de todos esta selecionado, en caso de estarlo recupera todos los 
             // usuarios y los carga en la grilla.
@@ -86,12 +89,13 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
 
                 // Si la consulta no es nula ni vacia carga la grilla con los usuarios filtrados
 
-                if(!string.IsNullOrEmpty(_consulta))
+                if (!string.IsNullOrEmpty(_consulta))
                 {
                     this.cargarGrilla(dvgUsuarios, usuarioObj.obtenerFiltados(_consulta));
                 }
 
-            } else
+            }
+            else
             {
                 this.cargarGrilla(dvgUsuarios, usuarioObj.RecuperarTodos());
             }
@@ -104,7 +108,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
 
         private void chbTodos_CheckedChanged(object sender, EventArgs e)
         {
-            if(chbTodos.CheckState == CheckState.Checked) {
+            if (chbTodos.CheckState == CheckState.Checked)
+            {
                 this.txtbUsuario.Text = String.Empty;
                 this.txtbApellido.Text = String.Empty;
                 this.txtbEmail.Text = String.Empty;
@@ -117,7 +122,8 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
                 this.txtbNombre.Enabled = false;
                 this.cbPerfil.Enabled = false;
 
-            } else
+            }
+            else
             {
                 this.txtbUsuario.Enabled = true;
                 this.txtbApellido.Enabled = true;
@@ -125,6 +131,37 @@ namespace gestorLollapalooza.pressLayer.UsuarioPres
                 this.txtbNombre.Enabled = true;
                 this.cbPerfil.Enabled = true;
             }
+        }
+
+        private void frmConsultaUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            frmBajaUsuario formularioBaja = new frmBajaUsuario(this.dvgUsuarios.CurrentRow.Cells[0].Value.ToString());
+            formularioBaja.ShowDialog();
+        }
+
+        private void btnModificarClick(object sender, EventArgs e)
+        {
+            frmModificacionUsuario formularioMod = new frmModificacionUsuario(this.dvgUsuarios.CurrentRow.Cells[0].Value.ToString());
+            formularioMod.ShowDialog();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAltaUsuario formulario = new frmAltaUsuario();
+            formulario.ShowDialog();
+
+        }
+
+        private void dvgUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.btnModifcar.Enabled = true;
+            this.btnEliminar.Enabled = true;
+
         }
 
     }
