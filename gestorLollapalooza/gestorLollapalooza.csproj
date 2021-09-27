@@ -62,11 +62,23 @@
     <Compile Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.Designer.cs">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\GrupoMusicalPres\frmBajaGrupoMusical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\GrupoMusicalPres\frmBajaGrupoMusical.Designer.cs">
+      <DependentUpon>frmBajaGrupoMusical.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmConsultaGrupoMusical.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmConsultaGrupoMusical.Designer.cs">
       <DependentUpon>frmConsultaGrupoMusical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\GrupoMusicalPres\frmModificacionGrupoMusical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\GrupoMusicalPres\frmModificacionGrupoMusical.Designer.cs">
+      <DependentUpon>frmModificacionGrupoMusical.cs</DependentUpon>
     </Compile>
     <Compile Include="presLayer\UsuarioPres\frmAltaUsuario.cs">
       <SubType>Form</SubType>
@@ -116,8 +128,14 @@
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmBajaGrupoMusical.resx">
+      <DependentUpon>frmBajaGrupoMusical.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmConsultaGrupoMusical.resx">
       <DependentUpon>frmConsultaGrupoMusical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmModificacionGrupoMusical.resx">
+      <DependentUpon>frmModificacionGrupoMusical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\LoginPres\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

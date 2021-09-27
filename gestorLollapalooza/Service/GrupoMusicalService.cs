@@ -30,7 +30,7 @@ namespace gestorLollapalooza.Service
 
         public bool persistirGrupoMusical(GrupoMusical grupoMusical)
         {
-            return dao.persistirGrupoMusical(grupoMusical);
+            return dao.existeGrupoMusical(grupoMusical);
         }
 
         public bool existeGrupoMusical(string nombre)
@@ -45,6 +45,20 @@ namespace gestorLollapalooza.Service
             grupo.Descripcion = descripcion;
             grupo.CantIntegrantes = cantIntegrantes;
             return grupo;
+        }
+        public GrupoMusical recuperarGrupoMusical(string nombre)
+        {
+            return dao.recuperarGrupo(nombre);
+        }
+
+        public bool borrarGrupo(string nombre)
+        {
+            return dao.borradoLogicamente(nombre);
+        }
+
+        public bool modificarGrupo(GrupoMusical grupo)
+        {
+            return dao.modificarGrupoMusical(grupo);
         }
     }
 }

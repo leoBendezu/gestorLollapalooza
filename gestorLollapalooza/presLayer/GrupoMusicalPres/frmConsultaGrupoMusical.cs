@@ -29,6 +29,8 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         private void frmConsultaGrupoMusical_Load(object sender, EventArgs e)
         {
             this.CargarGrilla(dvgGrupoMusical, oGrupoMusicalService.traerTodos());
+            this.btnEliminar.Enabled = false;
+            this.btnModificar.Enabled = false;
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
@@ -85,6 +87,28 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         {
             frmAltaGrupoMusical alta = new frmAltaGrupoMusical();
             alta.ShowDialog();
+            this.CargarGrilla(dvgGrupoMusical, oGrupoMusicalService.traerTodos());
+        }
+
+        private void dvgGrupoMusical_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.btnModificar.Enabled = true;
+            this.btnEliminar.Enabled = true;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e) //este boton es el eliminar, nose pq no cambia de nombre, en el design esta cambiado
+
+        {
+            frmBajaGrupoMusical frmBaja = new frmBajaGrupoMusical(dvgGrupoMusical.CurrentRow);
+            frmBaja.ShowDialog();
+            this.CargarGrilla(dvgGrupoMusical, oGrupoMusicalService.traerTodos());
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e) //este boton es el de modificar
+        {
+            frmModificacionGrupoMusical frmModificacion = new frmModificacionGrupoMusical(dvgGrupoMusical.CurrentRow);
+            frmModificacion.ShowDialog();
+            this.CargarGrilla(dvgGrupoMusical, oGrupoMusicalService.traerTodos());
         }
     }
 

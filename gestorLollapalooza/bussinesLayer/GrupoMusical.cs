@@ -8,7 +8,7 @@ namespace gestorLollapalooza.bussinesLayer
 {
     class GrupoMusical
     {
-        public string IdGrupoMusical { get; set; }
+        public int IdGrupoMusical { get; set; }
         public int CantIntegrantes { get; set; }
         public string Descripcion { get; set; }
         public string Nombre { get; set; }
