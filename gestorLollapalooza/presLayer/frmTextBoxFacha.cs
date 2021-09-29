@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace gestorLollapalooza
+namespace gestorLollapalooza.presLayer
 {
     public partial class frmTextBoxFacha : UserControl
     {

@@ -34,8 +34,8 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificacionUsuario));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.gbxUsuario = new System.Windows.Forms.GroupBox();
-            this.txtbContraseña = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbContraseña = new gestorLollapalooza.presLayer.frmTextBoxFacha();
+            this.txtbUsuario = new gestorLollapalooza.presLayer.frmTextBoxFacha();
             this.lblPerfil = new System.Windows.Forms.Label();
             this.ckbContraseña = new System.Windows.Forms.CheckBox();
             this.cbPerfil = new System.Windows.Forms.ComboBox();
@@ -44,11 +44,11 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtbApellido = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbEmail = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
-            this.btnCrear = new gestorLollapalooza.BotonFacha();
-            this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.txtbApellido = new gestorLollapalooza.presLayer.frmTextBoxFacha();
+            this.txtbEmail = new gestorLollapalooza.presLayer.frmTextBoxFacha();
+            this.txtbNombre = new gestorLollapalooza.presLayer.frmTextBoxFacha();
+            this.btnCrear = new gestorLollapalooza.presLayer.BotonFacha();
+            this.btnSalir = new gestorLollapalooza.presLayer.BotonFacha();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbxUsuario.SuspendLayout();
             this.groupBox1.SuspendLayout();
