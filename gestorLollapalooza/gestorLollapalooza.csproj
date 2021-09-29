@@ -161,6 +161,7 @@
     <Compile Include="Service\DiaFestivalService.cs" />
     <Compile Include="Service\GrupoMusicalService.cs" />
     <Compile Include="Service\PerfilService.cs" />
+    <Compile Include="Service\PuntoVentaService.cs" />
     <Compile Include="Service\TipoEntradaService.cs" />
     <Compile Include="Service\UsuarioService.cs" />
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
