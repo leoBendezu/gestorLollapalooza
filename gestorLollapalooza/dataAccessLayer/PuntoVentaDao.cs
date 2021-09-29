@@ -147,5 +147,38 @@ namespace gestorLollapalooza.dataAccessLayer
             return puntoVentaObj;
 
         }
+
+        public DataTable obtenerTodosDeUnCentro(int idCentro)
+        {
+
+
+
+            string strSql = "SELECT pv.* " +
+                         "from puntoVenta pv " +
+                         "WHERE pv.borradoLogico = 0 " +
+                         "AND idCentroVenta = " + idCentro;
+
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+        }
+
+        public IList<PuntoVenta> obtenerTodosDeUnCentroListados(int idCentro)
+        {
+            List<PuntoVenta> puntoVentas = new List<PuntoVenta>();
+
+            string strSql = "SELECT pv.* " +
+                         "from puntoVenta pv " +
+                         "WHERE pv.borradoLogico = 0 " +
+                         "AND idCentroVenta = "+ idCentro;
+
+
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                puntoVentas.Add(this.MapearPuntoVenta(row));
+            }
+            return puntoVentas;
+        }
     }
 }

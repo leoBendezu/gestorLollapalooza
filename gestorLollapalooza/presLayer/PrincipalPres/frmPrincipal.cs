@@ -1,4 +1,5 @@
-﻿using gestorLollapalooza.presLayer.GrupoMusicalPres;
+﻿using gestorLollapalooza.presLayer.CentroVentaPres;
+using gestorLollapalooza.presLayer.GrupoMusicalPres;
 using gestorLollapalooza.presLayer.LoginPres;
 using gestorLollapalooza.presLayer.PuntoVentaPres;
 using gestorLollapalooza.presLayer.TipoEntradaPres;
@@ -19,13 +20,13 @@ namespace gestorLollapalooza.pressLayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            /*
             frmLogin login = new frmLogin();
             login.ShowDialog();
 
             if(login.UsuarioLoggeado == null) { this.Close(); } 
 
-            login.Dispose();
+            login.Dispose();*/
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +77,12 @@ namespace gestorLollapalooza.pressLayer
         {
             frmGestionarPuntoVenta gestionarPuntoVenta = new frmGestionarPuntoVenta();
             gestionarPuntoVenta.ShowDialog();
+        }
+
+        private void gestiónCentroDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionarCentroVenta gestionarCentroVenta = new frmGestionarCentroVenta();
+            gestionarCentroVenta.ShowDialog();
         }
     }
 }

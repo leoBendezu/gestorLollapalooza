@@ -2,6 +2,7 @@
 using gestorLollapalooza.dataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,6 +90,16 @@ namespace gestorLollapalooza.Service
             // Si se logra modificar retorna true en caso contrario retorna false 
 
             return this.puntoVentaObj.modificarPuntoVenta(puntoVenta);
+        }
+
+        public DataTable recuperarDeCentro (int idCentro)
+        {
+            return this.puntoVentaObj.obtenerTodosDeUnCentro(idCentro);
+        }
+
+        public IList<PuntoVenta> recuperarDeCentroListados(int idCentro)
+        {
+            return this.puntoVentaObj.obtenerTodosDeUnCentroListados(idCentro);
         }
     }
 }
