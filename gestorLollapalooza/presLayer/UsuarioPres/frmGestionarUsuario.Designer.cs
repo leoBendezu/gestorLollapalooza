@@ -204,12 +204,12 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // txtbEmail
             // 
-            this.txtbEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.txtbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbEmail.BorderSize = 2;
             this.txtbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbEmail.ForeColor = System.Drawing.Color.White;
             this.txtbEmail.Location = new System.Drawing.Point(25, 270);
             this.txtbEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbEmail.Multiline = false;
@@ -252,12 +252,12 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // txtbApellido
             // 
-            this.txtbApellido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.txtbApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbApellido.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbApellido.BorderSize = 2;
             this.txtbApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbApellido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbApellido.ForeColor = System.Drawing.Color.White;
             this.txtbApellido.Location = new System.Drawing.Point(25, 194);
             this.txtbApellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbApellido.Multiline = false;
@@ -270,12 +270,12 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // txtbNombre
             // 
-            this.txtbNombre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbNombre.BorderSize = 2;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbNombre.ForeColor = System.Drawing.Color.White;
             this.txtbNombre.Location = new System.Drawing.Point(25, 123);
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
@@ -288,12 +288,12 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // txtbUsuario
             // 
-            this.txtbUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbUsuario.BorderSize = 2;
             this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.ForeColor = System.Drawing.Color.White;
             this.txtbUsuario.Location = new System.Drawing.Point(25, 54);
             this.txtbUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbUsuario.Multiline = false;
@@ -342,6 +342,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.botonFacha4.Text = "Limpiar";
             this.botonFacha4.TextColor = System.Drawing.Color.White;
             this.botonFacha4.UseVisualStyleBackColor = false;
+            this.botonFacha4.Click += new System.EventHandler(this.botonFacha4_Click);
             // 
             // btnConsultar
             // 
@@ -474,7 +475,6 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.Name = "frmGestionarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestionar Usuario";
-            this.Load += new System.EventHandler(this.frmConsultaUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgUsuarios)).EndInit();
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();

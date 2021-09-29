@@ -110,32 +110,13 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
         {
             if (chbTodos.CheckState == CheckState.Checked)
             {
-                this.txtbUsuario.Text = String.Empty;
-                this.txtbApellido.Text = String.Empty;
-                this.txtbEmail.Text = String.Empty;
-                this.txtbNombre.Text = String.Empty;
-                this.cbPerfil.SelectedIndex = -1;
-
-                this.txtbUsuario.Enabled = false;
-                this.txtbApellido.Enabled = false;
-                this.txtbEmail.Enabled = false;
-                this.txtbNombre.Enabled = false;
-                this.cbPerfil.Enabled = false;
-
+                this.LimpiarTxt();
+                this.Habilitar(false);
             }
             else
             {
-                this.txtbUsuario.Enabled = true;
-                this.txtbApellido.Enabled = true;
-                this.txtbEmail.Enabled = true;
-                this.txtbNombre.Enabled = true;
-                this.cbPerfil.Enabled = true;
+                this.Habilitar(true);
             }
-        }
-
-        private void frmConsultaUsuario_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -164,5 +145,27 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
 
         }
 
+        private void botonFacha4_Click(object sender, EventArgs e)
+        {
+            this.LimpiarTxt();
+        }
+
+        private void LimpiarTxt()
+        {
+            this.txtbUsuario.Text = String.Empty;
+            this.txtbApellido.Text = String.Empty;
+            this.txtbEmail.Text = String.Empty;
+            this.txtbNombre.Text = String.Empty;
+            this.cbPerfil.SelectedIndex = -1;
+        }
+
+        private void Habilitar(bool x)
+        {
+            this.txtbUsuario.Enabled = x;
+            this.txtbApellido.Enabled = x;
+            this.txtbEmail.Enabled = x;
+            this.txtbNombre.Enabled = x;
+            this.cbPerfil.Enabled = x;
+        }
     }
 }
