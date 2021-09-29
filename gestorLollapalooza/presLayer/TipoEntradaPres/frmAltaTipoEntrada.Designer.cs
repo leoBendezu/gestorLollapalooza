@@ -1,7 +1,7 @@
 ﻿
-namespace gestorLollapalooza.presLayer.GrupoMusicalPres
+namespace gestorLollapalooza.presLayer.TipoEntradaPres
 {
-    partial class frmAltaGrupoMusical
+    partial class frmAltaTipoEntrada
     {
         /// <summary>
         /// Required designer variable.
@@ -29,25 +29,20 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaGrupoMusical));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaTipoEntrada));
             this.gbxGrupoMusical = new System.Windows.Forms.GroupBox();
             this.txtbDescripcion = new gestorLollapalooza.frmTextBoxFacha();
-            this.numCantIntegrantes = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
             this.btnCrear = new gestorLollapalooza.BotonFacha();
             this.gbxGrupoMusical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxGrupoMusical
             // 
             this.gbxGrupoMusical.Controls.Add(this.txtbDescripcion);
-            this.gbxGrupoMusical.Controls.Add(this.numCantIntegrantes);
-            this.gbxGrupoMusical.Controls.Add(this.label2);
             this.gbxGrupoMusical.Controls.Add(this.label1);
             this.gbxGrupoMusical.Controls.Add(this.lblNombre);
             this.gbxGrupoMusical.Controls.Add(this.txtbNombre);
@@ -56,10 +51,10 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.gbxGrupoMusical.Margin = new System.Windows.Forms.Padding(4);
             this.gbxGrupoMusical.Name = "gbxGrupoMusical";
             this.gbxGrupoMusical.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxGrupoMusical.Size = new System.Drawing.Size(374, 266);
-            this.gbxGrupoMusical.TabIndex = 15;
+            this.gbxGrupoMusical.Size = new System.Drawing.Size(374, 205);
+            this.gbxGrupoMusical.TabIndex = 16;
             this.gbxGrupoMusical.TabStop = false;
-            this.gbxGrupoMusical.Text = "Datos del grupo musical";
+            this.gbxGrupoMusical.Text = "Datos de Tipo de entrada";
             // 
             // txtbDescripcion
             // 
@@ -69,7 +64,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbDescripcion.BorderSize = 2;
             this.txtbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtbDescripcion.Location = new System.Drawing.Point(11, 156);
+            this.txtbDescripcion.Location = new System.Drawing.Point(14, 141);
             this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbDescripcion.Multiline = false;
             this.txtbDescripcion.Name = "txtbDescripcion";
@@ -79,31 +74,13 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbDescripcion.TabIndex = 4;
             this.txtbDescripcion.UnderlinedStyle = false;
             // 
-            // numCantIntegrantes
-            // 
-            this.numCantIntegrantes.Location = new System.Drawing.Point(209, 219);
-            this.numCantIntegrantes.Name = "numCantIntegrantes";
-            this.numCantIntegrantes.Size = new System.Drawing.Size(120, 20);
-            this.numCantIntegrantes.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 208);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 38);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "   Cantidad de integrantes  : ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 113);
+            this.label1.Location = new System.Drawing.Point(14, 110);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 38);
+            this.label1.Size = new System.Drawing.Size(128, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Descripcion (*) :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,10 +88,10 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             // lblNombre
             // 
             this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(11, 17);
+            this.lblNombre.Location = new System.Drawing.Point(14, 27);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(90, 38);
+            this.lblNombre.Size = new System.Drawing.Size(90, 26);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre (*) : ";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,7 +104,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbNombre.BorderSize = 2;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombre.ForeColor = System.Drawing.Color.White;
-            this.txtbNombre.Location = new System.Drawing.Point(11, 60);
+            this.txtbNombre.Location = new System.Drawing.Point(14, 58);
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
@@ -147,11 +124,11 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(222, 287);
+            this.btnSalir.Location = new System.Drawing.Point(227, 226);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 14;
+            this.btnSalir.TabIndex = 17;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -167,49 +144,44 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.ForeColor = System.Drawing.Color.White;
-            this.btnCrear.Location = new System.Drawing.Point(312, 287);
+            this.btnCrear.Location = new System.Drawing.Point(311, 226);
             this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(76, 43);
-            this.btnCrear.TabIndex = 16;
+            this.btnCrear.TabIndex = 18;
             this.btnCrear.Text = "Crear";
             this.btnCrear.TextColor = System.Drawing.Color.White;
             this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click_1);
             // 
-            // frmAltaGrupoMusical
+            // frmAltaTipoEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(401, 342);
+            this.ClientSize = new System.Drawing.Size(399, 284);
             this.ControlBox = false;
-            this.Controls.Add(this.gbxGrupoMusical);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.gbxGrupoMusical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmAltaGrupoMusical";
+            this.Name = "frmAltaTipoEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Alta Grupo Musical";
+            this.Text = "Alta Tipo de Entrada";
             this.gbxGrupoMusical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantes)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private BotonFacha btnSalir;
-        private BotonFacha btnCrear;
         private System.Windows.Forms.GroupBox gbxGrupoMusical;
-        private System.Windows.Forms.Label label2;
+        private frmTextBoxFacha txtbDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNombre;
         private frmTextBoxFacha txtbNombre;
-        private System.Windows.Forms.NumericUpDown numCantIntegrantes;
-        private frmTextBoxFacha txtbDescripcion;
+        private BotonFacha btnSalir;
+        private BotonFacha btnCrear;
     }
 }

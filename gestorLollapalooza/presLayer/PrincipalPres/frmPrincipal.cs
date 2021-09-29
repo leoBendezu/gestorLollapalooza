@@ -1,5 +1,6 @@
 ﻿using gestorLollapalooza.presLayer.GrupoMusicalPres;
 using gestorLollapalooza.presLayer.LoginPres;
+using gestorLollapalooza.presLayer.TipoEntradaPres;
 using gestorLollapalooza.presLayer.UsuarioPres;
 using System;
 using System.Windows.Forms;
@@ -62,6 +63,12 @@ namespace gestorLollapalooza.pressLayer
         {
             frmConsultaGrupoMusical consultaGrupoMusical = new frmConsultaGrupoMusical();
             consultaGrupoMusical.ShowDialog();
+        }
+
+        private void gestionTipoDeEntradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionarTipoEntrada gestionTipoEntrada = new frmGestionarTipoEntrada();
+            gestionTipoEntrada.ShowDialog();
         }
     }
 }

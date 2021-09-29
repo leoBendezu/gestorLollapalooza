@@ -54,12 +54,14 @@
     <Compile Include="bussinesLayer\GrupoMusical.cs" />
     <Compile Include="bussinesLayer\Perfil.cs" />
     <Compile Include="bussinesLayer\PuntoVenta.cs" />
+    <Compile Include="bussinesLayer\TipoEntrada.cs" />
     <Compile Include="bussinesLayer\Usuario.cs" />
     <Compile Include="dataAccessLayer\BDConexion.cs" />
     <Compile Include="dataAccessLayer\DiaFestivalDao.cs" />
     <Compile Include="dataAccessLayer\GrupoMusicalDao.cs" />
     <Compile Include="dataAccessLayer\PerfilDao.cs" />
     <Compile Include="dataAccessLayer\PuntoVentaDao.cs" />
+    <Compile Include="dataAccessLayer\TipoEntradaDao.cs" />
     <Compile Include="dataAccessLayer\UsuarioDao.cs" />
     <Compile Include="presLayer\BotonFacha.cs">
       <SubType>Component</SubType>
@@ -87,6 +89,30 @@
     </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmModificacionGrupoMusical.Designer.cs">
       <DependentUpon>frmModificacionGrupoMusical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.Designer.cs">
+      <DependentUpon>frmAltaTipoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmBajaTipoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmBajaTipoEntrada.Designer.cs">
+      <DependentUpon>frmBajaTipoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmGestionarTipoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmGestionarTipoEntrada.Designer.cs">
+      <DependentUpon>frmGestionarTipoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmModificacionTipoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\TipoEntradaPres\frmModificacionTipoEntrada.Designer.cs">
+      <DependentUpon>frmModificacionTipoEntrada.cs</DependentUpon>
     </Compile>
     <Compile Include="presLayer\UsuarioPres\frmAltaUsuario.cs">
       <SubType>Form</SubType>
@@ -135,6 +161,7 @@
     <Compile Include="Service\DiaFestivalService.cs" />
     <Compile Include="Service\GrupoMusicalService.cs" />
     <Compile Include="Service\PerfilService.cs" />
+    <Compile Include="Service\TipoEntradaService.cs" />
     <Compile Include="Service\UsuarioService.cs" />
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
@@ -156,6 +183,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\frmTextBoxFacha.resx">
       <DependentUpon>frmTextBoxFacha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.resx">
+      <DependentUpon>frmAltaTipoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\TipoEntradaPres\frmBajaTipoEntrada.resx">
+      <DependentUpon>frmBajaTipoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\TipoEntradaPres\frmGestionarTipoEntrada.resx">
+      <DependentUpon>frmGestionarTipoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\TipoEntradaPres\frmModificacionTipoEntrada.resx">
+      <DependentUpon>frmModificacionTipoEntrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\UsuarioPres\frmAltaUsuario.resx">
       <DependentUpon>frmAltaUsuario.cs</DependentUpon>

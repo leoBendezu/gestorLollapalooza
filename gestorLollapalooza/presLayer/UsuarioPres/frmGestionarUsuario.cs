@@ -16,7 +16,6 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
     {
         private PerfilService perfilObj;
         private UsuarioService usuarioObj;
-        private String usuarioNomSeleccionado;
 
         public frmGestionarUsuario()
         {
@@ -167,5 +166,6 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbNombre.Enabled = x;
             this.cbPerfil.Enabled = x;
         }
+
     }
 }

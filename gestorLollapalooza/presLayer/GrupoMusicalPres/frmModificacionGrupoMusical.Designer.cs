@@ -29,6 +29,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModificacionGrupoMusical));
             this.btnSalir = new gestorLollapalooza.BotonFacha();
             this.btnModificar = new gestorLollapalooza.BotonFacha();
             this.gbxGrupoMusical = new System.Windows.Forms.GroupBox();
@@ -57,7 +58,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(72, 42);
             this.btnSalir.TabIndex = 20;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -182,13 +183,15 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(401, 340);
+            this.ControlBox = false;
             this.Controls.Add(this.gbxGrupoMusical);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnModificar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModificacionGrupoMusical";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmModificacionGrupoMusical";
+            this.Text = "Modificar Grupo Musical";
             this.Load += new System.EventHandler(this.frmModificacionGrupoMusical_Load);
             this.gbxGrupoMusical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantes)).EndInit();
