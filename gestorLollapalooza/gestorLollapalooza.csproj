@@ -90,6 +90,30 @@
     <Compile Include="presLayer\GrupoMusicalPres\frmModificacionGrupoMusical.Designer.cs">
       <DependentUpon>frmModificacionGrupoMusical.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmAltaPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmAltaPuntoVenta.Designer.cs">
+      <DependentUpon>frmAltaPuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmBajaPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmBajaPuntoVenta.Designer.cs">
+      <DependentUpon>frmBajaPuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmGestionarPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmGestionarPuntoVenta.Designer.cs">
+      <DependentUpon>frmGestionarPuntoVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.Designer.cs">
+      <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +208,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\frmTextBoxFacha.resx">
       <DependentUpon>frmTextBoxFacha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\PuntoVentaPres\frmAltaPuntoVenta.resx">
+      <DependentUpon>frmAltaPuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\PuntoVentaPres\frmBajaPuntoVenta.resx">
+      <DependentUpon>frmBajaPuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\PuntoVentaPres\frmGestionarPuntoVenta.resx">
+      <DependentUpon>frmGestionarPuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.resx">
+      <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.resx">
       <DependentUpon>frmAltaTipoEntrada.cs</DependentUpon>

@@ -31,7 +31,8 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dvgTipoEntrada = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPuntoVenta));
+            this.dvgPuntoVenta = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NroCentroVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,26 +45,26 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
-            this.btnLimpiar = new gestorLollapalooza.BotonFacha();
-            this.btnConsultar = new gestorLollapalooza.BotonFacha();
             this.btnModificar = new gestorLollapalooza.BotonFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.btnAgregar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgTipoEntrada)).BeginInit();
+            this.btnLimpiar = new gestorLollapalooza.BotonFacha();
+            this.btnConsultar = new gestorLollapalooza.BotonFacha();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPuntoVenta)).BeginInit();
             this.gbxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCentroVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPuntoVenta)).BeginInit();
             this.SuspendLayout();
             // 
-            // dvgTipoEntrada
+            // dvgPuntoVenta
             // 
-            this.dvgTipoEntrada.AllowUserToAddRows = false;
-            this.dvgTipoEntrada.AllowUserToDeleteRows = false;
-            this.dvgTipoEntrada.AllowUserToResizeColumns = false;
-            this.dvgTipoEntrada.AllowUserToResizeRows = false;
-            this.dvgTipoEntrada.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.dvgTipoEntrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dvgPuntoVenta.AllowUserToAddRows = false;
+            this.dvgPuntoVenta.AllowUserToDeleteRows = false;
+            this.dvgPuntoVenta.AllowUserToResizeColumns = false;
+            this.dvgPuntoVenta.AllowUserToResizeRows = false;
+            this.dvgPuntoVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.dvgPuntoVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
@@ -71,10 +72,10 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgTipoEntrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dvgTipoEntrada.ColumnHeadersHeight = 30;
-            this.dvgTipoEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dvgTipoEntrada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgPuntoVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dvgPuntoVenta.ColumnHeadersHeight = 30;
+            this.dvgPuntoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dvgPuntoVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.numero,
             this.NroCentroVenta});
@@ -85,17 +86,18 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgTipoEntrada.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dvgTipoEntrada.EnableHeadersVisualStyles = false;
-            this.dvgTipoEntrada.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.dvgTipoEntrada.Location = new System.Drawing.Point(331, 13);
-            this.dvgTipoEntrada.Name = "dvgTipoEntrada";
-            this.dvgTipoEntrada.ReadOnly = true;
-            this.dvgTipoEntrada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dvgTipoEntrada.RowHeadersVisible = false;
-            this.dvgTipoEntrada.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dvgTipoEntrada.Size = new System.Drawing.Size(505, 280);
-            this.dvgTipoEntrada.TabIndex = 7;
+            this.dvgPuntoVenta.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dvgPuntoVenta.EnableHeadersVisualStyles = false;
+            this.dvgPuntoVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.dvgPuntoVenta.Location = new System.Drawing.Point(331, 13);
+            this.dvgPuntoVenta.Name = "dvgPuntoVenta";
+            this.dvgPuntoVenta.ReadOnly = true;
+            this.dvgPuntoVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dvgPuntoVenta.RowHeadersVisible = false;
+            this.dvgPuntoVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dvgPuntoVenta.Size = new System.Drawing.Size(505, 291);
+            this.dvgPuntoVenta.TabIndex = 7;
+            this.dvgPuntoVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPuntoVenta_CellClick);
             // 
             // nombre
             // 
@@ -131,7 +133,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
             this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxFiltros.Size = new System.Drawing.Size(283, 227);
+            this.gbxFiltros.Size = new System.Drawing.Size(283, 237);
             this.gbxFiltros.TabIndex = 8;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
@@ -170,6 +172,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.chbTodos.Text = "Consultar Todos";
             this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chbTodos.UseVisualStyleBackColor = true;
+            this.chbTodos.CheckedChanged += new System.EventHandler(this.chbTodos_CheckedChanged);
             // 
             // label4
             // 
@@ -218,43 +221,6 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.txtbNombre.TabIndex = 4;
             this.txtbNombre.UnderlinedStyle = false;
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLimpiar.BorderRadius = 20;
-            this.btnLimpiar.BorderSize = 0;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(13, 247);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(93, 42);
-            this.btnLimpiar.TabIndex = 15;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextColor = System.Drawing.Color.White;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnConsultar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnConsultar.BorderRadius = 20;
-            this.btnConsultar.BorderSize = 0;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(203, 247);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(93, 42);
-            this.btnConsultar.TabIndex = 14;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextColor = System.Drawing.Color.White;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            // 
             // btnModificar
             // 
             this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
@@ -262,6 +228,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnModificar.BorderRadius = 20;
             this.btnModificar.BorderSize = 0;
+            this.btnModificar.Enabled = false;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
@@ -272,6 +239,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -280,6 +248,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnEliminar.BorderRadius = 20;
             this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
@@ -290,6 +259,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -308,6 +278,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnSalir
             // 
@@ -327,13 +298,55 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderRadius = 20;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(13, 262);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(93, 42);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnConsultar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConsultar.BorderRadius = 20;
+            this.btnConsultar.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(203, 262);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(93, 42);
+            this.btnConsultar.TabIndex = 14;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.TextColor = System.Drawing.Color.White;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmGestionarPuntoVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(962, 312);
+            this.ClientSize = new System.Drawing.Size(962, 320);
+            this.ControlBox = false;
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
@@ -341,10 +354,13 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.gbxFiltros);
-            this.Controls.Add(this.dvgTipoEntrada);
+            this.Controls.Add(this.dvgPuntoVenta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGestionarPuntoVenta";
-            this.Text = "GestionarPuntoVenta";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgTipoEntrada)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Gestionar Punto Venta";
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPuntoVenta)).EndInit();
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCentroVenta)).EndInit();
@@ -355,7 +371,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dvgTipoEntrada;
+        private System.Windows.Forms.DataGridView dvgPuntoVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn NroCentroVenta;

@@ -53,13 +53,13 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
 
                 if (!string.IsNullOrEmpty(_consulta))
                 {
-                    this.cargarGrilla(dvgTipoEntrada, puntoVentaService.obtenerFiltados(_consulta));
+                    this.cargarGrilla(dvgPuntoVenta, puntoVentaService.obtenerFiltados(_consulta));
                 }
 
             }
             else
             {
-                this.cargarGrilla(dvgTipoEntrada, puntoVentaService.RecuperarTodos());
+                this.cargarGrilla(dvgPuntoVenta, puntoVentaService.RecuperarTodos());
             }
         }
 
@@ -114,7 +114,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
 
 
 
-        private void dvgTipoEntrada_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dvgPuntoVenta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             this.btnModificar.Enabled = true;
             this.btnEliminar.Enabled = true;
@@ -125,23 +125,25 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.Close();
         }
 
-        /*
+        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAltaTipoEntrada alta = new frmAltaTipoEntrada();
+            frmAltaPuntoVenta alta = new frmAltaPuntoVenta();
             alta.ShowDialog();
         }
 
+
+        
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmModificacionTipoEntrada formularioMod = new frmModificacionTipoEntrada(this.dvgTipoEntrada.CurrentRow.Cells[0].Value.ToString());
+            frmModificarPuntoVenta formularioMod = new frmModificarPuntoVenta(this.dvgPuntoVenta.CurrentRow.Cells[0].Value.ToString());
             formularioMod.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            frmBajaTipoEntrada formularioBaja = new frmBajaTipoEntrada(this.dvgTipoEntrada.CurrentRow.Cells[0].Value.ToString());
+            frmBajaPuntoVenta formularioBaja = new frmBajaPuntoVenta(this.dvgPuntoVenta.CurrentRow.Cells[0].Value.ToString());
             formularioBaja.ShowDialog();
-        } */
+        } 
     }
 }

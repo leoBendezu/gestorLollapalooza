@@ -97,7 +97,7 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "UPDATE puntoVenta  SET " +
                             "nombre = '" + puntoVenta.NombrePuntoVenta + "'," +
                             "numero = '" + puntoVenta.NumeroPuntoVenta.ToString() + "'" +
-                            "WHERE idTipoEntrada = " + puntoVenta.IdPuntoVenta.ToString();
+                            "WHERE idPuntoVenta = " + puntoVenta.IdPuntoVenta.ToString();
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
         }
