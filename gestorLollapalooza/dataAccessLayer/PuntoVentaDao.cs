@@ -10,43 +10,109 @@ namespace gestorLollapalooza.dataAccessLayer
 {
     class PuntoVentaDao
     {
-        /*
         public IList<PuntoVenta> obtenerTodos()
         {
-            // Metodo encargado de recuperar todos los punto de venta de la Base de datos, no recibe parametros
+            // Metodo encargado de recuperar todos los usuarios de la Base de datos, no recibe parametros
             // Se conecta con el BDhelper para ejecutar la consulta strSql.
-            // Recorre el resultado de la consulta convirtiendo cada fila en un objeto puntoventa mediante el metodo
+            // Recorre el resultado de la consulta convirtiendo cada fila en un objeto usuario mediante el metodo
             // MapearUsuario(), luego retorna una lista con los usuarios.
 
-            List<PuntoVenta> usuarios = new List<PuntoVenta>();
+            List<PuntoVenta> puntoVentas = new List<PuntoVenta>();
 
-            string strSql = "SELECT u.*, p.idPuntoVenta, p.nombre " +
-                         "from PuntoVenta u JOIN CentroVenta p ON(u.idCentroVenta = p.idCentroVenta) " +
-                         "WHERE u.borradoLogico = 0 ";
+            string strSql = "SELECT pv.* " +
+                         "from puntoVenta pv " +
+                         "WHERE pv.borradoLogico = 0 ";
 
 
             var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
 
             foreach (DataRow row in resultadoConsulta.Rows)
             {
-                usuarios.Add(this.MapearPuntoVenta(row));
+                puntoVentas.Add(this.MapearPuntoVenta(row));
             }
-            return usuarios;
+            return puntoVentas;
         }
 
+        public IList<PuntoVenta> recuperarFiltrados(string filtros)
+        {
+            // Metodo encargado de recuperar todos los usuarios de la Base de datos que cumplan con ciertos filtros,
+            // recibe como parametros:
+            // * String filtros
+            // Se conecta con el BDhelper para ejecutar la consulta strSql.
+            // Recorre el resultado de la consulta convirtiendo cada fila en un objeto usuario mediante el metodo
+            // MapearUsuario(), luego retorna una lista con los usuarios.
 
-        public Usuario recuperarPuntoVenta(string nombrePuntoVenta)
+            IList<PuntoVenta> puntoVentas = new List<PuntoVenta>();
+            string strSql = "SELECT pv.* " +
+                             "from puntoVenta pv " +
+                             "WHERE pv.borradoLogico = 0 " + filtros;
+
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                puntoVentas.Add(this.MapearPuntoVenta(row));
+            }
+            return puntoVentas;
+        }
+
+        public bool persistirPuntoVenta(PuntoVenta puntoVenta)
+        {
+            // Metodo encargado de guardar un usuario en la base de datos, recibe como parametros:
+            // Usuario usuario
+            // Se conecta con el BDhelper para ejecutar la consulta strSql.
+            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
+            // en caso de serlo retorna true en caso contrario retorna false
+
+            string strSql = "INSERT INTO [dbo].[puntoVenta] ([nombre], [numero], [idCentroVenta])" +
+                "VALUES ( ' " +
+                puntoVenta.NombrePuntoVenta + "'," +
+                puntoVenta.NumeroPuntoVenta + "," +
+                puntoVenta.IdCentroVenta + ");";
+
+            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+        }
+
+        public bool borradoLogicamente(string nombre)
+        {
+            // Metodo encargado de darle borrado logico a un usuario, recibe como parametros:
+            // * String nombreUsuario
+            // Se conecta con el BDhelper para ejecutar la consulta strSql.
+            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
+            // en caso de serlo retorna true en caso contrario retorna false
+
+            string strSql = "UPDATE puntoVenta  SET borradoLogico = 1" +
+                               "WHERE nombre= '" + nombre + "';";
+            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+        }
+
+        public bool modificarPuntoVenta(PuntoVenta puntoVenta)
+        {
+            // Metodo encargado modificar los datos de un usuario, recibe como parametros:
+            // * Usuario usuario
+            // Se conecta con el BDhelper para ejecutar la consulta strSql.
+            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
+            // en caso de serlo retorna true en caso contrario retorna false
+
+            string strSql = "UPDATE puntoVenta  SET " +
+                            "nombre = '" + puntoVenta.NombrePuntoVenta + "'," +
+                            "numero = '" + puntoVenta.NumeroPuntoVenta.ToString() + "'" +
+                            "WHERE idTipoEntrada = " + puntoVenta.IdPuntoVenta.ToString();
+
+            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+        }
+
+        public PuntoVenta recuperarPuntoVenta(string nombre)
         {
             // Metodo encargado de recuperar un usuario especifico de la Base de datos, recibe como parametros:
-            // * String nombrePuntoVenta
+            // * String nombreUsuario
             // Se conecta con el BDhelper para ejecutar la consulta strSql.
             // Revisa que el resultado de la consulta sea por lo menos una fila, de ser asi la convierte en 
             // un objeto usuario mediante el metodo MapearUsuario(), luego retorna dicho usuario.
-
-            string strSql = "SELECT u.*, p.idCentroVenta, p.nombre " +
-                            "from PuntoVenta u JOIN centroventa p ON(u.idCentroVenta = p.idCentroVenta) " +
-                            "WHERE u.borradoLogico = 0 " +
-                            " AND PuntoVenta=" + "'" + nombre + "'";
+            string strSql = "SELECT pv.*" +
+                             "from puntoVenta pv " +
+                             "WHERE pv.borradoLogico = 0 "+
+                                "AND pv.nombre like '" + nombre + "';";
 
 
             var resultado = BDConexion.getBDConexion().EjecutarSQL(strSql);
@@ -59,109 +125,27 @@ namespace gestorLollapalooza.dataAccessLayer
             return null;
         }
 
-        public bool borradoLogicamente(string nombrePuntoVenta)
-        {
-            // Metodo encargado de darle borrado logico a un usuario, recibe como parametros:
-            // * String nombrePuntoVenta
-            // Se conecta con el BDhelper para ejecutar la consulta strSql.
-            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
-            // en caso de serlo retorna true en caso contrario retorna false
-
-            string strSql = "UPDATE PuntoVenta  SET borradoLogico = 1" +
-                               "WHERE PuntVenta= '" + nombrePuntoVenta + "'";
-            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
-        }
-
-        public bool modificarPuntoVenta(PuntoVenta puntoVenta)
-        {
-            // Metodo encargado modificar los datos de un punto de venta, recibe como parametros:
-            // *PuntoVenta puntoVenta
-            // Se conecta con el BDhelper para ejecutar la consulta strSql.
-            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
-            // en caso de serlo retorna true en caso contrario retorna false
-
-            string strSql = "UPDATE PuntoVenta  SET " +
-                            "nombre = '" + puntoVenta.nombrePuntoVenta + "'," +
-                            "numero = '" + puntoVenta.numeroPuntoVenta + "',";
-
-            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
-        }
-
-        public bool persistirPuntoVenta(PuntoVenta puntoVenta)
-        {
-            // Metodo encargado de guardar un usuario en la base de datos, recibe como parametros:
-            // PuntoVenta puntoVenta
-            // Se conecta con el BDhelper para ejecutar la consulta strSql.
-            // Revisa que el resultado de la consulta sea correco ( igual a 1 )
-            // en caso de serlo retorna true en caso contrario retorna false
-
-            string strSql = "INSERT INTO [dbo].[puntoVenta] ([idPuntoVenta], [nombre], [numero])" +
-                "VALUES ( " +
-                puntoVenta.idPuntoVenta.IdCentroVenta + " , '" +
-                puntoVenta.PuntoVentaNombre + "' , '" +
-                puntoVenta.PuntoVentaNumero + "' , '";
-
-            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
-        }
-
-        public IList<PuntoVenta> recuperarFiltrados(string filtros)
-        {
-            // Metodo encargado de recuperar todos los usuarios de la Base de datos que cumplan con ciertos filtros,
-            // recibe como parametros:
-            // * String filtros
-            // Se conecta con el BDhelper para ejecutar la consulta strSql.
-            // Recorre el resultado de la consulta convirtiendo cada fila en un objeto usuario mediante el metodo
-            // MapearUsuario(), luego retorna una lista con los usuarios.
-
-            IList<PuntoVenta> puntoVenta = new List<PuntoVenta>();
-            string strSql = "SELECT u.*, p.idCentroVenta, p.nombre " +
-                            "from puntoVenta u JOIN centroVenta p ON(u.idCentroVenta = p.idCentroVenta) " +
-                            "WHERE u.borradoLogico = 0 " + filtros;
-
-            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
-
-            foreach (DataRow row in resultadoConsulta.Rows)
-            {
-                usuarios.Add(this.MapearPuntoVenta(row));
-            }
-            return puntoVenta;
-        }
-
-
         public PuntoVenta MapearPuntoVenta(DataRow row)
         {
-
-            // Metodo encargado de convertir una fila en un objeto Usuario
-
-            // Recuperamos los atributos del usuario de SQL a C#
             int idPuntoVenta = Convert.ToInt32(row["idPuntoVenta"].ToString());
-            string nombrePuntoVenta = row["nombre"].ToString();
-            string numero = row["numero"].ToString();
-
-
-            // Recuperamos los atributos del perfil del usuario de SQL a C#
-
+            int numero = Convert.ToInt32(row["numero"].ToString());
             int idCentroVenta = Convert.ToInt32(row["idCentroVenta"].ToString());
-            string nombreCentroVenta = row["nombre"].ToString();
+            string nombre = row["nombre"].ToString();
 
 
-            // Instanciamos el perfil recuperado de la BD
-            CentroVenta centroVenta = new CentroVenta()
-            {
-                IdCentroVenta = idCentroVenta,
-                nombreCentroVenta = nombreCentroVenta
-
-            };
-
-            // Instanciamos el usuario recuperado de la BD
             PuntoVenta puntoVentaObj = new PuntoVenta()
             {
                 IdPuntoVenta = idPuntoVenta,
-                NombrePuntoVenta = nombrePuntoVenta
-
+                NombrePuntoVenta = nombre,
+                NumeroPuntoVenta = numero,
+                IdCentroVenta = idCentroVenta
             };
 
+
+
+
             return puntoVentaObj;
-        }*/
+
+        }
     }
 }
