@@ -55,16 +55,19 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
                 // intenta realizar la baja, de lograrlo avisa, recarga el comboBox cbUsuario y
                 // limpia los campos
-
+                
+                
             
 
                 if (this.GrupoService.borrarGrupo(oGrupoMusical.Nombre))
                 {
                     MessageBox.Show("Se elimino el usuario de forma correcta", "Advertencia");
-
+                    this.Close();
                 }
             
 
         }
+
+
     }
 }

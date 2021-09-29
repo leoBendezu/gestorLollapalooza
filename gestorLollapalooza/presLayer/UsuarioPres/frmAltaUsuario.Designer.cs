@@ -331,6 +331,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.Controls.Add(this.gbxUsuario);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

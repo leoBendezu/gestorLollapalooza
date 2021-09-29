@@ -110,6 +110,40 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             frmModificacion.ShowDialog();
             this.CargarGrilla(dvgGrupoMusical, oGrupoMusicalService.traerTodos());
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.LimpiarTxt();
+        }
+
+        private void LimpiarTxt()
+        {
+            this.txtbDescripcion.Text = String.Empty;
+            this.txtbNombre.Text = String.Empty;
+            this.numCantIntegrantes.Value = 0;
+        }
+
+        private void Habilitar(bool x)
+        {
+            this.numCantIntegrantes.Enabled = x;
+            this.txtbNombre.Enabled = x;
+            this.txtbDescripcion.Enabled = x;
+        }
+
+        private void chbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            {
+                if (chbTodos.CheckState == CheckState.Checked)
+                {
+                    this.LimpiarTxt();
+                    this.Habilitar(false);
+                }
+                else
+                {
+                    this.Habilitar(true);
+                }
+            }
+        }
     }
 
 

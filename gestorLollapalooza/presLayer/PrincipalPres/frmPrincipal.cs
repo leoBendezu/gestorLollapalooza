@@ -13,24 +13,6 @@ namespace gestorLollapalooza.pressLayer
             InitializeComponent();
         }
 
-        private void aBMCUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
-            consultaUsuario.ShowDialog();
-        }
-
-
-        private void consultarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
-            consultaUsuario.ShowDialog();
-        }
 
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -70,16 +52,16 @@ namespace gestorLollapalooza.pressLayer
             }
         }
 
-        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultaGrupoMusical consultaGrupoMusical = new frmConsultaGrupoMusical();
-            consultaGrupoMusical.ShowDialog();
-        }
-
         private void gestionUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmGestionarUsuario consultaUsuario = new frmGestionarUsuario();
             consultaUsuario.ShowDialog();
+        }
+
+        private void gestionGruposMusicalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaGrupoMusical consultaGrupoMusical = new frmConsultaGrupoMusical();
+            consultaGrupoMusical.ShowDialog();
         }
     }
 }

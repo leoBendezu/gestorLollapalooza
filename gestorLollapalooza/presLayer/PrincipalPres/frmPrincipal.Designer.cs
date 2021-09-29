@@ -36,7 +36,6 @@ namespace gestorLollapalooza.pressLayer
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -91,18 +90,10 @@ namespace gestorLollapalooza.pressLayer
             // 
             // gestionGruposMusicalesToolStripMenuItem
             // 
-            this.gestionGruposMusicalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarToolStripMenuItem});
             this.gestionGruposMusicalesToolStripMenuItem.Name = "gestionGruposMusicalesToolStripMenuItem";
             this.gestionGruposMusicalesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.gestionGruposMusicalesToolStripMenuItem.Text = "Gestion Grupos Musicales";
-            // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
-            this.consultarToolStripMenuItem.Text = "Consultar Grupos Musicales";
-            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            this.gestionGruposMusicalesToolStripMenuItem.Click += new System.EventHandler(this.gestionGruposMusicalesToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -155,6 +146,5 @@ namespace gestorLollapalooza.pressLayer
         private System.Windows.Forms.ToolStripMenuItem festivalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionGruposMusicalesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }

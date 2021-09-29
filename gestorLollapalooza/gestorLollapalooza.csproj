@@ -53,11 +53,13 @@
     <Compile Include="bussinesLayer\Festival.cs" />
     <Compile Include="bussinesLayer\GrupoMusical.cs" />
     <Compile Include="bussinesLayer\Perfil.cs" />
+    <Compile Include="bussinesLayer\PuntoVenta.cs" />
     <Compile Include="bussinesLayer\Usuario.cs" />
     <Compile Include="dataAccessLayer\BDConexion.cs" />
     <Compile Include="dataAccessLayer\DiaFestivalDao.cs" />
     <Compile Include="dataAccessLayer\GrupoMusicalDao.cs" />
     <Compile Include="dataAccessLayer\PerfilDao.cs" />
+    <Compile Include="dataAccessLayer\PuntoVentaDao.cs" />
     <Compile Include="dataAccessLayer\UsuarioDao.cs" />
     <Compile Include="presLayer\BotonFacha.cs">
       <SubType>Component</SubType>
