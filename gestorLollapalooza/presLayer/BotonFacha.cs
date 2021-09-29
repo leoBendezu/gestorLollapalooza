@@ -9,7 +9,7 @@ using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
 
-namespace gestorLollapalooza.presLayer
+namespace gestorLollapalooza
 {
     public class BotonFacha : Button
     {
