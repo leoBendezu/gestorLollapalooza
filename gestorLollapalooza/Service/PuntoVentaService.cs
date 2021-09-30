@@ -92,7 +92,7 @@ namespace gestorLollapalooza.Service
             return this.puntoVentaObj.modificarPuntoVenta(puntoVenta);
         }
 
-        public DataTable recuperarDeCentro (int idCentro)
+        public IList<PuntoVenta> recuperarDeCentro (int idCentro)
         {
             return this.puntoVentaObj.obtenerTodosDeUnCentro(idCentro);
         }

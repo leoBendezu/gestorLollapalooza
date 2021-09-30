@@ -148,10 +148,10 @@ namespace gestorLollapalooza.dataAccessLayer
 
         }
 
-        public DataTable obtenerTodosDeUnCentro(int idCentro)
+        public IList<PuntoVenta> obtenerTodosDeUnCentro(int idCentro)
         {
 
-
+            IList<PuntoVenta> puntoVentas = new List<PuntoVenta>();
 
             string strSql = "SELECT pv.* " +
                          "from puntoVenta pv " +
@@ -159,7 +159,13 @@ namespace gestorLollapalooza.dataAccessLayer
                          "AND idCentroVenta = " + idCentro;
 
 
-            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                puntoVentas.Add(this.MapearPuntoVenta(row));
+            }
+            return puntoVentas;
         }
 
         public IList<PuntoVenta> obtenerTodosDeUnCentroListados(int idCentro)

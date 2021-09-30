@@ -14,10 +14,13 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 {
     public partial class frmAltaCentroVenta : Form
     {
-        CentroVentaService oCentro = new CentroVentaService();
+        private CentroVentaService oCentro;
+        private IList<PuntoVenta> puntosVentaAgregados;
         public frmAltaCentroVenta()
         {
             InitializeComponent();
+            this.oCentro =  new CentroVentaService();
+            this.puntosVentaAgregados = new List<PuntoVenta>();
         }
 
         private void gbxGrupoMusical_Enter(object sender, EventArgs e)
@@ -44,12 +47,18 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
             }
 
+            if(puntosVentaAgregados.Count == 0)
+            {
+                MessageBox.Show("Debe agregar al menos un punto de venta");
+                band = false;
+            }
+
 
             return band;
 
         }
 
-        private void LimpiarTxt()
+        private void LimpiarTxtCentroVenta()
         {
             // Limpia los campos de texto
 
@@ -84,7 +93,8 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
                     CentroVenta centroVentaN = new CentroVenta()
                     {
-                        Nombre = nombreCentroVenta
+                        Nombre = nombreCentroVenta,
+                        puntosDeVenta = puntosVentaAgregados,
                     };
 
                     // Se intenta persistir el centro de venta en caso de lograrlo se informa y se limpian los txtBox
@@ -93,7 +103,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
                     if (oCentro.PersistirCentroVenta(centroVentaN))
                     {
                         MessageBox.Show("Centro de Venta Creado con exito", "info");
-                        this.LimpiarTxt();
+                        this.LimpiarTxtCentroVenta();
                         this.resetearColor();
 
                     }
@@ -105,7 +115,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
                 else
                 {
                     MessageBox.Show("Ya existe dicho Centro de Venta");
-                    this.LimpiarTxt();
+                    this.LimpiarTxtCentroVenta();
                     this.resetearColor();
                 }
 
@@ -115,6 +125,40 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
                 MessageBox.Show("Los campos en rojo deben ser completados obligatoriamente");
             }
         }
-    
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            PuntoVenta puntoVenta = new PuntoVenta()
+            {
+                NombrePuntoVenta = this.txtbNombrePv.Text,
+                NumeroPuntoVenta = (int) this.numPuntoVenta.Value
+            };
+
+            puntosVentaAgregados.Add(puntoVenta);
+
+            this.dgvPuntoVenta.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta);
+                
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if(this.dgvPuntoVenta.CurrentRow != null)
+            {
+
+
+                var puntoVenta = (PuntoVenta)dgvPuntoVenta.CurrentRow.DataBoundItem;
+                   
+                
+                puntosVentaAgregados.Remove(puntoVenta);
+                this.dgvPuntoVenta.Rows.Remove(dgvPuntoVenta.CurrentRow);
+            }
+            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            this.dgvPuntoVenta.Rows.Clear();
+            puntosVentaAgregados.Clear();
+        }
     }
 }

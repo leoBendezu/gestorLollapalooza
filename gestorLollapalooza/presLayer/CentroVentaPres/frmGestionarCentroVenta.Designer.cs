@@ -29,10 +29,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.botonFacha4 = new gestorLollapalooza.BotonFacha();
             this.btnConsultar = new gestorLollapalooza.BotonFacha();
             this.botonFacha3 = new gestorLollapalooza.BotonFacha();
@@ -43,10 +43,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnModifcar = new gestorLollapalooza.BotonFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.dgvCentroVenta = new System.Windows.Forms.DataGridView();
-            this.btnSalir = new gestorLollapalooza.BotonFacha();
-            this.dgvPuntoVenta = new System.Windows.Forms.DataGridView();
             this.idCentroVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.dgvPuntoVenta = new System.Windows.Forms.DataGridView();
             this.idPuntoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePuntoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.botonFacha4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonFacha4.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
             this.botonFacha4.ForeColor = System.Drawing.Color.White;
-            this.botonFacha4.Location = new System.Drawing.Point(10, 142);
+            this.botonFacha4.Location = new System.Drawing.Point(23, 142);
             this.botonFacha4.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha4.Name = "botonFacha4";
             this.botonFacha4.Size = new System.Drawing.Size(79, 49);
@@ -75,6 +75,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.botonFacha4.Text = "Limpiar";
             this.botonFacha4.TextColor = System.Drawing.Color.White;
             this.botonFacha4.UseVisualStyleBackColor = false;
+            this.botonFacha4.Click += new System.EventHandler(this.botonFacha4_Click);
             // 
             // btnConsultar
             // 
@@ -87,7 +88,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(171, 142);
+            this.btnConsultar.Location = new System.Drawing.Point(155, 142);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(79, 49);
@@ -124,11 +125,11 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.gbxFiltros.Controls.Add(this.label2);
             this.gbxFiltros.Controls.Add(this.txtbNombre);
             this.gbxFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.gbxFiltros.Location = new System.Drawing.Point(7, 12);
+            this.gbxFiltros.Location = new System.Drawing.Point(20, 12);
             this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
             this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxFiltros.Size = new System.Drawing.Size(243, 122);
+            this.gbxFiltros.Size = new System.Drawing.Size(214, 122);
             this.gbxFiltros.TabIndex = 10;
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
@@ -225,30 +226,30 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.dgvCentroVenta.AllowUserToResizeRows = false;
             this.dgvCentroVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.dgvCentroVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCentroVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCentroVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCentroVenta.ColumnHeadersHeight = 30;
             this.dgvCentroVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCentroVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCentroVenta,
             this.nombre});
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCentroVenta.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCentroVenta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCentroVenta.EnableHeadersVisualStyles = false;
             this.dgvCentroVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.dgvCentroVenta.Location = new System.Drawing.Point(283, 24);
+            this.dgvCentroVenta.Location = new System.Drawing.Point(272, 12);
             this.dgvCentroVenta.Name = "dgvCentroVenta";
             this.dgvCentroVenta.ReadOnly = true;
             this.dgvCentroVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -256,7 +257,21 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.dgvCentroVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCentroVenta.Size = new System.Drawing.Size(607, 167);
             this.dgvCentroVenta.TabIndex = 13;
+            this.dgvCentroVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCentroVenta_CellContentClick);
             this.dgvCentroVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCentroVenta_CellContentClick);
+            // 
+            // idCentroVenta
+            // 
+            this.idCentroVenta.HeaderText = "ID";
+            this.idCentroVenta.Name = "idCentroVenta";
+            this.idCentroVenta.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 500;
             // 
             // btnSalir
             // 
@@ -287,28 +302,28 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.dgvPuntoVenta.AllowUserToResizeRows = false;
             this.dgvPuntoVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.dgvPuntoVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPuntoVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPuntoVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPuntoVenta.ColumnHeadersHeight = 30;
             this.dgvPuntoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPuntoVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPuntoVenta,
             this.nombrePuntoVenta,
             this.numero});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPuntoVenta.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPuntoVenta.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPuntoVenta.EnableHeadersVisualStyles = false;
             this.dgvPuntoVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.dgvPuntoVenta.Location = new System.Drawing.Point(7, 250);
@@ -319,19 +334,6 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.dgvPuntoVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPuntoVenta.Size = new System.Drawing.Size(883, 242);
             this.dgvPuntoVenta.TabIndex = 18;
-            // 
-            // idCentroVenta
-            // 
-            this.idCentroVenta.HeaderText = "ID";
-            this.idCentroVenta.Name = "idCentroVenta";
-            this.idCentroVenta.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 500;
             // 
             // idPuntoVenta
             // 
@@ -355,10 +357,12 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 221);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.label1.Location = new System.Drawing.Point(4, 223);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 13);
+            this.label1.Size = new System.Drawing.Size(230, 15);
             this.label1.TabIndex = 22;
             this.label1.Text = "Puntos de venta del centro seleccionado:";
             // 
@@ -366,7 +370,9 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(994, 504);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPuntoVenta);
             this.Controls.Add(this.botonFacha4);
@@ -377,8 +383,9 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvCentroVenta);
             this.Controls.Add(this.btnSalir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGestionarCentroVenta";
-            this.Text = "frmGestionarCentroVenta";
+            this.Text = "Gestionar Centro Venta";
             this.Load += new System.EventHandler(this.frmGestionarCentroVenta_Load);
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();

@@ -10,16 +10,25 @@ namespace gestorLollapalooza.dataAccessLayer
 {
     class CentroVentaDao
     {
-        public DataTable obtenerTodos()
+        private PuntoVentaDao oPuntoVenta;
+        public IList<CentroVenta> obtenerTodos()
         {
+
+            List<CentroVenta> centrosVenta = new List<CentroVenta>();
         
 
             string strSql = "SELECT * " +
                          "from centroVenta  " +
                          "WHERE borradoLogico = 0 ";
 
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
 
-            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                centrosVenta.Add(this.MapearCentroVenta(row));
+            }
+            return centrosVenta;
+
         }
 
 
@@ -29,7 +38,7 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "SELECT * " +
                             "from centroVenta " +
                             "WHERE borradoLogico = 0 " +
-                            "AND nombre ="  + nombreCentroVenta ;
+                            "AND nombre ='"  + nombreCentroVenta + "'";
 
 
             var resultado = BDConexion.getBDConexion().EjecutarSQL(strSql);
@@ -55,7 +64,7 @@ namespace gestorLollapalooza.dataAccessLayer
         public bool modificarCentroVenta(CentroVenta centroVenta)
         {
             string strSql = "UPDATE centroVenta  SET " +
-                            "nombre = '" + centroVenta.Nombre + "'," +
+                            "nombre = '" + centroVenta.Nombre + "'" +
                             "WHERE idCentroVenta = " + centroVenta.IdCentroVenta;
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
@@ -66,16 +75,38 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "INSERT INTO [dbo].[centroVenta] ([nombre])" +
                 "VALUES ( '" + centroVenta.Nombre + "');";
 
-            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+            int res = BDConexion.getBDConexion().ejecutarSQL(strSql);
+
+            var newId = BDConexion.getBDConexion().ConsultaSQLScalar("SELECT IDENT_CURRENT('centroVenta')");
+
+
+            if (res == 1)
+            {
+                this.oPuntoVenta = new PuntoVentaDao();
+
+                foreach (PuntoVenta puntoVenta in centroVenta.puntosDeVenta)
+                {
+                    puntoVenta.IdCentroVenta = Convert.ToInt32(newId);
+                    this.oPuntoVenta.persistirPuntoVenta(puntoVenta);
+                }
+            }
+            return (res == 1);
         }
 
-        public DataTable recuperarFiltrados(string filtros)
-        {       
+        public IList<CentroVenta> recuperarFiltrados(string filtros)
+        {
+            IList<CentroVenta> centrosVenta = new List<CentroVenta>();
             string strSql = "SELECT * " +
                             "from centroVenta  " +
                             "WHERE borradoLogico = 0 " + filtros;
 
-            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                centrosVenta.Add(this.MapearCentroVenta(row));
+            }
+            return centrosVenta;
 
         }
 
@@ -87,6 +118,8 @@ namespace gestorLollapalooza.dataAccessLayer
 
             // Recuperamos los atributos del usuario de SQL a C#
             
+            
+            int idCentroVenta = Convert.ToInt32(row["idCentroVenta"]);
             string centroVentaNombre = row["nombre"].ToString();
 
  
@@ -94,7 +127,8 @@ namespace gestorLollapalooza.dataAccessLayer
             // Instanciamos el usuario recuperado de la BD
             CentroVenta centroVentaObj = new CentroVenta()
             {
-                Nombre = centroVentaNombre,
+                IdCentroVenta = idCentroVenta,
+                Nombre = centroVentaNombre
             };
 
             return centroVentaObj;

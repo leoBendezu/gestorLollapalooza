@@ -125,12 +125,15 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(416, 210);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBajaCentroVenta";
-            this.Text = "frmBajaCentroVenta";
+            this.Text = "Baja Centro Venta";
             this.Load += new System.EventHandler(this.frmBajaCentroVenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

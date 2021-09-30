@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gestorLollapalooza.bussinesLayer
 {
-    class PuntoVenta
+   public class PuntoVenta
     {
         public int IdPuntoVenta { get; set; }
         public string NombrePuntoVenta { get; set; }

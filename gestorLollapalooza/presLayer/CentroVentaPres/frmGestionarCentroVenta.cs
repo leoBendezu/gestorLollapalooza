@@ -1,4 +1,5 @@
-﻿using gestorLollapalooza.Service;
+﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,24 +34,26 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.Close();
         }
 
-        private void CargarGrillaCentro(DataGridView grilla, DataTable tabla)
+        private void CargarGrillaCentro(DataGridView grilla, IList<CentroVenta> fuente)
         {
             grilla.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
+            foreach (CentroVenta centroVenta in fuente)
             {
-                grilla.Rows.Add(tabla.Rows[i]["idCentroVenta"],
-                                tabla.Rows[i]["nombre"]);
+                grilla.Rows.Add(centroVenta.IdCentroVenta, centroVenta.Nombre);
             }
         }
-        private void CargarGrillaPunto(DataGridView grilla, DataTable tabla)
+
+
+        private void CargarGrillaPunto(DataGridView grilla, IList<PuntoVenta> fuente)
         {
+            // Carga los usuarios recuperados en la grilla
+
             grilla.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
+            foreach (PuntoVenta puntoVenta in fuente)
             {
-                grilla.Rows.Add(tabla.Rows[i]["idPuntoVenta"],
-                                tabla.Rows[i]["nombre"],
-                                tabla.Rows[i]["numero"]);
+                grilla.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta, puntoVenta.IdCentroVenta);
             }
+
         }
 
         private void frmGestionarCentroVenta_Load(object sender, EventArgs e)
@@ -60,7 +63,15 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
         private void chbTodos_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chbTodos.CheckState == CheckState.Checked)
+            {
+                this.LimpiarTxt();
+                this.Habilitar(false);
+            }
+            else
+            {
+                this.Habilitar(true);
+            }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -72,7 +83,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             {
                 if (!string.IsNullOrEmpty(this.txtbNombre.Text))
                 {
-                    _consulta += "AND nombre like '" + this.txtbNombre.Text + "' ";
+                    _consulta += "AND nombre like '%" + this.txtbNombre.Text + "%' ";
                 }
 
                 if (!string.IsNullOrEmpty(_consulta))
@@ -103,9 +114,30 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
         private void btnModifcar_Click(object sender, EventArgs e)
         {
-            frmModificacionCentroVenta modificacion = new frmModificacionCentroVenta(dgvCentroVenta.CurrentRow);
+            CentroVenta centroVenta = new CentroVenta()
+            {
+                IdCentroVenta = Convert.ToInt32(dgvCentroVenta.CurrentRow.Cells[0].Value),
+                Nombre = dgvCentroVenta.CurrentRow.Cells[1].Value.ToString()
+            };
+
+            frmModificacionCentroVenta modificacion = new frmModificacionCentroVenta(centroVenta);
             modificacion.ShowDialog();
             this.CargarGrillaCentro(dgvCentroVenta, oCentro.RecuperarTodos());
+        }
+
+        private void botonFacha4_Click(object sender, EventArgs e)
+        {
+            this.txtbNombre.Text = string.Empty;
+        }
+
+        public void LimpiarTxt()
+        {
+            this.txtbNombre.Text = string.Empty;
+        }
+
+        public void Habilitar(bool x)
+        {
+            this.txtbNombre.Enabled = x;
         }
     }
 }

@@ -24,7 +24,7 @@ namespace gestorLollapalooza.Service
             return (this.dao.borradoLogicamente(idCentroVenta));
         }
 
-        public DataTable RecuperarTodos()
+        public IList<CentroVenta> RecuperarTodos()
         {
             return dao.obtenerTodos();
         }
@@ -45,7 +45,7 @@ namespace gestorLollapalooza.Service
             return dao.recuperarCentroVenta(nombreCentroVenta);
         }
 
-        public DataTable obtenerFiltados(string filtros)
+        public IList<CentroVenta> obtenerFiltados(string filtros)
         {
             return dao.recuperarFiltrados(filtros);
         }

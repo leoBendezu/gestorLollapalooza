@@ -156,6 +156,27 @@ namespace gestorLollapalooza.dataAccessLayer
 
         }
 
+
+        public object ConsultaSQLScalar(string strSql)
+        {
+            SqlConnection cnn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                cnn.ConnectionString = string_conexion;
+                cnn.Open();
+                cmd.Connection = cnn;
+                cmd.CommandType = CommandType.Text;
+                // Establece la instrucción a ejecutar
+                cmd.CommandText = strSql;
+                return cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                throw (ex);
+            }
+        }
+
         public DataTable ConsultarTabla(string tabla)
         {
             return this.EjecutarSQL("Select * from " + tabla);

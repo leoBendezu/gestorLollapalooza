@@ -37,11 +37,9 @@ namespace gestorLollapalooza.pressLayer
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionTipoDeEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionPuntoDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gEstionCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +77,6 @@ namespace gestorLollapalooza.pressLayer
             this.gestionUsuariosToolStripMenuItem,
             this.gestionGruposMusicalesToolStripMenuItem,
             this.gestionTipoDeEntradaToolStripMenuItem,
-            this.gEstionCentroDeVentaToolStripMenuItem,
-            this.gestionPuntoDeVentaToolStripMenuItem,
             this.gestiónCentroDeVentaToolStripMenuItem});
             this.soporteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
@@ -110,12 +106,12 @@ namespace gestorLollapalooza.pressLayer
             this.gestionTipoDeEntradaToolStripMenuItem.Text = "Gestion Tipo de Entrada";
             this.gestionTipoDeEntradaToolStripMenuItem.Click += new System.EventHandler(this.gestionTipoDeEntradaToolStripMenuItem_Click);
             // 
-            // gestionPuntoDeVentaToolStripMenuItem
+            // gestiónCentroDeVentaToolStripMenuItem
             // 
-            this.gestionPuntoDeVentaToolStripMenuItem.Name = "gestionPuntoDeVentaToolStripMenuItem";
-            this.gestionPuntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.gestionPuntoDeVentaToolStripMenuItem.Text = "Gestion Punto de Venta";
-            this.gestionPuntoDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestionPuntoDeVentaToolStripMenuItem_Click);
+            this.gestiónCentroDeVentaToolStripMenuItem.Name = "gestiónCentroDeVentaToolStripMenuItem";
+            this.gestiónCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.gestiónCentroDeVentaToolStripMenuItem.Text = "Gestión CentroDeVenta";
+            this.gestiónCentroDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestiónCentroDeVentaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -132,19 +128,6 @@ namespace gestorLollapalooza.pressLayer
             this.pictureBox1.Size = new System.Drawing.Size(740, 240);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // gEstionCentroDeVentaToolStripMenuItem
-            // 
-            this.gEstionCentroDeVentaToolStripMenuItem.Name = "gEstionCentroDeVentaToolStripMenuItem";
-            this.gEstionCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.gEstionCentroDeVentaToolStripMenuItem.Text = "GEstion Centro de Venta";
-            // 
-            // gestiónCentroDeVentaToolStripMenuItem
-            // 
-            this.gestiónCentroDeVentaToolStripMenuItem.Name = "gestiónCentroDeVentaToolStripMenuItem";
-            this.gestiónCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.gestiónCentroDeVentaToolStripMenuItem.Text = "Gestión CentroDeVenta";
-            this.gestiónCentroDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestiónCentroDeVentaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -182,8 +165,6 @@ namespace gestorLollapalooza.pressLayer
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionGruposMusicalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionTipoDeEntradaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestionPuntoDeVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gEstionCentroDeVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónCentroDeVentaToolStripMenuItem;
     }
 }

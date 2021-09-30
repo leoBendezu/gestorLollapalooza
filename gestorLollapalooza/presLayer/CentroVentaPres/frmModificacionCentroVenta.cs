@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.presLayer.PuntoVentaPres;
 using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
@@ -14,21 +15,36 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 {
     public partial class frmModificacionCentroVenta : Form
     {
-        DataGridViewRow rowCentro;
-        CentroVentaService centroService = new CentroVentaService();
-        CentroVenta oCentroVenta;
+       private CentroVenta centroVentaSeleccionado;
+        private CentroVentaService centroService;
+       private PuntoVentaService puntoVentaService;
 
-        public frmModificacionCentroVenta(DataGridViewRow row)
+        public frmModificacionCentroVenta(CentroVenta centroVenta)
         {
             InitializeComponent();
-            rowCentro = row;
+            this.centroVentaSeleccionado = centroVenta;
+            this.centroService = new CentroVentaService();
+            this.puntoVentaService = new PuntoVentaService();
         }
 
         private void frmModificacionCentroVenta_Load(object sender, EventArgs e)
         {
-            oCentroVenta = centroService.recuperarCentroVenta((string)rowCentro.Cells[1].Value);
+           
+            this.txtbNombre.Text = centroVentaSeleccionado.Nombre;
+            this.CargarGrillaPunto(dgvPuntoVenta, puntoVentaService.recuperarDeCentro(centroVentaSeleccionado.IdCentroVenta));
+        }
 
-            this.txtbNombre.Text = oCentroVenta.Nombre;
+
+        private void CargarGrillaPunto(DataGridView grilla, IList<PuntoVenta> fuente)
+        {
+            // Carga los usuarios recuperados en la grilla
+
+            grilla.Rows.Clear();
+            foreach (PuntoVenta puntoVenta in fuente)
+            {
+                grilla.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta, puntoVenta.IdCentroVenta);
+            }
+
         }
 
         public bool Comprobar()
@@ -68,20 +84,21 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.Close();
         }
 
+        
         private void btnModificar_Click(object sender, EventArgs e)
         {
             // Comprueba si los campos obligatorios han sidos llenados
 
             if (Comprobar())
             {
-                this.oCentroVenta.Nombre = txtbNombre.Text;
+                this.centroVentaSeleccionado.Nombre = txtbNombre.Text;
 
 
 
                 // Intenta realizar la modificacion del CentroVenta si lo logra avisa, y resetea los campos
                 // En caso contrario avisa.
 
-                if (centroService.modificarCentroVenta(oCentroVenta))
+                if (centroService.modificarCentroVenta(centroVentaSeleccionado))
                 {
                     MessageBox.Show("Se ha modificado el CentroVenta", "Advertencia");
                     resetearColor();
@@ -95,7 +112,24 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             else
             {
                 MessageBox.Show("Los campos en rojo deben ser completados ", "Advertencia");
+            } 
+        }
+
+        private void btnModificarPv_Click(object sender, EventArgs e)
+        {
+            if (dgvPuntoVenta.CurrentRow != null)
+            {
+                frmModificarPuntoVenta frm = new frmModificarPuntoVenta(dgvPuntoVenta.CurrentRow.Cells[0].Value.ToString());
+                frm.ShowDialog();
+                this.CargarGrillaPunto(dgvPuntoVenta, puntoVentaService.recuperarDeCentro(centroVentaSeleccionado.IdCentroVenta));
             }
+        }
+
+        private void botonFacha1_Click(object sender, EventArgs e)
+        {
+            frmBajaPuntoVenta frm = new frmBajaPuntoVenta(dgvPuntoVenta.CurrentRow.Cells[0].Value.ToString());
+            frm.ShowDialog();
+            this.CargarGrillaPunto(dgvPuntoVenta, puntoVentaService.recuperarDeCentro(centroVentaSeleccionado.IdCentroVenta));
         }
     }
 }
