@@ -274,9 +274,10 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(89, 44);
             this.btnCrear.TabIndex = 9;
-            this.btnCrear.Text = "Crear";
+            this.btnCrear.Text = "Modificar";
             this.btnCrear.TextColor = System.Drawing.Color.White;
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnSalir
             // 
