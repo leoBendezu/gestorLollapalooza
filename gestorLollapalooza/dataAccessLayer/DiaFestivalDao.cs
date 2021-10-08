@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -40,14 +41,17 @@ namespace gestorLollapalooza.dataAccessLayer
 
             // Recuperamos los atributos del usuario de SQL a C#
             int idDiaFestival = Convert.ToInt32(row["idDiaFestival"].ToString());
-            DateTime fecha = (DateTime) row["fecha"];
-            DateTime fechaLimiteAnulacionEntrada = (DateTime) row["fechaLimiteAnulacionEntrada"];
-            DateTime fechaVtoVentaAnticipada = (DateTime) row["fechaVtoAnticipada"];
+            int fecha = (int)row["fecha"];
+            int fechaLimiteAnulacionEntrada = (int)row["fechaLimiteAnulacionEntrada"];
+            int fechaVtoVentaAnticipada = (int)row["fechaVtoAnticipada"];
             int horaPresentacion = (int)row["horaPresentacion"];
 
             // Recuperamos los atributos del Festival del DiaFestival de SQL a C#
 
             int idFestival = Convert.ToInt32(row["idFestival"].ToString());
+
+            ActuacionService serviceA = new ActuacionService();
+            IList<Actuacion> actuaciones = serviceA.obtenerTodosDeDiaFestival(idDiaFestival);
 
             // Instanciamos el DiaFestival recuperado de la BD
             DiaFestival diaFestivalObj = new DiaFestival()
@@ -58,6 +62,7 @@ namespace gestorLollapalooza.dataAccessLayer
                 FechaVtoVentaAnticipada = fechaVtoVentaAnticipada,
                 HoraPresentacion = horaPresentacion,
                 IdFestival = idFestival,
+                Actuaciones = actuaciones
             };
 
             return diaFestivalObj;
@@ -134,7 +139,7 @@ namespace gestorLollapalooza.dataAccessLayer
                 diaFestival.FechaLimiteAnulacionEntrada + "' , '" +
                 diaFestival.FechaVtoVentaAnticipada + "' , " +
                 diaFestival.HoraPresentacion + " , " +
-                diaFestival.IdDiaFestival + ");";
+                diaFestival.IdFestival + ");";
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
         }

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bussinesLayer\Actuacion.cs" />
     <Compile Include="bussinesLayer\CentroVenta.cs" />
     <Compile Include="bussinesLayer\DiaFestival.cs" />
     <Compile Include="bussinesLayer\Festival.cs" />
@@ -57,9 +58,11 @@
     <Compile Include="bussinesLayer\PuntoVenta.cs" />
     <Compile Include="bussinesLayer\TipoEntrada.cs" />
     <Compile Include="bussinesLayer\Usuario.cs" />
+    <Compile Include="dataAccessLayer\ActuacionDao.cs" />
     <Compile Include="dataAccessLayer\BDConexion.cs" />
     <Compile Include="dataAccessLayer\CentroVentaDao.cs" />
     <Compile Include="dataAccessLayer\DiaFestivalDao.cs" />
+    <Compile Include="dataAccessLayer\FestivalDao.cs" />
     <Compile Include="dataAccessLayer\GrupoMusicalDao.cs" />
     <Compile Include="dataAccessLayer\PerfilDao.cs" />
     <Compile Include="dataAccessLayer\PuntoVentaDao.cs" />
@@ -91,6 +94,12 @@
     </Compile>
     <Compile Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.Designer.cs">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.Designer.cs">
+      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
     </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.cs">
       <SubType>Form</SubType>
@@ -202,8 +211,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ActuacionService.cs" />
     <Compile Include="Service\CentroVentaService.cs" />
     <Compile Include="Service\DiaFestivalService.cs" />
+    <Compile Include="Service\FestivalService.cs" />
     <Compile Include="Service\GrupoMusicalService.cs" />
     <Compile Include="Service\PerfilService.cs" />
     <Compile Include="Service\PuntoVentaService.cs" />
@@ -220,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.resx">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\FestivalPres\frmGestionarFestival.resx">
+      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>

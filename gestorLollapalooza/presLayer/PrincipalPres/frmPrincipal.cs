@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.presLayer.CentroVentaPres;
+using gestorLollapalooza.presLayer.FestivalPres;
 using gestorLollapalooza.presLayer.GrupoMusicalPres;
 using gestorLollapalooza.presLayer.LoginPres;
 using gestorLollapalooza.presLayer.PuntoVentaPres;
@@ -83,6 +84,12 @@ namespace gestorLollapalooza.pressLayer
         {
             frmGestionarCentroVenta gestionarCentroVenta = new frmGestionarCentroVenta();
             gestionarCentroVenta.ShowDialog();
+        }
+
+        private void gestionarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGestionarFestival frmf = new frmGestionarFestival();
+            frmf.ShowDialog();
         }
     }
 }

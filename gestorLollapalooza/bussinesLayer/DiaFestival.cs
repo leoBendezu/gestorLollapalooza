@@ -9,11 +9,12 @@ namespace gestorLollapalooza.bussinesLayer
     class DiaFestival
     {
         public int IdDiaFestival { get; set; }
-        public DateTime Fecha { get; set; }
-        public DateTime FechaLimiteAnulacionEntrada { get; set; }
-        public DateTime FechaVtoVentaAnticipada { get; set; }
+        public int Fecha { get; set; }
+        public int FechaLimiteAnulacionEntrada { get; set; }
+        public int FechaVtoVentaAnticipada { get; set; }
         public int HoraPresentacion { get; set; }
         public int IdFestival { get; set; }
+        public IList<Actuacion> Actuaciones { get; set; }
 
 
 
