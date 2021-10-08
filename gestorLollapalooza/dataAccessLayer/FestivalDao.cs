@@ -15,13 +15,13 @@ namespace gestorLollapalooza.dataAccessLayer
         {
             List<Festival> festivales = new List<Festival>();
 
-            string strSql = "SELECT *, " +
-                         "from festival " +
-                         "WHERE borradoLogico = 0 ";
+            string strSql = "SELECT * " +
+                         "from festivales ";/*+
+                         "WHERE borradoLogico = 0 ";*/
 
 
             var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
-
+            
             foreach (DataRow row in resultadoConsulta.Rows)
             {
                 festivales.Add(this.MapearFestival(row));

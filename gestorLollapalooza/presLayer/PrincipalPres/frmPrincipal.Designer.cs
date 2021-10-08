@@ -33,6 +33,7 @@ namespace gestorLollapalooza.pressLayer
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.venderEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.festivalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,6 @@ namespace gestorLollapalooza.pressLayer
             this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,13 @@ namespace gestorLollapalooza.pressLayer
             this.festivalesToolStripMenuItem.Name = "festivalesToolStripMenuItem";
             this.festivalesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.festivalesToolStripMenuItem.Text = "Festivales";
+            // 
+            // gestionarToolStripMenuItem
+            // 
+            this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
+            this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gestionarToolStripMenuItem.Text = "Gestionar";
+            this.gestionarToolStripMenuItem.Click += new System.EventHandler(this.gestionarToolStripMenuItem_Click);
             // 
             // soporteToolStripMenuItem
             // 
@@ -131,12 +138,6 @@ namespace gestorLollapalooza.pressLayer
             this.pictureBox1.Size = new System.Drawing.Size(740, 240);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // gestionarToolStripMenuItem
-            // 
-            this.gestionarToolStripMenuItem.Name = "gestionarToolStripMenuItem";
-            this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gestionarToolStripMenuItem.Text = "Gestionar";
             // 
             // frmPrincipal
             // 

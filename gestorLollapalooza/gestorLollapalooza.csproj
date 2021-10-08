@@ -232,6 +232,9 @@
     <EmbeddedResource Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.resx">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\FestivalPres\frmGestionarFestival.resx">
+      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
     </EmbeddedResource>
