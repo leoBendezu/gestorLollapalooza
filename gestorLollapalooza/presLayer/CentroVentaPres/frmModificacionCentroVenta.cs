@@ -131,5 +131,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             frm.ShowDialog();
             this.CargarGrillaPunto(dgvPuntoVenta, puntoVentaService.recuperarDeCentro(centroVentaSeleccionado.IdCentroVenta));
         }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

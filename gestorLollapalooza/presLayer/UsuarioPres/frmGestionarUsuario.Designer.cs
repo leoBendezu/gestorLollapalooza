@@ -104,6 +104,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.dvgUsuarios.ReadOnly = true;
             this.dvgUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dvgUsuarios.RowHeadersVisible = false;
+            this.dvgUsuarios.RowHeadersWidth = 51;
             this.dvgUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dvgUsuarios.Size = new System.Drawing.Size(723, 491);
             this.dvgUsuarios.TabIndex = 5;
@@ -115,8 +116,10 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.clmUsuario.DefaultCellStyle = dataGridViewCellStyle2;
             this.clmUsuario.FillWeight = 120F;
             this.clmUsuario.HeaderText = "Usuario";
+            this.clmUsuario.MinimumWidth = 6;
             this.clmUsuario.Name = "clmUsuario";
             this.clmUsuario.ReadOnly = true;
+            this.clmUsuario.Width = 125;
             // 
             // clmPerfil
             // 
@@ -124,6 +127,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.clmPerfil.DefaultCellStyle = dataGridViewCellStyle3;
             this.clmPerfil.FillWeight = 120F;
             this.clmPerfil.HeaderText = "Perfil";
+            this.clmPerfil.MinimumWidth = 6;
             this.clmPerfil.Name = "clmPerfil";
             this.clmPerfil.ReadOnly = true;
             this.clmPerfil.Width = 120;
@@ -134,8 +138,10 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.clmNombre.DefaultCellStyle = dataGridViewCellStyle4;
             this.clmNombre.FillWeight = 120F;
             this.clmNombre.HeaderText = "Nombre";
+            this.clmNombre.MinimumWidth = 6;
             this.clmNombre.Name = "clmNombre";
             this.clmNombre.ReadOnly = true;
+            this.clmNombre.Width = 125;
             // 
             // clmApellido
             // 
@@ -143,6 +149,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.clmApellido.DefaultCellStyle = dataGridViewCellStyle5;
             this.clmApellido.FillWeight = 120F;
             this.clmApellido.HeaderText = "Apellido";
+            this.clmApellido.MinimumWidth = 6;
             this.clmApellido.Name = "clmApellido";
             this.clmApellido.ReadOnly = true;
             this.clmApellido.Width = 150;
@@ -153,6 +160,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.clmEmail.DefaultCellStyle = dataGridViewCellStyle6;
             this.clmEmail.FillWeight = 120F;
             this.clmEmail.HeaderText = "Email";
+            this.clmEmail.MinimumWidth = 6;
             this.clmEmail.Name = "clmEmail";
             this.clmEmail.ReadOnly = true;
             this.clmEmail.Width = 250;
@@ -185,7 +193,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.chbTodos.AutoSize = true;
             this.chbTodos.Location = new System.Drawing.Point(25, 378);
             this.chbTodos.Name = "chbTodos";
-            this.chbTodos.Size = new System.Drawing.Size(130, 20);
+            this.chbTodos.Size = new System.Drawing.Size(153, 23);
             this.chbTodos.TabIndex = 25;
             this.chbTodos.Text = "Consultar Todos";
             this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,13 +206,13 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.label4.Location = new System.Drawing.Point(21, 249);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 16);
+            this.label4.Size = new System.Drawing.Size(55, 19);
             this.label4.TabIndex = 24;
             this.label4.Text = "Email:";
             // 
             // txtbEmail
             // 
-            this.txtbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbEmail.BackColor = System.Drawing.Color.White;
             this.txtbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbEmail.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbEmail.BorderSize = 2;
@@ -216,7 +224,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbEmail.Name = "txtbEmail";
             this.txtbEmail.Padding = new System.Windows.Forms.Padding(9);
             this.txtbEmail.PasswordChar = false;
-            this.txtbEmail.Size = new System.Drawing.Size(196, 35);
+            this.txtbEmail.Size = new System.Drawing.Size(196, 39);
             this.txtbEmail.TabIndex = 23;
             this.txtbEmail.UnderlinedStyle = false;
             // 
@@ -226,7 +234,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.label3.Location = new System.Drawing.Point(21, 174);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 22;
             this.label3.Text = "Apellido:";
             // 
@@ -236,7 +244,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.label2.Location = new System.Drawing.Point(21, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(76, 19);
             this.label2.TabIndex = 21;
             this.label2.Text = "Nombre:";
             // 
@@ -246,13 +254,13 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.label1.Location = new System.Drawing.Point(21, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 16);
+            this.label1.Size = new System.Drawing.Size(72, 19);
             this.label1.TabIndex = 20;
             this.label1.Text = "Usuario:";
             // 
             // txtbApellido
             // 
-            this.txtbApellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbApellido.BackColor = System.Drawing.Color.White;
             this.txtbApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbApellido.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbApellido.BorderSize = 2;
@@ -264,13 +272,13 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbApellido.Name = "txtbApellido";
             this.txtbApellido.Padding = new System.Windows.Forms.Padding(9);
             this.txtbApellido.PasswordChar = false;
-            this.txtbApellido.Size = new System.Drawing.Size(196, 35);
+            this.txtbApellido.Size = new System.Drawing.Size(196, 39);
             this.txtbApellido.TabIndex = 19;
             this.txtbApellido.UnderlinedStyle = false;
             // 
             // txtbNombre
             // 
-            this.txtbNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbNombre.BackColor = System.Drawing.Color.White;
             this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbNombre.BorderSize = 2;
@@ -282,13 +290,13 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(196, 35);
+            this.txtbNombre.Size = new System.Drawing.Size(196, 39);
             this.txtbNombre.TabIndex = 18;
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // txtbUsuario
             // 
-            this.txtbUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.txtbUsuario.BackColor = System.Drawing.Color.White;
             this.txtbUsuario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbUsuario.BorderSize = 2;
@@ -300,7 +308,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbUsuario.Name = "txtbUsuario";
             this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
             this.txtbUsuario.PasswordChar = false;
-            this.txtbUsuario.Size = new System.Drawing.Size(196, 35);
+            this.txtbUsuario.Size = new System.Drawing.Size(196, 39);
             this.txtbUsuario.TabIndex = 4;
             this.txtbUsuario.UnderlinedStyle = false;
             // 
@@ -310,7 +318,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.cbPerfil.Location = new System.Drawing.Point(73, 334);
             this.cbPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.cbPerfil.Name = "cbPerfil";
-            this.cbPerfil.Size = new System.Drawing.Size(148, 24);
+            this.cbPerfil.Size = new System.Drawing.Size(148, 27);
             this.cbPerfil.TabIndex = 6;
             // 
             // lblPerfil
@@ -319,7 +327,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.lblPerfil.Location = new System.Drawing.Point(21, 337);
             this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerfil.Name = "lblPerfil";
-            this.lblPerfil.Size = new System.Drawing.Size(44, 16);
+            this.lblPerfil.Size = new System.Drawing.Size(51, 19);
             this.lblPerfil.TabIndex = 5;
             this.lblPerfil.Text = "Perfil:";
             // 
@@ -453,7 +461,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // frmGestionarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));

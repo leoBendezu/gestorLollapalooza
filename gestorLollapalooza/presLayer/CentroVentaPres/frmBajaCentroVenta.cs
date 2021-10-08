@@ -59,5 +59,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
             this.txtbNombre.Text = oCentroVenta.Nombre;
         }
+
+        private void txtbNombre_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

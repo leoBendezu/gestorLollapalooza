@@ -68,6 +68,9 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
         }
 
+        private void txtbNombre_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

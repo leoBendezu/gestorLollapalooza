@@ -104,7 +104,7 @@ namespace gestorLollapalooza
             set
             {
                 base.ForeColor = value;
-                textBox1.ForeColor = value;
+                textBox1.ForeColor = Color.Black;
             }
         }
 
@@ -212,9 +212,12 @@ namespace gestorLollapalooza
 
 
         }
+        
+
+    }
     }
 
-}
+
 
 
 
