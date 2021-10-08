@@ -95,6 +95,12 @@
     <Compile Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.Designer.cs">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.Designer.cs">
+      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.cs">
       <SubType>Form</SubType>
     </Compile>
