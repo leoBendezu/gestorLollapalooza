@@ -25,6 +25,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private void frmGestionarFestival_Load(object sender, EventArgs e)
         {
             this.CargarGrillaFestivales(dgvFestivales, serviceF.obtenerTodos());
+            MessageBox.Show("hola "+serviceF.obtenerTodos().Count);
         }
 
         private void /*festivales*/dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,5 +69,9 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             }
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

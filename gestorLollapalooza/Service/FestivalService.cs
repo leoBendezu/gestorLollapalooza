@@ -11,7 +11,7 @@ namespace gestorLollapalooza.Service
 {
     class FestivalService
     {
-        private FestivalDao dao;
+        private FestivalDao dao = new FestivalDao();
         public IList<Festival> obtenerTodos()
         {
             return dao.obtenerTodos();

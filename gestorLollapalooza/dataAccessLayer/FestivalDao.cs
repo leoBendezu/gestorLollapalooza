@@ -13,12 +13,12 @@ namespace gestorLollapalooza.dataAccessLayer
     {
         public IList<Festival> obtenerTodos()
         {
-            List<Festival> festivales = new List<Festival>();
+            IList<Festival> festivales = new List<Festival>();
 
             string strSql = "SELECT * " +
-                         "from festivales ";/*+
-                         "WHERE borradoLogico = 0 ";*/
-
+                         "from festival ";/* +
+                         "WHERE borradoLogico = 0 ";
+            */
 
             var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
             

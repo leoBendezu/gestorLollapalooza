@@ -44,6 +44,12 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.numeroOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grupoMusical = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDiasFestival = new System.Windows.Forms.DataGridView();
+            this.idDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaLimiteAnulacionEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaVtoVentaAnticipada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaPresentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.festival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.txtbAnoEdicion = new gestorLollapalooza.frmTextBoxFacha();
@@ -57,12 +63,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.btnModifcar = new gestorLollapalooza.BotonFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
-            this.idDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaLimiteAnulacionEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaVtoVentaAnticipada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaPresentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.festival = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFestivales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActuaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiasFestival)).BeginInit();
@@ -201,6 +201,44 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dgvDiasFestival.Size = new System.Drawing.Size(843, 153);
             this.dgvDiasFestival.TabIndex = 2;
             this.dgvDiasFestival.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
+            // 
+            // idDia
+            // 
+            this.idDia.HeaderText = "Nro";
+            this.idDia.Name = "idDia";
+            this.idDia.ReadOnly = true;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            // 
+            // fechaLimiteAnulacionEntrada
+            // 
+            this.fechaLimiteAnulacionEntrada.HeaderText = "Fecha limite de anulacion de entrada";
+            this.fechaLimiteAnulacionEntrada.Name = "fechaLimiteAnulacionEntrada";
+            this.fechaLimiteAnulacionEntrada.ReadOnly = true;
+            this.fechaLimiteAnulacionEntrada.Width = 200;
+            // 
+            // fechaVtoVentaAnticipada
+            // 
+            this.fechaVtoVentaAnticipada.HeaderText = "Fecha de Vto de Venta Anticipada";
+            this.fechaVtoVentaAnticipada.Name = "fechaVtoVentaAnticipada";
+            this.fechaVtoVentaAnticipada.ReadOnly = true;
+            this.fechaVtoVentaAnticipada.Width = 200;
+            // 
+            // horaPresentacion
+            // 
+            this.horaPresentacion.HeaderText = "Hora de Presentacion";
+            this.horaPresentacion.Name = "horaPresentacion";
+            this.horaPresentacion.ReadOnly = true;
+            // 
+            // festival
+            // 
+            this.festival.HeaderText = "Festival";
+            this.festival.Name = "festival";
+            this.festival.ReadOnly = true;
             // 
             // label1
             // 
@@ -415,44 +453,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
-            // 
-            // idDia
-            // 
-            this.idDia.HeaderText = "Nro";
-            this.idDia.Name = "idDia";
-            this.idDia.ReadOnly = true;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            // 
-            // fechaLimiteAnulacionEntrada
-            // 
-            this.fechaLimiteAnulacionEntrada.HeaderText = "Fecha limite de anulacion de entrada";
-            this.fechaLimiteAnulacionEntrada.Name = "fechaLimiteAnulacionEntrada";
-            this.fechaLimiteAnulacionEntrada.ReadOnly = true;
-            this.fechaLimiteAnulacionEntrada.Width = 200;
-            // 
-            // fechaVtoVentaAnticipada
-            // 
-            this.fechaVtoVentaAnticipada.HeaderText = "Fecha de Vto de Venta Anticipada";
-            this.fechaVtoVentaAnticipada.Name = "fechaVtoVentaAnticipada";
-            this.fechaVtoVentaAnticipada.ReadOnly = true;
-            this.fechaVtoVentaAnticipada.Width = 200;
-            // 
-            // horaPresentacion
-            // 
-            this.horaPresentacion.HeaderText = "Hora de Presentacion";
-            this.horaPresentacion.Name = "horaPresentacion";
-            this.horaPresentacion.ReadOnly = true;
-            // 
-            // festival
-            // 
-            this.festival.HeaderText = "Festival";
-            this.festival.Name = "festival";
-            this.festival.ReadOnly = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmGestionarFestival
             // 
