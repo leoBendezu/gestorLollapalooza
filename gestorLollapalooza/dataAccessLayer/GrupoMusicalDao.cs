@@ -10,22 +10,42 @@ namespace gestorLollapalooza.dataAccessLayer
 {
     class GrupoMusicalDao
     {
-        public DataTable RecuperarTodos()
+        public List<GrupoMusical> RecuperarTodos()
         {
             string consulta = "SELECT * FROM grupoMusical WHERE borradoLogico = 0 ";
 
-            return BDConexion.getBDConexion().EjecutarSQL(consulta);
+        
+
+            List<GrupoMusical> grupos = new List<GrupoMusical>();
+
+
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(consulta);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                grupos.Add(this.mapearGrupoMusical(row));
+            }
+            return grupos;
+
         }
 
-        public DataTable recuperarFiltrados(string filtros)
+        public List<GrupoMusical> recuperarFiltrados(string filtros)
         {
 
-           DataTable gruposMusicales = new DataTable();
+            List<GrupoMusical> grupos = new List<GrupoMusical>();
             string strSql = "SELECT * " +
                             "from grupoMusical " +
                             "WHERE borradoLogico = 0 " + filtros;
 
-            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            foreach (DataRow row in resultadoConsulta.Rows)
+            {
+                grupos.Add(this.mapearGrupoMusical(row));
+            }
+            return grupos;
+
 
         }
 

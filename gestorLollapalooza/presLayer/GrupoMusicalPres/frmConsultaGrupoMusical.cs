@@ -32,7 +32,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnEliminar.Enabled = false;
             this.btnModificar.Enabled = false;
         }
-
+        /*
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
         {
             grilla.Rows.Clear();
@@ -44,7 +44,19 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
                                 tabla.Rows[i]["cantIntegrantes"]);
             }
         }
+        */
 
+        private void CargarGrilla(DataGridView grilla, IList<GrupoMusical> fuente)
+        {
+            // Carga los grupos musicales recuperados en la grilla
+
+            grilla.Rows.Clear();
+            foreach (GrupoMusical grupo in fuente)
+            {
+                grilla.Rows.Add(grupo.IdGrupoMusical, grupo.Nombre, grupo.Descripcion, grupo.CantIntegrantes);
+            }
+
+        }
 
 
 

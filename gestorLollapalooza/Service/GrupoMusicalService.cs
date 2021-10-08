@@ -18,12 +18,12 @@ namespace gestorLollapalooza.Service
             dao = new GrupoMusicalDao();
         }
 
-        public DataTable traerTodos()
+        public List<GrupoMusical> traerTodos()
         {
             return dao.RecuperarTodos();
         }
 
-        public DataTable traerFiltrados(string filtros)
+        public List<GrupoMusical> traerFiltrados(string filtros)
         {
             return dao.recuperarFiltrados(filtros);
         }
