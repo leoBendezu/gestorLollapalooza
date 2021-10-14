@@ -312,6 +312,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dgvDias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvDias.Size = new System.Drawing.Size(704, 163);
             this.dgvDias.TabIndex = 26;
+            this.dgvDias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // fcha
             // 
