@@ -53,14 +53,48 @@ namespace gestorLollapalooza.dataAccessLayer
 
         public bool persistirFestival(Festival festival)
         {
-            string strSql = "INSERT INTO [dbo].[festival] ([anoEdicion], [descuentoVentaAnticipada], [fechaInicio], [nombre], [porcentajeDevolucionPorAnulacion], [vigente])" +
+            string strSql = "INSERT INTO [dbo].[festival] ([añoEdicion], [descuentoVentaAnticipada], [fechaInicio], [nombre], [porcentajeDevolucionPorAnulacion], [vigente], [fechaFin])" +
                 "VALUES ( " +
                 festival.AnoEdicion + " , '" +
                 festival.DescuentoVentaAnticipada + "' , '" +
-                festival.FechaInicio + "' , '" +
+                festival.FechaInicio.ToString("YYYY-MM-DD") + "' , '" +
                 festival.Nombre + "' , '" +
                 festival.PorcentajeDevolucionPorAnulacion + "' , '" +
-                festival.Vigente + "');";
+                festival.Vigente + "'" +
+                festival.FechaFin.ToString("YYYY-MM-DD") + "');'";
+
+            BDConexion.getBDConexion().IniciarTransaccion();
+            BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
+
+            var newId = BDConexion.getBDConexion().RecuperarIdentity("Festival");
+
+            foreach(DiaFestival dia in festival.Dias)
+            {
+                strSql = "INSERT INTO [dbo].[diaFestival] ([fecha], [fechaLimiteAnulacionEntrada],[fechaVtoVentaAnticipada], [idFestival]) " +
+                "VALUES ('" +
+                dia.Fecha.ToString("YYYY-MM-DD") + "', '" +
+                dia.FechaLimiteAnulacionEntrada.ToString("YYYY-MM-DD") + "', '" +
+                dia.FechaVtoVentaAnticipada.ToString("YYYY-MM-DD") + "', '" +
+                newId + ");";
+                BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
+
+
+                var newIdDia = BDConexion.getBDConexion().RecuperarIdentity("diaFestival");
+
+                foreach(Actuacion act in dia.Actuaciones)
+                {
+                    strSql = "INSERT INTO [dbo].[diaFestival] ([duracionEstimada], [numeroOrden],[idGrupoMusical], [idDiaFestival]) " +
+                            "VALUES ('" +
+                            act.DuracionActuacion + "," +
+                            act.NumeroOrden + "," +
+                            act.GrupoMusical.IdGrupoMusical + "," +
+                            newIdDia + ");";
+                    BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
+
+                }
+                BDConexion.getBDConexion().FinalizarTransaccion();
+                return true;
+            }
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
         }
