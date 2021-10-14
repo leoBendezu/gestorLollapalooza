@@ -75,22 +75,22 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "INSERT INTO [dbo].[centroVenta] ([nombre])" +
                 "VALUES ( '" + centroVenta.Nombre + "');";
 
-            int res = BDConexion.getBDConexion().ejecutarSQL(strSql);
+            BDConexion.getBDConexion().IniciarTransaccion();
+            BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
 
-            var newId = BDConexion.getBDConexion().ConsultaSQLScalar("SELECT IDENT_CURRENT('centroVenta')");
-
-
-            if (res == 1)
+            var newId = BDConexion.getBDConexion().RecuperarIdentity("CentroVenta");
+            foreach (PuntoVenta puntoVenta in centroVenta.puntosDeVenta)
             {
-                this.oPuntoVenta = new PuntoVentaDao();
-
-                foreach (PuntoVenta puntoVenta in centroVenta.puntosDeVenta)
-                {
-                    puntoVenta.IdCentroVenta = Convert.ToInt32(newId);
-                    this.oPuntoVenta.persistirPuntoVenta(puntoVenta);
-                }
+                puntoVenta.IdCentroVenta = Convert.ToInt32(newId);
+                strSql = "INSERT INTO [dbo].[puntoVenta] ([nombre], [numero], [idCentroVenta])" +
+                         "VALUES ( ' " +
+                         puntoVenta.NombrePuntoVenta + "'," +
+                         puntoVenta.NumeroPuntoVenta + "," +
+                         puntoVenta.IdCentroVenta + ");";
+               BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
             }
-            return (res == 1);
+            BDConexion.getBDConexion().FinalizarTransaccion();
+            return true;
         }
 
         public IList<CentroVenta> recuperarFiltrados(string filtros)

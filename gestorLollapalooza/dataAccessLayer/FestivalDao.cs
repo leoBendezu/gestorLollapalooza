@@ -16,9 +16,9 @@ namespace gestorLollapalooza.dataAccessLayer
             IList<Festival> festivales = new List<Festival>();
 
             string strSql = "SELECT * " +
-                         "from festival ";/* +
+                         "from festival " +
                          "WHERE borradoLogico = 0 ";
-            */
+            
 
             var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
             

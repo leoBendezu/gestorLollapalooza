@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gestorLollapalooza.bussinesLayer
 {
-    class GrupoMusical
+    public class GrupoMusical
     {
         public int IdGrupoMusical { get; set; }
         public int CantIntegrantes { get; set; }

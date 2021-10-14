@@ -56,6 +56,9 @@ namespace gestorLollapalooza.dataAccessLayer
             return puntoVentas;
         }
 
+
+
+
         public bool persistirPuntoVenta(PuntoVenta puntoVenta)
         {
             // Metodo encargado de guardar un usuario en la base de datos, recibe como parametros:

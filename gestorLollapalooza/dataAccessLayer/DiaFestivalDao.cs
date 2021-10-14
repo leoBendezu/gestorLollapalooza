@@ -41,9 +41,9 @@ namespace gestorLollapalooza.dataAccessLayer
 
             // Recuperamos los atributos del usuario de SQL a C#
             int idDiaFestival = Convert.ToInt32(row["idDiaFestival"].ToString());
-            int fecha = (int)row["fecha"];
-            int fechaLimiteAnulacionEntrada = (int)row["fechaLimiteAnulacionEntrada"];
-            int fechaVtoVentaAnticipada = (int)row["fechaVtoAnticipada"];
+            DateTime fecha = (DateTime)row["fecha"];
+            DateTime fechaLimiteAnulacionEntrada = (DateTime)row["fechaLimiteAnulacionEntrada"];
+            DateTime fechaVtoVentaAnticipada = (DateTime)row["fechaVtoAnticipada"];
             int horaPresentacion = (int)row["horaPresentacion"];
 
             // Recuperamos los atributos del Festival del DiaFestival de SQL a C#
@@ -60,7 +60,7 @@ namespace gestorLollapalooza.dataAccessLayer
                 Fecha = fecha,
                 FechaLimiteAnulacionEntrada = fechaLimiteAnulacionEntrada,
                 FechaVtoVentaAnticipada = fechaVtoVentaAnticipada,
-                HoraPresentacion = horaPresentacion,
+
                 IdFestival = idFestival,
                 Actuaciones = actuaciones
             };
@@ -117,8 +117,7 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "UPDATE diaFestival  SET " +
                             "fecha = '" + diaFestival.Fecha + "'," +
                             "fechaLimiteAnulacionEntrada = '" + diaFestival.FechaLimiteAnulacionEntrada + "'," +
-                            "fechaVtoVentaAnticipada = '" + diaFestival.FechaVtoVentaAnticipada + "'," +
-                            "horaPresentacion = '" + diaFestival.HoraPresentacion + "'" +
+                            "fechaVtoVentaAnticipada = '" + diaFestival.FechaVtoVentaAnticipada + "'" +
                             "WHERE idDiaFestival = " + diaFestival.IdDiaFestival;
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
@@ -133,12 +132,11 @@ namespace gestorLollapalooza.dataAccessLayer
             // en caso de serlo retorna true en caso contrario retorna false
 
             string strSql = "INSERT INTO [dbo].[diaFestival] ([fecha], [fechaLimiteAnulacionEntrada], [fechaVtoVentaAnticipada]," +
-                " [horaPresentacion], [idFestival])" +
+                "  [idFestival])" +
                 "VALUES ( '" +
                 diaFestival.Fecha + "' , '" +
                 diaFestival.FechaLimiteAnulacionEntrada + "' , '" +
                 diaFestival.FechaVtoVentaAnticipada + "' , " +
-                diaFestival.HoraPresentacion + " , " +
                 diaFestival.IdFestival + ");";
 
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);

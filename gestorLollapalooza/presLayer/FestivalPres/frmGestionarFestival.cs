@@ -17,6 +17,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         FestivalService serviceF = new FestivalService();
         DiaFestivalService serviceD = new DiaFestivalService();
         ActuacionService serviceA = new ActuacionService();
+
+
         public frmGestionarFestival()
         {
             InitializeComponent();
@@ -25,7 +27,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private void frmGestionarFestival_Load(object sender, EventArgs e)
         {
             this.CargarGrillaFestivales(dgvFestivales, serviceF.obtenerTodos());
-            MessageBox.Show("hola "+serviceF.obtenerTodos().Count);
         }
 
         private void /*festivales*/dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,7 +57,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             grilla.Rows.Clear();
             foreach (DiaFestival dia in fuente)
             {
-                grilla.Rows.Add(dia.IdDiaFestival, dia.Fecha, dia.FechaLimiteAnulacionEntrada, dia.FechaVtoVentaAnticipada, dia.HoraPresentacion, dia.IdFestival);
+                grilla.Rows.Add(dia.IdDiaFestival, dia.Fecha, dia.FechaLimiteAnulacionEntrada, dia.FechaVtoVentaAnticipada,  dia.IdFestival);
             }
         }
 
@@ -65,7 +66,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             grilla.Rows.Clear();
             foreach (Actuacion actuacion in fuente)
             {
-                grilla.Rows.Add(actuacion.IdActuacion, actuacion.DuracionActuacion, actuacion.HoraInicio, actuacion.NumeroOrden, actuacion.GrupoMusical.Nombre);
+                grilla.Rows.Add(actuacion.IdActuacion, actuacion.DuracionActuacion,  actuacion.NumeroOrden, actuacion.GrupoMusical.Nombre);
             }
         }
 

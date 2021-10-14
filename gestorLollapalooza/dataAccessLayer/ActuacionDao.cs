@@ -80,10 +80,8 @@ namespace gestorLollapalooza.dataAccessLayer
             {
                 IdActuacion = idActuacion,
                 DuracionActuacion = duracionActuacion,
-                HoraInicio = horaInicio,
                 NumeroOrden = numeroOrden,
                 GrupoMusical = grupo,
-                DiaFestival = dia
 
             };
 
@@ -98,13 +96,12 @@ namespace gestorLollapalooza.dataAccessLayer
             // Revisa que el resultado de la consulta sea correco ( igual a 1 )
             // en caso de serlo retorna true en caso contrario retorna false
 
-            string strSql = "INSERT INTO [dbo].[actuacion] ([duracionActuacion], [horaInicio], [numeroOrden], [idGrupoMusical], [idDiaFestival])" +
+            string strSql = "INSERT INTO [dbo].[actuacion] ([duracionActuacion], [numeroOrden], [idGrupoMusical], [idDiaFestival])" +
                 "VALUES ( '" +
                 actuacion.DuracionActuacion + "' , '" +
-                actuacion.HoraInicio + "' , '" +
+                
                 actuacion.NumeroOrden + "' , '" +
-                actuacion.GrupoMusical.IdGrupoMusical + "' , '" +
-                actuacion.DiaFestival.IdDiaFestival + "');";
+                actuacion.GrupoMusical.IdGrupoMusical + "');";
             
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
         }

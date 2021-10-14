@@ -5,13 +5,23 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace gestorLollapalooza.dataAccessLayer
 {
     class BDConexion
-    {
+      { 
+        
         private string string_conexion;
         private static BDConexion instance = new BDConexion();
+
+
+        // Probando para la transaccion
+        private SqlConnection cnn = new SqlConnection();
+        private SqlCommand cmd = new SqlCommand();
+        private SqlTransaction miTransaccion = null;
+        private bool estadoTransaccion = true;
+        private bool Transaccion =  false;
 
         public BDConexion()
         {
@@ -79,6 +89,8 @@ namespace gestorLollapalooza.dataAccessLayer
 
             return afectadas;
         }
+
+
 
 
         public DataTable EjecutarSQL(string strSql)
@@ -163,7 +175,7 @@ namespace gestorLollapalooza.dataAccessLayer
             SqlCommand cmd = new SqlCommand();
             try
             {
-                cnn.ConnectionString = string_conexion;
+               // cnn.ConnectionString = string_conexion;
                 cnn.Open();
                 cmd.Connection = cnn;
                 cmd.CommandType = CommandType.Text;
@@ -175,6 +187,81 @@ namespace gestorLollapalooza.dataAccessLayer
             {
                 throw (ex);
             }
+        }
+
+        public void IniciarTransaccion()
+        {
+            this.Transaccion = true;
+            cnn.ConnectionString = string_conexion;
+            cnn.Open();
+            this.miTransaccion = cnn.BeginTransaction();
+            cmd.Transaction = this.miTransaccion;
+            cmd.Connection = cnn;
+
+        }
+
+        public void FinalizarTransaccion()
+        {
+            if (this.Transaccion)
+            {
+                if (this.estadoTransaccion)
+                {
+
+                    MessageBox.Show("PASAMOS POR COMMIT!   ", "info");
+                    this.miTransaccion.Commit();
+                }
+                else
+                {
+                    MessageBox.Show("PASAMOS POR ROLLBACK!   " + this.estadoTransaccion, "info");
+
+                    miTransaccion.Rollback();
+                }
+                this.Transaccion = false;
+            }
+
+            if ((cnn.State == ConnectionState.Open))
+            {
+                cnn.Close();
+            }
+
+            // Dispose() libera los recursos asociados a la conexón
+            cnn.Dispose();
+        }
+
+
+        public object RecuperarIdentity(string tabla)
+        {
+            string strSql =" SELECT IDENT_CURRENT('" + tabla + "')";
+            try
+            {
+                this.cmd.CommandType = CommandType.Text;
+                this.cmd.CommandText = strSql ;
+                return cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                throw (ex);
+            }
+
+        }
+        
+
+        public int EjecutarSQLConTransaccion(string strSql)
+        {
+            int afectadas = 0;
+            //  Se utiliza para sentencias SQL del tipo Insert, Update, Delete con transaccion.
+            try
+            {
+                this.cmd.CommandType = CommandType.Text;
+                this.cmd.CommandText = strSql;
+                afectadas = this.cmd.ExecuteNonQuery(); 
+                
+            }
+            catch
+            {
+                this.estadoTransaccion = false;
+            }
+            return afectadas;
         }
 
         public DataTable ConsultarTabla(string tabla)

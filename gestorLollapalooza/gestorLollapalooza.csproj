@@ -99,6 +99,18 @@
     <Compile Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.Designer.cs">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\DiaFestivalPres\frmDiaFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\DiaFestivalPres\frmDiaFestival.Designer.cs">
+      <DependentUpon>frmDiaFestival.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\FestivalPres\frmDiagramarFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\FestivalPres\frmDiagramarFestival.Designer.cs">
+      <DependentUpon>frmDiagramarFestival.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\FestivalPres\frmGestionarFestival.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +254,12 @@
     <EmbeddedResource Include="presLayer\CentroVentaPres\frmModificacionCentroVenta.resx">
       <DependentUpon>frmModificacionCentroVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\DiaFestivalPres\frmDiaFestival.resx">
+      <DependentUpon>frmDiaFestival.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\FestivalPres\frmDiagramarFestival.resx">
+      <DependentUpon>frmDiagramarFestival.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\FestivalPres\frmGestionarFestival.resx">
       <DependentUpon>frmGestionarFestival.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sala_de_cine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -59,7 +59,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.btnLimpiar = new gestorLollapalooza.BotonFacha();
             this.btnConsultar = new gestorLollapalooza.BotonFacha();
             this.chbVigente = new System.Windows.Forms.CheckBox();
-            this.botonFacha3 = new gestorLollapalooza.BotonFacha();
             this.btnModifcar = new gestorLollapalooza.BotonFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
@@ -372,26 +371,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.chbVigente.Text = "Vigente";
             this.chbVigente.UseVisualStyleBackColor = true;
             // 
-            // botonFacha3
-            // 
-            this.botonFacha3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.botonFacha3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.botonFacha3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonFacha3.BorderRadius = 20;
-            this.botonFacha3.BorderSize = 0;
-            this.botonFacha3.FlatAppearance.BorderSize = 0;
-            this.botonFacha3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonFacha3.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
-            this.botonFacha3.ForeColor = System.Drawing.Color.White;
-            this.botonFacha3.Location = new System.Drawing.Point(1031, 266);
-            this.botonFacha3.Margin = new System.Windows.Forms.Padding(4);
-            this.botonFacha3.Name = "botonFacha3";
-            this.botonFacha3.Size = new System.Drawing.Size(74, 49);
-            this.botonFacha3.TabIndex = 31;
-            this.botonFacha3.Text = "Agregar";
-            this.botonFacha3.TextColor = System.Drawing.Color.White;
-            this.botonFacha3.UseVisualStyleBackColor = false;
-            // 
             // btnModifcar
             // 
             this.btnModifcar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
@@ -404,7 +383,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.btnModifcar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifcar.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
             this.btnModifcar.ForeColor = System.Drawing.Color.White;
-            this.btnModifcar.Location = new System.Drawing.Point(949, 266);
+            this.btnModifcar.Location = new System.Drawing.Point(1031, 266);
             this.btnModifcar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifcar.Name = "btnModifcar";
             this.btnModifcar.Size = new System.Drawing.Size(74, 49);
@@ -460,7 +439,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1126, 622);
-            this.Controls.Add(this.botonFacha3);
             this.Controls.Add(this.btnModifcar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnSalir);
@@ -494,7 +472,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private System.Windows.Forms.CheckBox chbVigente;
         private BotonFacha btnLimpiar;
         private BotonFacha btnConsultar;
-        private BotonFacha botonFacha3;
         private BotonFacha btnModifcar;
         private BotonFacha btnEliminar;
         private BotonFacha btnSalir;
