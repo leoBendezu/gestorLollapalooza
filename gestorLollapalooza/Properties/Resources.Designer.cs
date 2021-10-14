@@ -79,5 +79,15 @@ namespace gestorLollapalooza.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sala_de_cine {
+            get {
+                object obj = ResourceManager.GetObject("Sala_de_cine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
