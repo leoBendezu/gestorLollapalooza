@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace gestorLollapalooza.dataAccessLayer
 {
@@ -55,26 +56,29 @@ namespace gestorLollapalooza.dataAccessLayer
         {
             string strSql = "INSERT INTO [dbo].[festival] ([añoEdicion], [descuentoVentaAnticipada], [fechaInicio], [nombre], [porcentajeDevolucionPorAnulacion], [vigente], [fechaFin])" +
                 "VALUES ( " +
-                festival.AnoEdicion + " , '" +
-                festival.DescuentoVentaAnticipada + "' , '" +
-                festival.FechaInicio.ToString("YYYY-MM-DD") + "' , '" +
-                festival.Nombre + "' , '" +
-                festival.PorcentajeDevolucionPorAnulacion + "' , '" +
-                festival.Vigente + "'" +
-                festival.FechaFin.ToString("YYYY-MM-DD") + "');'";
+                festival.AnoEdicion + " , " +
+                festival.DescuentoVentaAnticipada + " , '" +
+                festival.FechaInicio.ToString("yyyy-MM-dd") + "' , '" +
+                festival.Nombre + "' , " +
+                festival.PorcentajeDevolucionPorAnulacion + " ," +
+                festival.Vigente + ",'" +
+                festival.FechaFin.ToString("yyyy-MM-dd") + "');";
 
             BDConexion.getBDConexion().IniciarTransaccion();
             BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
 
-            var newId = BDConexion.getBDConexion().RecuperarIdentity("Festival");
+            
 
-            foreach(DiaFestival dia in festival.Dias)
+            var newId = BDConexion.getBDConexion().RecuperarIdentity("Festival");
+            
+
+            foreach (DiaFestival dia in festival.Dias)
             {
-                strSql = "INSERT INTO [dbo].[diaFestival] ([fecha], [fechaLimiteAnulacionEntrada],[fechaVtoVentaAnticipada], [idFestival]) " +
+                strSql = "INSERT INTO [dbo].[diaFestival] ([fecha], [fechaLimiteAnulacionEntrada],[fechaVtoVentaAnticipado], [idFestival]) " +
                 "VALUES ('" +
-                dia.Fecha.ToString("YYYY-MM-DD") + "', '" +
-                dia.FechaLimiteAnulacionEntrada.ToString("YYYY-MM-DD") + "', '" +
-                dia.FechaVtoVentaAnticipada.ToString("YYYY-MM-DD") + "', '" +
+                dia.Fecha.ToString("yyyy-MM-dd") + "', '" +
+                dia.FechaLimiteAnulacionEntrada.ToString("yyyy-MM-dd") + "', '" +
+                dia.FechaVtoVentaAnticipada.ToString("yyyy-MM-dd") + "'," +
                 newId + ");";
                 BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
 
@@ -83,8 +87,8 @@ namespace gestorLollapalooza.dataAccessLayer
 
                 foreach(Actuacion act in dia.Actuaciones)
                 {
-                    strSql = "INSERT INTO [dbo].[diaFestival] ([duracionEstimada], [numeroOrden],[idGrupoMusical], [idDiaFestival]) " +
-                            "VALUES ('" +
+                    strSql = "INSERT INTO [dbo].[Actuacion] ([duracionEstimada], [numeroOrden],[idGrupoMusical], [idDiaFestival]) " +
+                            "VALUES (" +
                             act.DuracionActuacion + "," +
                             act.NumeroOrden + "," +
                             act.GrupoMusical.IdGrupoMusical + "," +
@@ -123,10 +127,11 @@ namespace gestorLollapalooza.dataAccessLayer
             int idFestival = Convert.ToInt32(row["idFestival"].ToString());
             int anoEdicion = Convert.ToInt32(row["añoEdicion"].ToString());
             int descuentoVentaAnticipada = Convert.ToInt32(row["descuentoVentaAnticipada"].ToString());
-            int fechaInicio = Convert.ToInt32(row["fechaInicio"].ToString());
+            DateTime fechaInicio = Convert.ToDateTime(row["fechaInicio"].ToString());
+            DateTime fechaFin = Convert.ToDateTime(row["fechaFin"].ToString());
             string nombre = row["nombre"].ToString();
             int porcentajeDevolucionPorAnulacion = Convert.ToInt32(row["porcentajeDevolucionPorAnulacion"].ToString());
-            int vigente = Convert.ToInt32(row["vigente"].ToString());
+            int vigente = Convert.ToInt32(row["vigente"]);
 
             IList<DiaFestival> dias;
             DiaFestivalService serviceD = new DiaFestivalService();
@@ -140,6 +145,7 @@ namespace gestorLollapalooza.dataAccessLayer
                 AnoEdicion = anoEdicion,
                 DescuentoVentaAnticipada = descuentoVentaAnticipada,
                 FechaInicio = fechaInicio,
+                FechaFin = fechaFin,
                 Nombre = nombre,
                 PorcentajeDevolucionPorAnulacion = porcentajeDevolucionPorAnulacion,
                 Vigente = vigente,

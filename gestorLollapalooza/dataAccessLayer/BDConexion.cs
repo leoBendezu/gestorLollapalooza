@@ -254,12 +254,15 @@ namespace gestorLollapalooza.dataAccessLayer
             {
                 this.cmd.CommandType = CommandType.Text;
                 this.cmd.CommandText = strSql;
-                afectadas = this.cmd.ExecuteNonQuery(); 
+                afectadas = this.cmd.ExecuteNonQuery();
                 
+
             }
             catch
             {
                 this.estadoTransaccion = false;
+
+                MessageBox.Show("Fail" + strSql);
             }
             return afectadas;
         }

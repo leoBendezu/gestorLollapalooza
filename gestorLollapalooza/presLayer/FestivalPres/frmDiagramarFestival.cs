@@ -162,8 +162,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                         DescuentoVentaAnticipada = Convert.ToInt32(this.txtbDescuento.Text),
                         PorcentajeDevolucionPorAnulacion = Convert.ToInt32(this.txtbDevolucion.Text),
                         FechaFin = dtpFechaFin.Value,
-                        FechaInicio = dtpFechaInicio.Value
-
+                        FechaInicio = dtpFechaInicio.Value,
+                        Dias = this.dias
                     };
 
                     oFestival.persistirFestival(festival);
@@ -176,11 +176,11 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private bool existeFestival()
         {
             string filtros = "and nombre = '" + this.txtbNombre.Text +
-                             "' and fechaInicio = '" + this.dtpFechaInicio.Value.ToString("yy-MM-dd") +
-                             "' and fechaFin = '" + this.dtpFechaFin.Value.ToString("yy-MM-dd") +
+                             "' and fechaInicio = '" + this.dtpFechaInicio.Value.ToString("yyyy-MM-dd") +
+                             "' and fechaFin = '" + this.dtpFechaFin.Value.ToString("yyyy-MM-dd") +
                              "' and descuentoVentaAnticipada = " + this.txtbDescuento.Text +
-                             "' and porcentajeDevolucionPorAnulacion = " + this.txtbDevolucion.Text +
-                             "' and anioEdicion = " + this.numAno.Value +
+                             " and porcentajeDevolucionPorAnulacion = " + this.txtbDevolucion.Text +
+                             " and añoEdicion = " + this.numAno.Value +
                              "";
             if (oFestival.recuperarFiltrados(filtros).Count != 0)
             {
