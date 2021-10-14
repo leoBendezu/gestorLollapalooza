@@ -143,7 +143,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
                     Fecha = this.dtpFecha.Value.Date,
                     FechaLimiteAnulacionEntrada = this.dtpAnulacion.Value.Date,
                     FechaVtoVentaAnticipada = this.dtpAnticipa.Value.Date,
-                    Actuaciones = this.actuaciones
+                    Actuaciones = new List<Actuacion>(this.actuaciones)
                 };
 
                 dias.Add(dia);

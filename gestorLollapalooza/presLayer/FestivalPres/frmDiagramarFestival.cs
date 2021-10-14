@@ -38,7 +38,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             grilla.Rows.Clear();
             foreach (DiaFestival dia in fuente)
             {
-                grilla.Rows.Add(dia.Fecha, dia.FechaLimiteAnulacionEntrada, dia.FechaVtoVentaAnticipada);
+                grilla.Rows.Add(dia.Fecha.ToString("MM-dd-yy"), dia.FechaLimiteAnulacionEntrada.ToString("MM-dd-yy"), dia.FechaVtoVentaAnticipada.ToString("MM-dd-yy"));
             }
         }       
         
@@ -139,12 +139,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         {
             if (this.dgvDias.CurrentRow != null)
             {
-
-
-                MessageBox.Show("uwu" + dgvDias.CurrentRow.Index);
-
-                //this.CargarGrillaActuaciones(dgvActuacion, dias[dia].Actuaciones);
-                
+                int dia = dgvDias.CurrentRow.Index;
+                this.CargarGrillaActuaciones(dgvActuacion, dias[dia].Actuaciones);     
             }
         }
     }
