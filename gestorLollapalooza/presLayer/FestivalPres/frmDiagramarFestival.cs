@@ -66,7 +66,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                 this.numAno.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
                 return false;
             }
-            if (!(this.dtpFechaFin.Value.CompareTo(this.dtpFechaInicio.Value) > 0))
+            if (!(this.dtpFechaFin.Value.Date.CompareTo(this.dtpFechaInicio.Value.Date) >= 0))
             { 
                 MessageBox.Show("Ingrese correctamente el periodo del festival...");
                 return false; 
