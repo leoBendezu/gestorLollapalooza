@@ -61,6 +61,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
         private void LimpiarTxtCentroVenta()
         {
             // Limpia los campos de texto
+           
 
             this.txtbNombre.Text = String.Empty;
             this.txtbNombre.Focus();
