@@ -1,5 +1,6 @@
 ﻿using gestorLollapalooza.bussinesLayer;
 using gestorLollapalooza.presLayer.DiaFestivalPres;
+using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
 {
     public partial class frmDiagramarFestival : Form
     {
+        FestivalService oFestival = new FestivalService();
+
         private IList<DiaFestival> dias;
         public frmDiagramarFestival()
         {
@@ -95,7 +98,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             {
                 this.txtbDescuento.Text = "0";
             }
-            string caracteres = "0123456789.";
+            string caracteres = "0123456789";
             for (int i =0; i< this.txtbDescuento.Text.Length; i++)
             {
                 char letra = this.txtbDescuento.Text[i];
@@ -143,5 +146,39 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                 this.CargarGrillaActuaciones(dgvActuacion, dias[dia].Actuaciones);     
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvDias.Rows.Count > 0)
+
+            {
+                if (!existeFestival())
+                {
+                    BDHelper.getBDHelper().conectarConTransaccion();
+                    grabarPedido();
+                    grabarDetalle();
+                    BDHelper.getBDHelper().desconectar();
+                }
+            }
+            else
+                MessageBox.Show("Debe tener al menos un item de pedido...");
+        }
+
+        private bool existeFestival()
+        {
+            string filtros = "and nombre = '" + this.txtbNombre.Text +
+                             "' and fechaInicio = '" + this.dtpFechaInicio.Value.ToString("yy-MM-dd") +
+                             "' and fechaFin = '" + this.dtpFechaFin.Value.ToString("yy-MM-dd") +
+                             "' and descuentoVentaAnticipada = " + this.txtbDescuento.Text +
+                             "' and porcentajeDevolucionPorAnulacion = " + this.txtbDevolucion.Text +
+                             "' and anioEdicion = " + this.numAno.Value +
+                             "";
+            if (oFestival.recuperarFiltrados(filtros).Count != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+    
     }
 }
