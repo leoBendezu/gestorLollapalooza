@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.dataAccessLayer;
 using gestorLollapalooza.presLayer.DiaFestivalPres;
 using gestorLollapalooza.Service;
 using System;
@@ -154,10 +155,18 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             {
                 if (!existeFestival())
                 {
-                    BDHelper.getBDHelper().conectarConTransaccion();
-                    grabarPedido();
-                    grabarDetalle();
-                    BDHelper.getBDHelper().desconectar();
+                    Festival festival = new Festival()
+                    {
+                        Nombre = this.txtbNombre.Text,
+                        AnoEdicion = (int)this.numAno.Value,
+                        DescuentoVentaAnticipada = Convert.ToInt32(this.txtbDescuento.Text),
+                        PorcentajeDevolucionPorAnulacion = Convert.ToInt32(this.txtbDevolucion.Text),
+                        FechaFin = dtpFechaFin.Value,
+                        FechaInicio = dtpFechaInicio.Value
+
+                    };
+
+                    oFestival.persistirFestival(festival);
                 }
             }
             else
