@@ -26,11 +26,31 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             resetearColor();
             if (Validar())
             {
-                frmDiaFestival frm = new frmDiaFestival(this.dtpFechaInicio.Value, this.dtpFechaFin.Value, this.dias);
+                frmDiaFestival frm = new frmDiaFestival(this.dtpFechaInicio.Value.Date, this.dtpFechaFin.Value.Date, this.dias);
                 frm.ShowDialog();
+                this.CargarGrillaDias(this.dgvDias, this.dias);
             }
             
         }
+
+        private void CargarGrillaDias(DataGridView grilla, IList<DiaFestival> fuente)
+        {
+            grilla.Rows.Clear();
+            foreach (DiaFestival dia in fuente)
+            {
+                grilla.Rows.Add(dia.Fecha, dia.FechaLimiteAnulacionEntrada, dia.FechaVtoVentaAnticipada);
+            }
+        }       
+        
+        private void CargarGrillaActuaciones(DataGridView grilla, IList<Actuacion> fuente)
+        {
+            grilla.Rows.Clear();
+            foreach (Actuacion actuacion in fuente)
+            {
+                grilla.Rows.Add(actuacion.NumeroOrden, actuacion.DuracionActuacion, actuacion.GrupoMusical.Nombre);
+            }
+        }
+
 
         private void frmTextBoxFacha1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -113,6 +133,19 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.txtbDescuento.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbDevolucion.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
 
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.dgvDias.CurrentRow != null)
+            {
+
+
+                MessageBox.Show("uwu" + dgvDias.CurrentRow.Index);
+
+                //this.CargarGrillaActuaciones(dgvActuacion, dias[dia].Actuaciones);
+                
+            }
         }
     }
 }

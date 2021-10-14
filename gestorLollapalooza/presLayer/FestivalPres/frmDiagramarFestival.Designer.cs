@@ -45,11 +45,11 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvActuacion = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPuntoVenta = new System.Windows.Forms.DataGridView();
+            this.dgvDias = new System.Windows.Forms.DataGridView();
             this.fcha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechlim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +66,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAno)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntoVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFestivales
@@ -192,8 +192,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.dgvPuntoVenta);
+            this.groupBox1.Controls.Add(this.dgvActuacion);
+            this.groupBox1.Controls.Add(this.dgvDias);
             this.groupBox1.Controls.Add(this.btnQuitar);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.label9);
@@ -206,14 +206,14 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Diagramacion";
             // 
-            // dataGridView2
+            // dgvActuacion
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvActuacion.AllowUserToAddRows = false;
+            this.dgvActuacion.AllowUserToDeleteRows = false;
+            this.dgvActuacion.AllowUserToResizeColumns = false;
+            this.dgvActuacion.AllowUserToResizeRows = false;
+            this.dgvActuacion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.dgvActuacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
@@ -221,10 +221,10 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeight = 30;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvActuacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvActuacion.ColumnHeadersHeight = 30;
+            this.dgvActuacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvActuacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.duracionEstimada,
             this.Column4});
@@ -235,18 +235,20 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.dataGridView2.Location = new System.Drawing.Point(191, 250);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView2.Size = new System.Drawing.Size(464, 163);
-            this.dataGridView2.TabIndex = 27;
+            this.dgvActuacion.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvActuacion.EnableHeadersVisualStyles = false;
+            this.dgvActuacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.dgvActuacion.Location = new System.Drawing.Point(191, 250);
+            this.dgvActuacion.Name = "dgvActuacion";
+            this.dgvActuacion.ReadOnly = true;
+            this.dgvActuacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvActuacion.RowHeadersVisible = false;
+            this.dgvActuacion.RowHeadersWidth = 51;
+            this.dgvActuacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvActuacion.Size = new System.Drawing.Size(464, 163);
+            this.dgvActuacion.TabIndex = 27;
+            this.dgvActuacion.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dgvActuacion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // Column3
             // 
@@ -269,14 +271,14 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.Column4.ReadOnly = true;
             this.Column4.Width = 170;
             // 
-            // dgvPuntoVenta
+            // dgvDias
             // 
-            this.dgvPuntoVenta.AllowUserToAddRows = false;
-            this.dgvPuntoVenta.AllowUserToDeleteRows = false;
-            this.dgvPuntoVenta.AllowUserToResizeColumns = false;
-            this.dgvPuntoVenta.AllowUserToResizeRows = false;
-            this.dgvPuntoVenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.dgvPuntoVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDias.AllowUserToAddRows = false;
+            this.dgvDias.AllowUserToDeleteRows = false;
+            this.dgvDias.AllowUserToResizeColumns = false;
+            this.dgvDias.AllowUserToResizeRows = false;
+            this.dgvDias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            this.dgvDias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
@@ -284,10 +286,10 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPuntoVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvPuntoVenta.ColumnHeadersHeight = 30;
-            this.dgvPuntoVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvPuntoVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDias.ColumnHeadersHeight = 30;
+            this.dgvDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fcha,
             this.fechlim,
             this.Column1});
@@ -298,18 +300,18 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPuntoVenta.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPuntoVenta.EnableHeadersVisualStyles = false;
-            this.dgvPuntoVenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.dgvPuntoVenta.Location = new System.Drawing.Point(10, 40);
-            this.dgvPuntoVenta.Name = "dgvPuntoVenta";
-            this.dgvPuntoVenta.ReadOnly = true;
-            this.dgvPuntoVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPuntoVenta.RowHeadersVisible = false;
-            this.dgvPuntoVenta.RowHeadersWidth = 51;
-            this.dgvPuntoVenta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvPuntoVenta.Size = new System.Drawing.Size(704, 163);
-            this.dgvPuntoVenta.TabIndex = 26;
+            this.dgvDias.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDias.EnableHeadersVisualStyles = false;
+            this.dgvDias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.dgvDias.Location = new System.Drawing.Point(10, 40);
+            this.dgvDias.Name = "dgvDias";
+            this.dgvDias.ReadOnly = true;
+            this.dgvDias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDias.RowHeadersVisible = false;
+            this.dgvDias.RowHeadersWidth = 51;
+            this.dgvDias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvDias.Size = new System.Drawing.Size(704, 163);
+            this.dgvDias.TabIndex = 26;
             // 
             // fcha
             // 
@@ -507,8 +509,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             ((System.ComponentModel.ISupportInitialize)(this.numAno)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPuntoVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,8 +538,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private BotonFacha btnQuitar;
         private BotonFacha btnAgregar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dgvPuntoVenta;
+        private System.Windows.Forms.DataGridView dgvActuacion;
+        private System.Windows.Forms.DataGridView dgvDias;
         private System.Windows.Forms.DataGridViewTextBoxColumn fcha;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechlim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
