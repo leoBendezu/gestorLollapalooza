@@ -133,7 +133,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             // Devuelve el color original a los campos
 
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.numAno.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.numAno.BackColor = Color.White;
             this.txtbDescuento.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbDevolucion.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
 
@@ -170,7 +170,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                 }
             }
             else
-                MessageBox.Show("Debe tener al menos un item de pedido...");
+                MessageBox.Show("El festival debe poseer al menos un dia en su diagramacion..");
         }
 
         private bool existeFestival()
@@ -188,6 +188,21 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             }
             return false;
         }
+
+        private void limpiar()
+        {
+            this.txtbNombre.Text = string.Empty;
+            this.txtbDescuento.Text = string.Empty;
+            this.txtbDevolucion.Text = string.Empty;
+            this.numAno.Value = 0;
+            this.dtpFechaFin.Value = DateTime.Today;
+            this.dtpFechaInicio.Value = DateTime.Today;
+
+            this.dgvDias.Rows.Clear();
+            this.dgvActuacion.Rows.Clear();
+            this.dias.Clear();
+        }
+            
     
     }
 }

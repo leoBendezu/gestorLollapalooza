@@ -153,7 +153,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbPassword.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbPassword.BorderSize = 2;
             this.txtbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtbPassword.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbPassword.ForeColor = System.Drawing.Color.White;
             this.txtbPassword.Location = new System.Drawing.Point(70, 329);
             this.txtbPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbPassword.Multiline = false;
@@ -163,7 +163,6 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbPassword.Size = new System.Drawing.Size(157, 29);
             this.txtbPassword.TabIndex = 11;
             this.txtbPassword.UnderlinedStyle = true;
-
             // 
             // txtbUsuario
             // 
@@ -172,7 +171,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbUsuario.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtbUsuario.BorderSize = 2;
             this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.txtbUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtbUsuario.ForeColor = System.Drawing.Color.White;
             this.txtbUsuario.Location = new System.Drawing.Point(70, 261);
             this.txtbUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbUsuario.Multiline = false;
@@ -198,6 +197,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;

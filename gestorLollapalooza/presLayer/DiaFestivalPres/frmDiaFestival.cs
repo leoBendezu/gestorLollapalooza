@@ -1,4 +1,5 @@
 ﻿using gestorLollapalooza.bussinesLayer;
+using gestorLollapalooza.presLayer.GrupoMusicalPres;
 using gestorLollapalooza.Service;
 using System;
 using System.Collections.Generic;
@@ -208,6 +209,13 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void botonFacha1_Click(object sender, EventArgs e)
+        {
+            frmConsultaGrupoMusical frm = new frmConsultaGrupoMusical();
+            frm.ShowDialog();
+            frm.Dispose();
         }
     }
 

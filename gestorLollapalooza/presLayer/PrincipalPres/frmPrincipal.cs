@@ -22,12 +22,12 @@ namespace gestorLollapalooza.pressLayer
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             
-            /*frmLogin login = new frmLogin();
+            frmLogin login = new frmLogin();
             login.ShowDialog();
 
             if(login.UsuarioLoggeado == null) { this.Close(); } 
 
-            login.Dispose(); */
+            login.Dispose(); 
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)

@@ -96,11 +96,11 @@ namespace gestorLollapalooza.dataAccessLayer
                     BDConexion.getBDConexion().EjecutarSQLConTransaccion(strSql);
 
                 }
-                BDConexion.getBDConexion().FinalizarTransaccion();
-                return true;
+               
             }
 
-            return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+            BDConexion.getBDConexion().FinalizarTransaccion();
+            return true;
         }
 
         public IList<Festival> recuperarFiltrados(string filtros)
