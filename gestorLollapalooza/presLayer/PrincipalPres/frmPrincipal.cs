@@ -3,6 +3,7 @@ using gestorLollapalooza.presLayer.FestivalPres;
 using gestorLollapalooza.presLayer.GrupoMusicalPres;
 using gestorLollapalooza.presLayer.LoginPres;
 using gestorLollapalooza.presLayer.PuntoVentaPres;
+using gestorLollapalooza.presLayer.ReportPres;
 using gestorLollapalooza.presLayer.TipoEntradaPres;
 using gestorLollapalooza.presLayer.UsuarioPres;
 using System;
@@ -96,6 +97,12 @@ namespace gestorLollapalooza.pressLayer
         {
             frmDiagramarFestival frmf = new frmDiagramarFestival();
             frmf.ShowDialog();
+        }
+
+        private void gruposMusicalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteGM reporte = new ReporteGM();
+            reporte.ShowDialog();
         }
     }
 }

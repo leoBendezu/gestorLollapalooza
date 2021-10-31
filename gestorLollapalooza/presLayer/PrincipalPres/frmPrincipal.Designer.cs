@@ -34,6 +34,7 @@ namespace gestorLollapalooza.pressLayer
             this.venderEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.festivalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.diagramarNuevoFestivalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,8 @@ namespace gestorLollapalooza.pressLayer
             this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.diagramarNuevoFestivalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@ namespace gestorLollapalooza.pressLayer
             this.venderEntradaToolStripMenuItem,
             this.festivalesToolStripMenuItem,
             this.soporteToolStripMenuItem,
+            this.reportesToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -84,6 +87,13 @@ namespace gestorLollapalooza.pressLayer
             this.gestionarToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
             this.gestionarToolStripMenuItem.Text = "Gestionar";
             this.gestionarToolStripMenuItem.Click += new System.EventHandler(this.gestionarToolStripMenuItem_Click);
+            // 
+            // diagramarNuevoFestivalToolStripMenuItem
+            // 
+            this.diagramarNuevoFestivalToolStripMenuItem.Name = "diagramarNuevoFestivalToolStripMenuItem";
+            this.diagramarNuevoFestivalToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.diagramarNuevoFestivalToolStripMenuItem.Text = "Diagramar Nuevo Festival";
+            this.diagramarNuevoFestivalToolStripMenuItem.Click += new System.EventHandler(this.diagramarNuevoFestivalToolStripMenuItem_Click);
             // 
             // soporteToolStripMenuItem
             // 
@@ -143,12 +153,20 @@ namespace gestorLollapalooza.pressLayer
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // diagramarNuevoFestivalToolStripMenuItem
+            // reportesToolStripMenuItem
             // 
-            this.diagramarNuevoFestivalToolStripMenuItem.Name = "diagramarNuevoFestivalToolStripMenuItem";
-            this.diagramarNuevoFestivalToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.diagramarNuevoFestivalToolStripMenuItem.Text = "Diagramar Nuevo Festival";
-            this.diagramarNuevoFestivalToolStripMenuItem.Click += new System.EventHandler(this.diagramarNuevoFestivalToolStripMenuItem_Click);
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gruposMusicalesToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // gruposMusicalesToolStripMenuItem
+            // 
+            this.gruposMusicalesToolStripMenuItem.Name = "gruposMusicalesToolStripMenuItem";
+            this.gruposMusicalesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.gruposMusicalesToolStripMenuItem.Text = "Grupos Musicales";
+            this.gruposMusicalesToolStripMenuItem.Click += new System.EventHandler(this.gruposMusicalesToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -189,5 +207,7 @@ namespace gestorLollapalooza.pressLayer
         private System.Windows.Forms.ToolStripMenuItem gestiónCentroDeVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diagramarNuevoFestivalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruposMusicalesToolStripMenuItem;
     }
 }
