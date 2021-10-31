@@ -177,11 +177,11 @@
     <Compile Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.Designer.cs">
       <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="presLayer\ReportPres\ReporteGM.cs">
+    <Compile Include="presLayer\ReportPres\frmReporteGM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presLayer\ReportPres\ReporteGM.Designer.cs">
-      <DependentUpon>ReporteGM.cs</DependentUpon>
+    <Compile Include="presLayer\ReportPres\frmReporteGM.Designer.cs">
+      <DependentUpon>frmReporteGM.cs</DependentUpon>
     </Compile>
     <Compile Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.cs">
       <SubType>Form</SubType>
@@ -251,6 +251,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportLayer\DataSetGruposMusicales.cs">
+      <DependentUpon>DataSetGruposMusicales.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportLayer\DataSetGruposMusicales.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -323,8 +326,8 @@
     <EmbeddedResource Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.resx">
       <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presLayer\ReportPres\ReporteGM.resx">
-      <DependentUpon>ReporteGM.cs</DependentUpon>
+    <EmbeddedResource Include="presLayer\ReportPres\frmReporteGM.resx">
+      <DependentUpon>frmReporteGM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.resx">
       <DependentUpon>frmAltaTipoEntrada.cs</DependentUpon>

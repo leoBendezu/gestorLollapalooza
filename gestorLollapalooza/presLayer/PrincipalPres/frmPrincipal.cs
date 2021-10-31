@@ -101,7 +101,13 @@ namespace gestorLollapalooza.pressLayer
 
         private void gruposMusicalesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteGM reporte = new ReporteGM();
+            frmReporteGM reporte = new frmReporteGM();
+            reporte.ShowDialog();
+        }
+
+        private void grupoMusicalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteGM reporte = new frmReporteGM();
             reporte.ShowDialog();
         }
     }
