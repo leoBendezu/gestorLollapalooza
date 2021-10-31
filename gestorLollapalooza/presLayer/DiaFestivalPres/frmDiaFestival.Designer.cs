@@ -29,8 +29,12 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiaFestival));
             this.gbxFestivales = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtpAnticipa = new System.Windows.Forms.DateTimePicker();
@@ -40,6 +44,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numDuracionEstimada = new System.Windows.Forms.NumericUpDown();
             this.botonFacha2 = new gestorLollapalooza.BotonFacha();
             this.botonFacha1 = new gestorLollapalooza.BotonFacha();
             this.btnQuitar = new gestorLollapalooza.BotonFacha();
@@ -52,16 +57,15 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dgvActuacion = new System.Windows.Forms.DataGridView();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
             this.btnAceptar = new gestorLollapalooza.BotonFacha();
-            this.numDuracionEstimada = new System.Windows.Forms.NumericUpDown();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duracionEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxFestivales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracionEstimada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracionEstimada)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFestivales
@@ -164,6 +168,13 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actuacion";
             // 
+            // numDuracionEstimada
+            // 
+            this.numDuracionEstimada.Location = new System.Drawing.Point(20, 56);
+            this.numDuracionEstimada.Name = "numDuracionEstimada";
+            this.numDuracionEstimada.Size = new System.Drawing.Size(67, 20);
+            this.numDuracionEstimada.TabIndex = 44;
+            // 
             // botonFacha2
             // 
             this.botonFacha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
@@ -202,6 +213,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.botonFacha1.Text = "?";
             this.botonFacha1.TextColor = System.Drawing.Color.White;
             this.botonFacha1.UseVisualStyleBackColor = false;
+            this.botonFacha1.Click += new System.EventHandler(this.botonFacha1_Click);
             // 
             // btnQuitar
             // 
@@ -306,28 +318,28 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dgvActuacion.AllowUserToResizeRows = false;
             this.dgvActuacion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.dgvActuacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvActuacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvActuacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvActuacion.ColumnHeadersHeight = 30;
             this.dgvActuacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvActuacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
             this.duracionEstimada,
             this.Column4});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvActuacion.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvActuacion.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvActuacion.EnableHeadersVisualStyles = false;
             this.dgvActuacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.dgvActuacion.Location = new System.Drawing.Point(69, 382);
@@ -380,15 +392,10 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // numDuracionEstimada
-            // 
-            this.numDuracionEstimada.Location = new System.Drawing.Point(20, 56);
-            this.numDuracionEstimada.Name = "numDuracionEstimada";
-            this.numDuracionEstimada.Size = new System.Drawing.Size(67, 20);
-            this.numDuracionEstimada.TabIndex = 44;
-            // 
             // Column3
             // 
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column3.HeaderText = "numero orden";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -396,6 +403,8 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             // duracionEstimada
             // 
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.duracionEstimada.DefaultCellStyle = dataGridViewCellStyle3;
             this.duracionEstimada.HeaderText = "Duracion Estimada (min)";
             this.duracionEstimada.Name = "duracionEstimada";
             this.duracionEstimada.ReadOnly = true;
@@ -403,6 +412,8 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             // Column4
             // 
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Grupo Musical Actuante";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -412,6 +423,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(601, 617);
             this.Controls.Add(this.btnSalir);
@@ -419,16 +431,20 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.Controls.Add(this.dgvActuacion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxFestivales);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDiaFestival";
-            this.Text = "frmDiaFestival";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Dias Festival";
             this.gbxFestivales.ResumeLayout(false);
             this.gbxFestivales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracionEstimada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracionEstimada)).EndInit();
             this.ResumeLayout(false);
 
         }

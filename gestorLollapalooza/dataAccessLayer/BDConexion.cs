@@ -207,12 +207,12 @@ namespace gestorLollapalooza.dataAccessLayer
                 if (this.estadoTransaccion)
                 {
 
-                    MessageBox.Show("PASAMOS POR COMMIT!   ", "info");
+                    MessageBox.Show("Transaccion realizada de forma exitosa  ", "info");
                     this.miTransaccion.Commit();
                 }
                 else
                 {
-                    MessageBox.Show("PASAMOS POR ROLLBACK!   " + this.estadoTransaccion, "info");
+                    MessageBox.Show("Transaccion fallida   ", "info");
 
                     miTransaccion.Rollback();
                 }
@@ -262,14 +262,10 @@ namespace gestorLollapalooza.dataAccessLayer
             {
                 this.estadoTransaccion = false;
 
-                MessageBox.Show("Fail" + strSql);
             }
             return afectadas;
         }
 
-        public DataTable ConsultarTabla(string tabla)
-        {
-            return this.EjecutarSQL("Select * from " + tabla);
-        }
+
     }
 }
