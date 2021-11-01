@@ -2,7 +2,7 @@
 {
 
 
-    partial class DataSetGruposMusicales
+    partial class DataSetLollaPalooza
     {
     }
 }

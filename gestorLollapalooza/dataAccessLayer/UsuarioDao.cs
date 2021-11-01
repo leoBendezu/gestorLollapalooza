@@ -37,6 +37,21 @@ namespace gestorLollapalooza.dataAccessLayer
         }
 
 
+        public DataTable obtenerTodosReporte()
+        {
+            // funciona igual que el obtenerTodos, pero retorna un datatable y lo usamos para los reportes
+
+            List<Usuario> usuarios = new List<Usuario>();
+
+            string strSql = "SELECT u.*, p.idPerfil, p.nombrePerfil " +
+                         "from usuarios u JOIN perfiles p ON(u.idPerfil = p.idPerfil) " +
+                         "WHERE u.borradoLogico = 0 ";
+
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+        }
+
+
         public Usuario recuperarUsuario(string nombreUsuario)
         {
             // Metodo encargado de recuperar un usuario especifico de la Base de datos, recibe como parametros:
@@ -135,6 +150,21 @@ namespace gestorLollapalooza.dataAccessLayer
                 usuarios.Add(this.MapearUsuario(row));
             }
             return usuarios;
+        }
+
+
+        public DataTable recuperarFiltradosReporte(string filtros)
+        {
+            // Funciona igual que el recuperarFiltrados pero devuelve las cosas en forma de datatable para facilitarle la vida a los pobres que hacen el reporte
+
+            IList<Usuario> usuarios = new List<Usuario>();
+            string strSql = "SELECT u.*, p.idPerfil, p.nombrePerfil " +
+                            "from usuarios u JOIN perfiles p ON(u.idPerfil = p.idPerfil) " +
+                            "WHERE u.borradoLogico = 0 " + filtros;
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+            
         }
 
 

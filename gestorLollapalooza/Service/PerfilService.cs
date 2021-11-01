@@ -2,6 +2,7 @@
 using gestorLollapalooza.dataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,10 @@ namespace gestorLollapalooza.Service
             // Si se logra recuperar todos los perfiles retorna una lista de perfiles 
 
             return this.oPerfil.obtenerTodos();
+        }
+        public DataTable recuperarTodosReporte()
+        {
+            return oPerfil.obtenerTodosReporte();
         }
     }
 }

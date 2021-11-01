@@ -2,6 +2,7 @@
 using gestorLollapalooza.dataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -109,6 +110,16 @@ namespace gestorLollapalooza.Service
             // si encuentra usuarios en base al filtro retorna una lista de usuarios
 
             return oUsuario.recuperarFiltrados(filtros);
+        }
+
+        public DataTable recuperarFiltradosReporte(String filtros)
+        {
+            return oUsuario.recuperarFiltradosReporte(filtros);
+        }
+
+        public DataTable recuperarTodosReporte()
+        {
+            return oUsuario.obtenerTodosReporte();
         }
     }
 }

@@ -183,6 +183,12 @@
     <Compile Include="presLayer\ReportPres\frmReporteGM.Designer.cs">
       <DependentUpon>frmReporteGM.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteUsuarios.Designer.cs">
+      <DependentUpon>frmReporteUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,13 +257,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportLayer\DataSetGruposMusicales.cs">
-      <DependentUpon>DataSetGruposMusicales.xsd</DependentUpon>
+    <Compile Include="ReportLayer\DataSetLollaPalooza.cs">
+      <DependentUpon>DataSetLollaPalooza.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ReportLayer\DataSetGruposMusicales.Designer.cs">
+    <Compile Include="ReportLayer\DataSetLollaPalooza.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetGruposMusicales.xsd</DependentUpon>
+      <DependentUpon>DataSetLollaPalooza.xsd</DependentUpon>
     </Compile>
     <Compile Include="Service\ActuacionService.cs" />
     <Compile Include="Service\CentroVentaService.cs" />
@@ -329,6 +335,9 @@
     <EmbeddedResource Include="presLayer\ReportPres\frmReporteGM.resx">
       <DependentUpon>frmReporteGM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\ReportPres\frmReporteUsuarios.resx">
+      <DependentUpon>frmReporteUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\TipoEntradaPres\frmAltaTipoEntrada.resx">
       <DependentUpon>frmAltaTipoEntrada.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +368,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportLayer\ReportGruposMusicales.rdlc" />
+    <EmbeddedResource Include="ReportLayer\ReportUsuarios.rdlc" />
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,16 +392,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReportLayer\DataSetGruposMusicales.xsc">
-      <DependentUpon>DataSetGruposMusicales.xsd</DependentUpon>
+    <None Include="ReportLayer\DataSetLollaPalooza.xsc">
+      <DependentUpon>DataSetLollaPalooza.xsd</DependentUpon>
     </None>
-    <None Include="ReportLayer\DataSetGruposMusicales.xsd">
+    <None Include="ReportLayer\DataSetLollaPalooza.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetGruposMusicales.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetLollaPalooza.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ReportLayer\DataSetGruposMusicales.xss">
-      <DependentUpon>DataSetGruposMusicales.xsd</DependentUpon>
+    <None Include="ReportLayer\DataSetLollaPalooza.xss">
+      <DependentUpon>DataSetLollaPalooza.xsd</DependentUpon>
     </None>
     <None Include="Resources\logo.png" />
   </ItemGroup>

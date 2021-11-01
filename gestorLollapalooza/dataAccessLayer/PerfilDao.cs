@@ -34,7 +34,24 @@ namespace gestorLollapalooza.dataAccessLayer
             }
             return perfiles;
         }
-    
+
+
+        public DataTable obtenerTodosReporte()
+        {
+
+
+
+            List<Perfil> perfiles = new List<Perfil>();
+
+            var strSql = "SELECT p.idPerfil, p.nombrePerfil " +
+                         "from perfiles p " +
+                         "WHERE p.borradoLogico = 0 ";
+
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+
+        }
+
         public Perfil MapearPerfil(DataRow row)
         {
 

@@ -21,9 +21,9 @@ namespace gestorLollapalooza.dataAccessLayer
 
             List<Actuacion> actuaciones = new List<Actuacion>();
 
-            var strSql = "SELECT p.idPerfil, p.nombrePerfil " +
-                         "from perfiles p " +
-                         "WHERE p.borradoLogico = 0 ";
+            var strSql = "SELECT idActuacion, duracionEstimada, numeroOrden, idGrupoMusical, idDiaFestival " +
+                         "from actuacion " +
+                         "WHERE borradoLogico = 0 ";
 
 
             var resultadoConsulta = BDConexion.getBDConexion().EjecutarSQL(strSql);
@@ -41,9 +41,9 @@ namespace gestorLollapalooza.dataAccessLayer
 
             List<Actuacion> actuaciones = new List<Actuacion>();
 
-            var strSql = "SELECT p.idPerfil, p.nombrePerfil " +
-                         "from perfiles p " +
-                         "WHERE p.borradoLogico = 0 " +
+            var strSql = "SELECT idActuacion, duracionEstimada, numeroOrden, idGrupoMusical, idDiaFestival " +
+                         "from actuacion " +
+                         "WHERE borradoLogico = 0 " +
                          "and idDiaFestival = "+ idDiaFestival;
 
 
@@ -63,8 +63,8 @@ namespace gestorLollapalooza.dataAccessLayer
             // Metodo encargado de convertir una fila en un objeto perfil
 
             int idActuacion = Convert.ToInt32(row["idActuacion"].ToString());
-            int duracionActuacion = Convert.ToInt32(row["duracionActuacion"].ToString());
-            int horaInicio = Convert.ToInt32(row["horaInicio"].ToString());
+            int duracionActuacion = Convert.ToInt32(row["duracionEstimada"].ToString());
+     
             int numeroOrden = Convert.ToInt32(row["numeroOrden"].ToString());
             int idGrupoMusical = Convert.ToInt32(row["idGrupoMusical"].ToString());
             int idDiaFestival = Convert.ToInt32(row["idDiaFestival"].ToString());

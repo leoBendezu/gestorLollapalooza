@@ -43,8 +43,8 @@ namespace gestorLollapalooza.dataAccessLayer
             int idDiaFestival = Convert.ToInt32(row["idDiaFestival"].ToString());
             DateTime fecha = (DateTime)row["fecha"];
             DateTime fechaLimiteAnulacionEntrada = (DateTime)row["fechaLimiteAnulacionEntrada"];
-            DateTime fechaVtoVentaAnticipada = (DateTime)row["fechaVtoAnticipada"];
-            int horaPresentacion = (int)row["horaPresentacion"];
+            DateTime fechaVtoVentaAnticipada = (DateTime)row["fechaVtoVentaAnticipado"];
+            
 
             // Recuperamos los atributos del Festival del DiaFestival de SQL a C#
 

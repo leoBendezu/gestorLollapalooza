@@ -22,13 +22,13 @@ namespace gestorLollapalooza.pressLayer
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            /*
             frmLogin login = new frmLogin();
             login.ShowDialog();
 
             if(login.UsuarioLoggeado == null) { this.Close(); } 
 
-            login.Dispose(); 
+            login.Dispose(); */
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +108,12 @@ namespace gestorLollapalooza.pressLayer
         private void grupoMusicalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteGM reporte = new frmReporteGM();
+            reporte.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteUsuarios reporte = new frmReporteUsuarios();
             reporte.ShowDialog();
         }
     }

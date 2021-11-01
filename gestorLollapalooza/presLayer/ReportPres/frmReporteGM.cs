@@ -24,13 +24,13 @@ namespace gestorLollapalooza.presLayer.ReportPres
         {
 
             this.reportViewerGM.RefreshReport();
-            this.CargarReporte();
+
         }
 
 
-        private void CargarReporte()
+        private void CargarReporte(String filtros)
         {
-            var datos = oGrupo.traerTodos();
+            var datos = oGrupo.traerFiltrados(filtros);
 
             this.reportViewerGM.LocalReport.DataSources.Clear();
 
@@ -46,6 +46,16 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.reportViewerGM.LocalReport.SetParameters(parametros);
 
             this.reportViewerGM.RefreshReport();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (chbTraerTodos.Checked) { this.CargarReporte(""); }
+            else 
+            {
+                if(numCantIntegrantesMin.Value > numCantidadIntegrantesMax.Value) { MessageBox.Show("Error: la cantidad minima no puede ser mayor a la cantidad maxima"); }
+                this.CargarReporte("and cantIntegrantes < "+numCantidadIntegrantesMax.Value+" and cantIntegrantes > "+numCantIntegrantesMin.Value);
+            }
         }
     }
 }

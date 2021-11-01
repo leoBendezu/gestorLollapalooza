@@ -11,7 +11,7 @@ namespace gestorLollapalooza.Service
 {
     class ActuacionService
     {
-        private ActuacionDao dao;
+        private ActuacionDao dao = new ActuacionDao();
 
         public IList<Actuacion> obtenerTodos()
         {
