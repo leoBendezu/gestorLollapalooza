@@ -54,5 +54,10 @@ namespace gestorLollapalooza.Service
         {
             return (dao.recuperarCentroVenta(nombreCentro) != null);
         }
+
+        public DataTable obtenerTodosDt()
+        {
+            return dao.obtenerTodosDt();
+        }
     }
 }

@@ -30,6 +30,25 @@ namespace gestorLollapalooza.dataAccessLayer
             return festivales;
         }
 
+        public DataTable obtenerTodosDt()
+        {
+
+            string strSql = "SELECT * " +
+                         "from festival " +
+                         "WHERE borradoLogico = 0 ";
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+        }
+
+        public DataTable recuperarFiltradosDT(string filtros)
+        {
+            
+            string strSql = "SELECT * " +
+                            "from festival " +
+                            "WHERE borradoLogico = 0 " + filtros;
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+        }
 
         public bool borradoLogicamente(int idFestival)
         {

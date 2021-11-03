@@ -43,10 +43,12 @@ namespace gestorLollapalooza.pressLayer
             this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoMusicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.festivalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -136,7 +138,9 @@ namespace gestorLollapalooza.pressLayer
             // 
             this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.grupoMusicalToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.festivalToolStripMenuItem,
+            this.centroDeVentaToolStripMenuItem});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.reporteToolStripMenuItem.Text = "Reporte";
@@ -144,9 +148,16 @@ namespace gestorLollapalooza.pressLayer
             // grupoMusicalToolStripMenuItem
             // 
             this.grupoMusicalToolStripMenuItem.Name = "grupoMusicalToolStripMenuItem";
-            this.grupoMusicalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grupoMusicalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.grupoMusicalToolStripMenuItem.Text = "GrupoMusical";
             this.grupoMusicalToolStripMenuItem.Click += new System.EventHandler(this.grupoMusicalToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -169,12 +180,18 @@ namespace gestorLollapalooza.pressLayer
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // usuariosToolStripMenuItem
+            // festivalToolStripMenuItem
             // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.festivalToolStripMenuItem.Name = "festivalToolStripMenuItem";
+            this.festivalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.festivalToolStripMenuItem.Text = "Festival";
+            this.festivalToolStripMenuItem.Click += new System.EventHandler(this.festivalToolStripMenuItem_Click);
+            // 
+            // centroDeVentaToolStripMenuItem
+            // 
+            this.centroDeVentaToolStripMenuItem.Name = "centroDeVentaToolStripMenuItem";
+            this.centroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.centroDeVentaToolStripMenuItem.Text = "Centro De Venta";
             // 
             // frmPrincipal
             // 
@@ -220,5 +237,7 @@ namespace gestorLollapalooza.pressLayer
         private ToolStripMenuItem reporteToolStripMenuItem;
         private ToolStripMenuItem grupoMusicalToolStripMenuItem;
         private ToolStripMenuItem usuariosToolStripMenuItem;
+        private ToolStripMenuItem festivalToolStripMenuItem;
+        private ToolStripMenuItem centroDeVentaToolStripMenuItem;
     }
 }

@@ -106,6 +106,15 @@ namespace gestorLollapalooza.dataAccessLayer
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
         }
 
+        public DataTable obtenerTodosDt()
+        {
+            string strSql = "SELECT * " +
+             "from diaFestival  " +
+             "WHERE borradoLogico = 0 ";
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
+        }
+
         public bool modificarDiaFestival(DiaFestival diaFestival)
         {
             // Metodo encargado modificar los datos de un DiaFestival, recibe como parametros:

@@ -11,6 +11,7 @@ namespace gestorLollapalooza.dataAccessLayer
     class CentroVentaDao
     {
         private PuntoVentaDao oPuntoVenta;
+
         public IList<CentroVenta> obtenerTodos()
         {
 
@@ -59,6 +60,15 @@ namespace gestorLollapalooza.dataAccessLayer
             string strSql = "UPDATE centroVenta  SET borradoLogico = 1" +
                                "WHERE idCentroVenta = " + idCentroVenta ;
             return (BDConexion.getBDConexion().ejecutarSQL(strSql) == 1);
+        }
+
+        internal DataTable obtenerTodosDt()
+        {
+            string strSql = "SELECT * " +
+             "from centroVenta  " +
+             "WHERE borradoLogico = 0 ";
+
+            return BDConexion.getBDConexion().EjecutarSQL(strSql);
         }
 
         public bool modificarCentroVenta(CentroVenta centroVenta)

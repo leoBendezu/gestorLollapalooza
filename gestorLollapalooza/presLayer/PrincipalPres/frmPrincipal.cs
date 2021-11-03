@@ -116,5 +116,11 @@ namespace gestorLollapalooza.pressLayer
             frmReporteUsuarios reporte = new frmReporteUsuarios();
             reporte.ShowDialog();
         }
+
+        private void festivalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteFestival reporteFestival = new frmReporteFestival();
+            reporteFestival.ShowDialog();
+        }
     }
 }

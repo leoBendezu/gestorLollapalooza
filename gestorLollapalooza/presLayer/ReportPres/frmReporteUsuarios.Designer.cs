@@ -47,25 +47,26 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnConsultar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.btnConsultar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnConsultar.BorderRadius = 20;
             this.btnConsultar.BorderSize = 0;
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(638, 11);
+            this.btnConsultar.Location = new System.Drawing.Point(277, 11);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(150, 40);
+            this.btnConsultar.Size = new System.Drawing.Size(86, 40);
             this.btnConsultar.TabIndex = 1;
-            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.Text = "Generar Reporte";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cmbPerfil
             // 
+            this.cmbPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.cmbPerfil.FormattingEnabled = true;
             this.cmbPerfil.Location = new System.Drawing.Point(54, 22);
             this.cmbPerfil.Name = "cmbPerfil";
@@ -75,6 +76,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // cbxTraerTodos
             // 
             this.cbxTraerTodos.AutoSize = true;
+            this.cbxTraerTodos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.cbxTraerTodos.Location = new System.Drawing.Point(181, 24);
             this.cbxTraerTodos.Name = "cbxTraerTodos";
             this.cbxTraerTodos.Size = new System.Drawing.Size(80, 17);
@@ -85,6 +87,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.label1.Location = new System.Drawing.Point(12, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
@@ -95,6 +98,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1129, 535);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxTraerTodos);

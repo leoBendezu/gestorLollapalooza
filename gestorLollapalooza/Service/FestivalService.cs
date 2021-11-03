@@ -32,6 +32,11 @@ namespace gestorLollapalooza.Service
             return dao.persistirFestival(festival);
         }
 
+        public DataTable recuperarFiltadrosDT(string filtros)
+        {
+            return dao.recuperarFiltradosDT(filtros);
+        }
+
         public IList<Festival> recuperarFiltrados(string filtros)
         {
             return dao.recuperarFiltrados(filtros);
@@ -41,6 +46,11 @@ namespace gestorLollapalooza.Service
         public Festival MapearFestival(DataRow row)
         {
             return dao.MapearFestival(row);
+        }
+
+        public DataTable obtenerTodosDt()
+        {
+            return dao.obtenerTodosDt();
         }
     }
 }

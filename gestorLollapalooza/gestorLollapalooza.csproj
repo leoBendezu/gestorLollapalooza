@@ -177,6 +177,18 @@
     <Compile Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.Designer.cs">
       <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteCentroVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteCentroVenta.Designer.cs">
+      <DependentUpon>frmReporteCentroVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presLayer\ReportPres\frmReporteFestival.Designer.cs">
+      <DependentUpon>frmReporteFestival.cs</DependentUpon>
+    </Compile>
     <Compile Include="presLayer\ReportPres\frmReporteGM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +344,9 @@
     <EmbeddedResource Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.resx">
       <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\ReportPres\frmReporteFestival.resx">
+      <DependentUpon>frmReporteFestival.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\ReportPres\frmReporteGM.resx">
       <DependentUpon>frmReporteGM.cs</DependentUpon>
     </EmbeddedResource>
@@ -367,6 +382,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportLayer\ReportCentroVenta.rdlc" />
+    <EmbeddedResource Include="ReportLayer\ReportFestival.rdlc" />
     <EmbeddedResource Include="ReportLayer\ReportGruposMusicales.rdlc" />
     <EmbeddedResource Include="ReportLayer\ReportUsuarios.rdlc" />
     <EmbeddedResource Include="UserControl1.resx">

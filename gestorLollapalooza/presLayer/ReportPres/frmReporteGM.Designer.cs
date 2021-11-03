@@ -38,8 +38,8 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.label2 = new System.Windows.Forms.Label();
             this.numCantidadIntegrantesMax = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnConsultar = new gestorLollapalooza.BotonFacha();
             this.chbTraerTodos = new System.Windows.Forms.CheckBox();
+            this.btnConsultar = new gestorLollapalooza.BotonFacha();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetGruposMusicales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantesMin)).BeginInit();
@@ -63,7 +63,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             // dataTable1BindingSource
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataMember = "GrupoMusical";
             this.dataTable1BindingSource.DataSource = this.dataSetGruposMusicales;
             // 
             // numCantIntegrantesMin
@@ -105,31 +105,13 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.groupBox1.Controls.Add(this.numCantIntegrantesMin);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 17);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(323, 125);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnConsultar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnConsultar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnConsultar.BorderRadius = 20;
-            this.btnConsultar.BorderSize = 0;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(717, 52);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(150, 40);
-            this.btnConsultar.TabIndex = 7;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextColor = System.Drawing.Color.White;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // chbTraerTodos
             // 
@@ -141,10 +123,30 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.chbTraerTodos.Text = "Traer todos";
             this.chbTraerTodos.UseVisualStyleBackColor = true;
             // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnConsultar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnConsultar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnConsultar.BorderRadius = 20;
+            this.btnConsultar.BorderSize = 0;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(719, 43);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(104, 49);
+            this.btnConsultar.TabIndex = 7;
+            this.btnConsultar.Text = "Generar Reporte";
+            this.btnConsultar.TextColor = System.Drawing.Color.White;
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
             // frmReporteGM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(879, 586);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.groupBox1);
@@ -153,7 +155,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetGruposMusicales)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantesMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCantidadIntegrantesMax)).EndInit();
             this.groupBox1.ResumeLayout(false);
