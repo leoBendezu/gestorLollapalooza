@@ -977,7 +977,9 @@ Rol 2: Vendedor</Value>
                     <TextRun>
                       <Value>Reporte de Usuarios del sistema</Value>
                       <Style>
+                        <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
+                        <Color>White</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -985,10 +987,10 @@ Rol 2: Vendedor</Value>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox15</rd:DefaultName>
-              <Top>1.12375in</Top>
-              <Left>1.81819in</Left>
-              <Height>0.25in</Height>
-              <Width>2.3125in</Width>
+              <Top>0.57167in</Top>
+              <Left>3.08208in</Left>
+              <Height>0.34375in</Height>
+              <Width>4.66667in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1049,6 +1051,7 @@ Rol 2: Vendedor</Value>
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>#00ae9a</BackgroundColor>
           </Style>
         </PageHeader>
         <PageFooter>

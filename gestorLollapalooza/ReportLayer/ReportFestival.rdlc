@@ -377,7 +377,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>2.00229cm</Height>
+                  <Height>0.73229cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -587,8 +587,8 @@
             <DataSetName>DataSetFestival</DataSetName>
             <Top>3.09245cm</Top>
             <Left>1.55787cm</Left>
-            <Height>4.00458cm</Height>
-            <Width>21.66655cm</Width>
+            <Height>2.73458cm</Height>
+            <Width>21.66656cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1399,6 +1399,7 @@
                       <Value>Reporte Festivales Lollapalooza</Value>
                       <Style>
                         <FontSize>20pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                         <Color>White</Color>
                       </Style>
                     </TextRun>

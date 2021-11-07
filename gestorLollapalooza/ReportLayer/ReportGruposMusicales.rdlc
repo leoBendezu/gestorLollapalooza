@@ -66,7 +66,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.60417in</Height>
+                  <Height>0.25in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -191,7 +191,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.60417in</Height>
+                  <Height>0.26042in</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -338,7 +338,7 @@
             <DataSetName>DataSetGruposMusicales</DataSetName>
             <Top>0.29042in</Top>
             <Left>0.3425in</Left>
-            <Height>1.20834in</Height>
+            <Height>0.51042in</Height>
             <Width>7.14584in</Width>
             <Style>
               <Border>
@@ -1082,7 +1082,9 @@
                     <TextRun>
                       <Value>Reporte: Grupos Musicales</Value>
                       <Style>
+                        <FontSize>20pt</FontSize>
                         <FontWeight>Bold</FontWeight>
+                        <Color>White</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -1090,10 +1092,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>1.17583in</Top>
-              <Left>1.74875in</Left>
-              <Height>0.21875in</Height>
-              <Width>1.89583in</Width>
+              <Top>0.39458in</Top>
+              <Left>3.08209in</Left>
+              <Height>0.53125in</Height>
+              <Width>4.40625in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1153,6 +1155,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>#00ae9a</BackgroundColor>
           </Style>
         </PageHeader>
         <PageFooter>
