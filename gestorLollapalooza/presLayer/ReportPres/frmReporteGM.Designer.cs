@@ -152,7 +152,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.reportViewerGM);
             this.Name = "frmReporteGM";
-            this.Text = "Form1";
+            this.Text = "Fromulario de grupos musicales";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetGruposMusicales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();

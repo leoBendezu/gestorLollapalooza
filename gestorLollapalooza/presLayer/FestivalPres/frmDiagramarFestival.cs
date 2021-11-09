@@ -180,7 +180,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                              "' and fechaFin = '" + this.dtpFechaFin.Value.ToString("yyyy-MM-dd") +
                              "' and descuentoVentaAnticipada = " + this.txtbDescuento.Text +
                              " and porcentajeDevolucionPorAnulacion = " + this.txtbDevolucion.Text +
-                             " and añoEdicion = " + this.numAno.Value +
+                             " and anoEdicion = " + this.numAno.Value +
                              "";
             if (oFestival.recuperarFiltrados(filtros).Count != 0)
             {

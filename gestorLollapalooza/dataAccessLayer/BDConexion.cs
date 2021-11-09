@@ -25,7 +25,8 @@ namespace gestorLollapalooza.dataAccessLayer
 
         public BDConexion()
         {
-            string_conexion = "Data Source=SQL5103.site4now.net;Initial Catalog=db_a79729_dynamiteteam;User Id=db_a79729_dynamiteteam_admin;Password=dt123456";
+            string_conexion = "Data Source=SQL5063.site4now.net;Initial Catalog=db_a7c3f9_pav2021;User Id=db_a7c3f9_pav2021_admin;Password=1pav2021 ";
+;
         }
 
         public static BDConexion getBDConexion()
@@ -214,7 +215,7 @@ namespace gestorLollapalooza.dataAccessLayer
                 {
                     MessageBox.Show("Transaccion fallida   ", "info");
 
-                    miTransaccion.Rollback();
+                   this.miTransaccion.Rollback();
                 }
                 this.Transaccion = false;
             }
@@ -254,13 +255,15 @@ namespace gestorLollapalooza.dataAccessLayer
             {
                 this.cmd.CommandType = CommandType.Text;
                 this.cmd.CommandText = strSql;
+
                 afectadas = this.cmd.ExecuteNonQuery();
-                
+
 
             }
-            catch
+            catch (SqlException ex)
             {
                 this.estadoTransaccion = false;
+                throw ex;
 
             }
             return afectadas;

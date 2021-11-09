@@ -73,7 +73,7 @@ namespace gestorLollapalooza.dataAccessLayer
 
         public bool persistirFestival(Festival festival)
         {
-            string strSql = "INSERT INTO [dbo].[festival] ([añoEdicion], [descuentoVentaAnticipada], [fechaInicio], [nombre], [porcentajeDevolucionPorAnulacion], [vigente], [fechaFin])" +
+            string strSql = "INSERT INTO [dbo].[festival] ([anoEdicion], [descuentoVentaAnticipada], [fechaInicio], [nombre], [porcentajeDevolucionPorAnulacion], [vigente], [fechaFin])" +
                 "VALUES ( " +
                 festival.AnoEdicion + " , " +
                 festival.DescuentoVentaAnticipada + " , '" +
@@ -144,7 +144,7 @@ namespace gestorLollapalooza.dataAccessLayer
 
             // Recuperamos los atributos del usuario de SQL a C#
             int idFestival = Convert.ToInt32(row["idFestival"].ToString());
-            int anoEdicion = Convert.ToInt32(row["añoEdicion"].ToString());
+            int anoEdicion = Convert.ToInt32(row["anoEdicion"].ToString());
             int descuentoVentaAnticipada = Convert.ToInt32(row["descuentoVentaAnticipada"].ToString());
             DateTime fechaInicio = Convert.ToDateTime(row["fechaInicio"].ToString());
             DateTime fechaFin = Convert.ToDateTime(row["fechaFin"].ToString());

@@ -31,16 +31,16 @@ namespace gestorLollapalooza.presLayer.ReportPres
         {
             this.rvFestival = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnConsultar = new gestorLollapalooza.BotonFacha();
+            this.numHasta = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numa = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.chTodos = new System.Windows.Forms.CheckBox();
             this.cbVigentes = new System.Windows.Forms.CheckBox();
-            this.btnConsultar = new gestorLollapalooza.BotonFacha();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numa = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numHasta = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHasta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numa)).BeginInit();
             this.SuspendLayout();
             // 
             // rvFestival
@@ -69,26 +69,6 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
-            // chTodos
-            // 
-            this.chTodos.AutoSize = true;
-            this.chTodos.Location = new System.Drawing.Point(276, 57);
-            this.chTodos.Name = "chTodos";
-            this.chTodos.Size = new System.Drawing.Size(117, 17);
-            this.chTodos.TabIndex = 43;
-            this.chTodos.Text = "Todos los exitentes";
-            this.chTodos.UseVisualStyleBackColor = true;
-            // 
-            // cbVigentes
-            // 
-            this.cbVigentes.AutoSize = true;
-            this.cbVigentes.Location = new System.Drawing.Point(276, 34);
-            this.cbVigentes.Name = "cbVigentes";
-            this.cbVigentes.Size = new System.Drawing.Size(90, 17);
-            this.cbVigentes.TabIndex = 40;
-            this.cbVigentes.Text = "Solo vigentes";
-            this.cbVigentes.UseVisualStyleBackColor = true;
-            // 
             // btnConsultar
             // 
             this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
@@ -107,46 +87,6 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Apartir del año:";
-            // 
-            // numa
-            // 
-            this.numa.Location = new System.Drawing.Point(129, 36);
-            this.numa.Maximum = new decimal(new int[] {
-            2100,
-            0,
-            0,
-            0});
-            this.numa.Minimum = new decimal(new int[] {
-            1950,
-            0,
-            0,
-            0});
-            this.numa.Name = "numa";
-            this.numa.Size = new System.Drawing.Size(120, 20);
-            this.numa.TabIndex = 47;
-            this.numa.Value = new decimal(new int[] {
-            2021,
-            0,
-            0,
-            0});
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Hasta el año:";
             // 
             // numHasta
             // 
@@ -170,6 +110,66 @@ namespace gestorLollapalooza.presLayer.ReportPres
             0,
             0});
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Hasta el año:";
+            // 
+            // numa
+            // 
+            this.numa.Location = new System.Drawing.Point(129, 36);
+            this.numa.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.numa.Minimum = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
+            this.numa.Name = "numa";
+            this.numa.Size = new System.Drawing.Size(120, 20);
+            this.numa.TabIndex = 47;
+            this.numa.Value = new decimal(new int[] {
+            2021,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Apartir del año:";
+            // 
+            // chTodos
+            // 
+            this.chTodos.AutoSize = true;
+            this.chTodos.Location = new System.Drawing.Point(276, 57);
+            this.chTodos.Name = "chTodos";
+            this.chTodos.Size = new System.Drawing.Size(117, 17);
+            this.chTodos.TabIndex = 43;
+            this.chTodos.Text = "Todos los exitentes";
+            this.chTodos.UseVisualStyleBackColor = true;
+            // 
+            // cbVigentes
+            // 
+            this.cbVigentes.AutoSize = true;
+            this.cbVigentes.Location = new System.Drawing.Point(276, 34);
+            this.cbVigentes.Name = "cbVigentes";
+            this.cbVigentes.Size = new System.Drawing.Size(90, 17);
+            this.cbVigentes.TabIndex = 40;
+            this.cbVigentes.Text = "Solo vigentes";
+            this.cbVigentes.UseVisualStyleBackColor = true;
+            // 
             // frmReporteFestival
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,12 +179,12 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rvFestival);
             this.Name = "frmReporteFestival";
-            this.Text = "frmReporte";
+            this.Text = "Reporte Festivales";
             this.Load += new System.EventHandler(this.frmReporteFestival_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numHasta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numa)).EndInit();
             this.ResumeLayout(false);
 
         }

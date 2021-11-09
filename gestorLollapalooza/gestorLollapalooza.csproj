@@ -129,12 +129,6 @@
     <Compile Include="presLayer\FestivalPres\frmDiagramarFestival.Designer.cs">
       <DependentUpon>frmDiagramarFestival.cs</DependentUpon>
     </Compile>
-    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="presLayer\FestivalPres\frmGestionarFestival.Designer.cs">
-      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
-    </Compile>
     <Compile Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,9 +305,6 @@
     <EmbeddedResource Include="presLayer\FestivalPres\frmDiagramarFestival.resx">
       <DependentUpon>frmDiagramarFestival.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presLayer\FestivalPres\frmGestionarFestival.resx">
-      <DependentUpon>frmGestionarFestival.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="presLayer\GrupoMusicalPres\frmAltaGrupoMusical.resx">
       <DependentUpon>frmAltaGrupoMusical.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\PuntoVentaPres\frmModificarPuntoVenta.resx">
       <DependentUpon>frmModificarPuntoVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presLayer\ReportPres\frmReporteCentroVenta.resx">
+      <DependentUpon>frmReporteCentroVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presLayer\ReportPres\frmReporteFestival.resx">
       <DependentUpon>frmReporteFestival.cs</DependentUpon>

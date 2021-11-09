@@ -87,11 +87,7 @@ namespace gestorLollapalooza.pressLayer
             gestionarCentroVenta.ShowDialog();
         }
 
-        private void gestionarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmGestionarFestival frmf = new frmGestionarFestival();
-            frmf.ShowDialog();
-        }
+
 
         private void diagramarNuevoFestivalToolStripMenuItem_Click(object sender, EventArgs e)
         {

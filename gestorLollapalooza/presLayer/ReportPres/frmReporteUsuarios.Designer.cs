@@ -106,7 +106,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.reportViewerUsuarios);
             this.Name = "frmReporteUsuarios";
-            this.Text = "frmReporteUsuarios";
+            this.Text = "Reporte de usuarios";
             this.Load += new System.EventHandler(this.frmReporteUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

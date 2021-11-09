@@ -141,7 +141,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbPerfil.Name = "txtbPerfil";
             this.txtbPerfil.Padding = new System.Windows.Forms.Padding(9);
             this.txtbPerfil.PasswordChar = false;
-            this.txtbPerfil.Size = new System.Drawing.Size(143, 39);
+            this.txtbPerfil.Size = new System.Drawing.Size(143, 35);
             this.txtbPerfil.TabIndex = 22;
             this.txtbPerfil.UnderlinedStyle = false;
             // 
@@ -160,7 +160,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbApellido.Name = "txtbApellido";
             this.txtbApellido.Padding = new System.Windows.Forms.Padding(9);
             this.txtbApellido.PasswordChar = false;
-            this.txtbApellido.Size = new System.Drawing.Size(143, 39);
+            this.txtbApellido.Size = new System.Drawing.Size(143, 35);
             this.txtbApellido.TabIndex = 21;
             this.txtbApellido.UnderlinedStyle = false;
             // 
@@ -179,7 +179,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(143, 39);
+            this.txtbNombre.Size = new System.Drawing.Size(143, 35);
             this.txtbNombre.TabIndex = 20;
             this.txtbNombre.UnderlinedStyle = false;
             // 
@@ -198,7 +198,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbEmail.Name = "txtbEmail";
             this.txtbEmail.Padding = new System.Windows.Forms.Padding(9);
             this.txtbEmail.PasswordChar = false;
-            this.txtbEmail.Size = new System.Drawing.Size(143, 39);
+            this.txtbEmail.Size = new System.Drawing.Size(143, 35);
             this.txtbEmail.TabIndex = 19;
             this.txtbEmail.UnderlinedStyle = false;
             // 
@@ -217,7 +217,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbUsuario.Name = "txtbUsuario";
             this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
             this.txtbUsuario.PasswordChar = false;
-            this.txtbUsuario.Size = new System.Drawing.Size(143, 39);
+            this.txtbUsuario.Size = new System.Drawing.Size(143, 35);
             this.txtbUsuario.TabIndex = 18;
             this.txtbUsuario.Tag = "";
             this.txtbUsuario.UnderlinedStyle = false;
@@ -260,10 +260,11 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // frmBajaUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));

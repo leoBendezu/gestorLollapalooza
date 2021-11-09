@@ -42,11 +42,9 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtbNombre);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(527, 148);
+            this.groupBox1.Size = new System.Drawing.Size(395, 120);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Grupo Musical";
@@ -55,10 +53,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(31, 33);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(23, 27);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 36);
+            this.label3.Size = new System.Drawing.Size(63, 29);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,13 +70,13 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombre.Enabled = false;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbNombre.Location = new System.Drawing.Point(31, 75);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtbNombre.Location = new System.Drawing.Point(23, 61);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
             this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(464, 43);
+            this.txtbNombre.Size = new System.Drawing.Size(348, 35);
             this.txtbNombre.TabIndex = 18;
             this.txtbNombre.Tag = "";
             this.txtbNombre.UnderlinedStyle = false;
@@ -94,10 +92,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(305, 188);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSalir.Location = new System.Drawing.Point(229, 153);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(113, 47);
+            this.btnSalir.Size = new System.Drawing.Size(85, 38);
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
@@ -114,10 +112,10 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(429, 188);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(322, 153);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(113, 47);
+            this.btnEliminar.Size = new System.Drawing.Size(85, 38);
             this.btnEliminar.TabIndex = 19;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -126,16 +124,15 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             // frmBajaCentroVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(555, 258);
+            this.ClientSize = new System.Drawing.Size(440, 231);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBajaCentroVenta";
             this.Text = "Baja Centro Venta";
             this.Load += new System.EventHandler(this.frmBajaCentroVenta_Load);
