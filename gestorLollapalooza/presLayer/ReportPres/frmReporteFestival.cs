@@ -55,7 +55,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             {
                 string filtros = "";
                 if (this.numa.Value < this.numHasta.Value) { 
-                filtros += "and añoEdicion >= " + this.numa.Value + "and añoEdicion <=" + this.numHasta.Value;
+                filtros += "and anoEdicion >= " + this.numa.Value + "and anoEdicion <=" + this.numHasta.Value;
                 }
                 if (this.cbVigentes.Checked)
                 {
