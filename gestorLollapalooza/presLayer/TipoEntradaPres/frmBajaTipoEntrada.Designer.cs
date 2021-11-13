@@ -47,9 +47,11 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.groupBox1.Controls.Add(this.txtbDescripcion);
             this.groupBox1.Controls.Add(this.txtbNombre);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(395, 198);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(527, 244);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del tipo de entrada";
@@ -57,22 +59,22 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 101);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(31, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 29);
+            this.label4.Size = new System.Drawing.Size(124, 36);
             this.label4.TabIndex = 24;
-            this.label4.Text = "Descripcion: ";
+            this.label4.Text = "Descripción: ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(20, 27);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(27, 33);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 29);
+            this.label3.Size = new System.Drawing.Size(84, 36);
             this.label3.TabIndex = 23;
             this.label3.Text = "Nombre:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,13 +88,13 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.txtbDescripcion.Enabled = false;
             this.txtbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbDescripcion.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbDescripcion.Location = new System.Drawing.Point(23, 135);
-            this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbDescripcion.Location = new System.Drawing.Point(31, 166);
+            this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtbDescripcion.Multiline = false;
             this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.txtbDescripcion.PasswordChar = false;
-            this.txtbDescripcion.Size = new System.Drawing.Size(348, 35);
+            this.txtbDescripcion.Size = new System.Drawing.Size(464, 43);
             this.txtbDescripcion.TabIndex = 2;
             this.txtbDescripcion.UnderlinedStyle = false;
             // 
@@ -105,13 +107,13 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.txtbNombre.Enabled = false;
             this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbNombre.ForeColor = System.Drawing.Color.DimGray;
-            this.txtbNombre.Location = new System.Drawing.Point(23, 61);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNombre.Location = new System.Drawing.Point(31, 75);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(348, 35);
+            this.txtbNombre.Size = new System.Drawing.Size(464, 43);
             this.txtbNombre.TabIndex = 1;
             this.txtbNombre.Tag = "";
             this.txtbNombre.UnderlinedStyle = false;
@@ -126,10 +128,10 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(228, 217);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(304, 267);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(85, 38);
+            this.btnSalir.Size = new System.Drawing.Size(113, 47);
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
@@ -146,10 +148,10 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(322, 217);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(429, 267);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(85, 38);
+            this.btnEliminar.Size = new System.Drawing.Size(113, 47);
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -158,16 +160,17 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             // 
             // frmBajaTipoEntrada
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(426, 265);
+            this.ClientSize = new System.Drawing.Size(568, 326);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBajaTipoEntrada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Baja Tipo de entrada";

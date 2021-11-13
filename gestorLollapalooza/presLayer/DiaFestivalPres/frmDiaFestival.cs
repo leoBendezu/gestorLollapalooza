@@ -218,6 +218,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void gbxFestivales_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

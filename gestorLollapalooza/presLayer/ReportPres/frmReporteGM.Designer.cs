@@ -50,10 +50,11 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // reportViewerGM
             // 
             this.reportViewerGM.LocalReport.ReportEmbeddedResource = "gestorLollapalooza.ReportLayer.ReportGruposMusicales.rdlc";
-            this.reportViewerGM.Location = new System.Drawing.Point(12, 163);
+            this.reportViewerGM.Location = new System.Drawing.Point(16, 201);
+            this.reportViewerGM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewerGM.Name = "reportViewerGM";
             this.reportViewerGM.ServerReport.BearerToken = null;
-            this.reportViewerGM.Size = new System.Drawing.Size(855, 411);
+            this.reportViewerGM.Size = new System.Drawing.Size(1139, 505);
             this.reportViewerGM.TabIndex = 0;
             // 
             // dataSetGruposMusicales
@@ -68,34 +69,38 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             // numCantIntegrantesMin
             // 
-            this.numCantIntegrantesMin.Location = new System.Drawing.Point(197, 26);
+            this.numCantIntegrantesMin.Location = new System.Drawing.Point(263, 32);
+            this.numCantIntegrantesMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numCantIntegrantesMin.Name = "numCantIntegrantesMin";
-            this.numCantIntegrantesMin.Size = new System.Drawing.Size(120, 20);
+            this.numCantIntegrantesMin.Size = new System.Drawing.Size(160, 22);
             this.numCantIntegrantesMin.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 33);
+            this.label1.Location = new System.Drawing.Point(20, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 13);
+            this.label1.Size = new System.Drawing.Size(211, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "cantidad de integrantes minima:";
+            this.label1.Text = "Cantidad de integrantes mínima:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 60);
+            this.label2.Location = new System.Drawing.Point(20, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 13);
+            this.label2.Size = new System.Drawing.Size(218, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "cantidad de integrantes maxima: ";
+            this.label2.Text = "Cantidad de integrantes máxima: ";
             // 
             // numCantidadIntegrantesMax
             // 
-            this.numCantidadIntegrantesMax.Location = new System.Drawing.Point(197, 55);
+            this.numCantidadIntegrantesMax.Location = new System.Drawing.Point(263, 68);
+            this.numCantidadIntegrantesMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numCantidadIntegrantesMax.Name = "numCantidadIntegrantesMax";
-            this.numCantidadIntegrantesMax.Size = new System.Drawing.Size(120, 20);
+            this.numCantidadIntegrantesMax.Size = new System.Drawing.Size(160, 22);
             this.numCantidadIntegrantesMax.TabIndex = 5;
             // 
             // groupBox1
@@ -106,9 +111,11 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 17);
+            this.groupBox1.Location = new System.Drawing.Point(16, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(323, 125);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(431, 154);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -116,9 +123,10 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // chbTraerTodos
             // 
             this.chbTraerTodos.AutoSize = true;
-            this.chbTraerTodos.Location = new System.Drawing.Point(197, 102);
+            this.chbTraerTodos.Location = new System.Drawing.Point(263, 126);
+            this.chbTraerTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chbTraerTodos.Name = "chbTraerTodos";
-            this.chbTraerTodos.Size = new System.Drawing.Size(80, 17);
+            this.chbTraerTodos.Size = new System.Drawing.Size(104, 21);
             this.chbTraerTodos.TabIndex = 8;
             this.chbTraerTodos.Text = "Traer todos";
             this.chbTraerTodos.UseVisualStyleBackColor = true;
@@ -133,9 +141,10 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(719, 43);
+            this.btnConsultar.Location = new System.Drawing.Point(959, 53);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(104, 49);
+            this.btnConsultar.Size = new System.Drawing.Size(139, 60);
             this.btnConsultar.TabIndex = 7;
             this.btnConsultar.Text = "Generar Reporte";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
@@ -144,15 +153,16 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             // frmReporteGM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(879, 586);
+            this.ClientSize = new System.Drawing.Size(1172, 721);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.reportViewerGM);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReporteGM";
-            this.Text = "Fromulario de grupos musicales";
+            this.Text = "Formulario de grupos musicales";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSetGruposMusicales)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
