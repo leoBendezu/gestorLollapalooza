@@ -53,10 +53,10 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(121, 183);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 20;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -73,10 +73,10 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
             this.btnModificar.Location = new System.Drawing.Point(220, 183);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(76, 43);
-            this.btnModificar.TabIndex = 21;
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -89,11 +89,11 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.gbxFiltros.Controls.Add(this.label3);
             this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.txtbNombre);
-            this.gbxFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxFiltros.ForeColor = System.Drawing.Color.White;
             this.gbxFiltros.Location = new System.Drawing.Point(14, 13);
-            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
-            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Size = new System.Drawing.Size(283, 150);
             this.gbxFiltros.TabIndex = 19;
             this.gbxFiltros.TabStop = false;
@@ -102,9 +102,19 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             // numPuntoVenta
             // 
             this.numPuntoVenta.Location = new System.Drawing.Point(21, 109);
+            this.numPuntoVenta.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPuntoVenta.Name = "numPuntoVenta";
             this.numPuntoVenta.Size = new System.Drawing.Size(120, 20);
-            this.numPuntoVenta.TabIndex = 13;
+            this.numPuntoVenta.TabIndex = 2;
+            this.numPuntoVenta.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -147,10 +157,10 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombre.TabIndex = 4;
+            this.txtbNombre.TabIndex = 1;
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // frmModificarPuntoVenta
@@ -158,7 +168,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(328, 267);
+            this.ClientSize = new System.Drawing.Size(310, 240);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnModificar);

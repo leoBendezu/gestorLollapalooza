@@ -156,11 +156,11 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(161, 155);
+            this.btnSalir.Location = new System.Drawing.Point(24, 156);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 26;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -176,11 +176,11 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(24, 155);
+            this.btnModificar.Location = new System.Drawing.Point(161, 156);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(76, 43);
-            this.btnModificar.TabIndex = 28;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -200,7 +200,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnModificarPv.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarPv.Name = "btnModificarPv";
             this.btnModificarPv.Size = new System.Drawing.Size(119, 44);
-            this.btnModificarPv.TabIndex = 29;
+            this.btnModificarPv.TabIndex = 2;
             this.btnModificarPv.Text = "Modificar PuntoVenta";
             this.btnModificarPv.TextColor = System.Drawing.Color.White;
             this.btnModificarPv.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.botonFacha1.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha1.Name = "botonFacha1";
             this.botonFacha1.Size = new System.Drawing.Size(119, 44);
-            this.botonFacha1.TabIndex = 30;
+            this.botonFacha1.TabIndex = 3;
             this.botonFacha1.Text = "Eliminar PuntoVenta";
             this.botonFacha1.TextColor = System.Drawing.Color.White;
             this.botonFacha1.UseVisualStyleBackColor = false;

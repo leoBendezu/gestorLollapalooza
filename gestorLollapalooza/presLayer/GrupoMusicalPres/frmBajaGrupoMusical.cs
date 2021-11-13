@@ -61,7 +61,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
                 if (this.GrupoService.borrarGrupo(oGrupoMusical.Nombre))
                 {
-                    MessageBox.Show("Se elimino el usuario de forma correcta", "Advertencia");
+                    MessageBox.Show("Se elimino el grupo musical correctamente", "Advertencia");
                     this.Close();
                 }
             

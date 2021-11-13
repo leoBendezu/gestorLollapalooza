@@ -70,6 +70,16 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbUsuario.Focus();
         }
 
-        
+        private void cbContra_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.cbContra.CheckState == CheckState.Checked)
+            {
+                this.txtbPassword.PasswordChar = false;
+            }
+            else
+            {
+                this.txtbPassword.PasswordChar = true;            
+            }
+        }
     }
 }

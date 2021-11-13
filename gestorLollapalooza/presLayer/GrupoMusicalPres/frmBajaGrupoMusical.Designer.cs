@@ -109,7 +109,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbCantIntegranres.Padding = new System.Windows.Forms.Padding(9);
             this.txtbCantIntegranres.PasswordChar = false;
             this.txtbCantIntegranres.Size = new System.Drawing.Size(348, 35);
-            this.txtbCantIntegranres.TabIndex = 20;
+            this.txtbCantIntegranres.TabIndex = 3;
             this.txtbCantIntegranres.UnderlinedStyle = false;
             // 
             // txtbDescripcion
@@ -128,7 +128,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
             this.txtbDescripcion.PasswordChar = false;
             this.txtbDescripcion.Size = new System.Drawing.Size(348, 35);
-            this.txtbDescripcion.TabIndex = 19;
+            this.txtbDescripcion.TabIndex = 2;
             this.txtbDescripcion.UnderlinedStyle = false;
             // 
             // txtbNombre
@@ -147,7 +147,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(348, 35);
-            this.txtbNombre.TabIndex = 18;
+            this.txtbNombre.TabIndex = 1;
             this.txtbNombre.Tag = "";
             this.txtbNombre.UnderlinedStyle = false;
             this.txtbNombre.Load += new System.EventHandler(this.txtbNombre_Load);
@@ -166,7 +166,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(85, 38);
-            this.btnSalir.TabIndex = 15;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -186,7 +186,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 38);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;

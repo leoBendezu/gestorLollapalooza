@@ -100,7 +100,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dtpAnticipa.Location = new System.Drawing.Point(235, 64);
             this.dtpAnticipa.Name = "dtpAnticipa";
             this.dtpAnticipa.Size = new System.Drawing.Size(95, 20);
-            this.dtpAnticipa.TabIndex = 38;
+            this.dtpAnticipa.TabIndex = 3;
             // 
             // dtpAnulacion
             // 
@@ -108,7 +108,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dtpAnulacion.Location = new System.Drawing.Point(20, 123);
             this.dtpAnulacion.Name = "dtpAnulacion";
             this.dtpAnulacion.Size = new System.Drawing.Size(95, 20);
-            this.dtpAnulacion.TabIndex = 37;
+            this.dtpAnulacion.TabIndex = 2;
             // 
             // dtpFecha
             // 
@@ -116,7 +116,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dtpFecha.Location = new System.Drawing.Point(20, 64);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(95, 20);
-            this.dtpFecha.TabIndex = 35;
+            this.dtpFecha.TabIndex = 1;
             // 
             // label4
             // 
@@ -183,7 +183,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             0});
             this.numDuracionEstimada.Name = "numDuracionEstimada";
             this.numDuracionEstimada.Size = new System.Drawing.Size(67, 20);
-            this.numDuracionEstimada.TabIndex = 44;
+            this.numDuracionEstimada.TabIndex = 4;
             this.numDuracionEstimada.Value = new decimal(new int[] {
             30,
             0,
@@ -204,7 +204,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.botonFacha2.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha2.Name = "botonFacha2";
             this.botonFacha2.Size = new System.Drawing.Size(76, 43);
-            this.botonFacha2.TabIndex = 43;
+            this.botonFacha2.TabIndex = 9;
             this.botonFacha2.Text = "Quitar";
             this.botonFacha2.TextColor = System.Drawing.Color.White;
             this.botonFacha2.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.botonFacha1.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha1.Name = "botonFacha1";
             this.botonFacha1.Size = new System.Drawing.Size(43, 39);
-            this.botonFacha1.TabIndex = 42;
+            this.botonFacha1.TabIndex = 7;
             this.botonFacha1.Text = "?";
             this.botonFacha1.TextColor = System.Drawing.Color.White;
             this.botonFacha1.UseVisualStyleBackColor = false;
@@ -244,7 +244,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(76, 43);
-            this.btnQuitar.TabIndex = 41;
+            this.btnQuitar.TabIndex = 10;
             this.btnQuitar.Text = "Limpiar";
             this.btnQuitar.TextColor = System.Drawing.Color.White;
             this.btnQuitar.UseVisualStyleBackColor = false;
@@ -264,7 +264,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(76, 43);
-            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -285,7 +285,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             0});
             this.numOrden.Name = "numOrden";
             this.numOrden.Size = new System.Drawing.Size(67, 20);
-            this.numOrden.TabIndex = 39;
+            this.numOrden.TabIndex = 5;
             this.numOrden.Value = new decimal(new int[] {
             1,
             0,
@@ -327,7 +327,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.txtbGrupoActuante.Padding = new System.Windows.Forms.Padding(9);
             this.txtbGrupoActuante.PasswordChar = false;
             this.txtbGrupoActuante.Size = new System.Drawing.Size(186, 35);
-            this.txtbGrupoActuante.TabIndex = 31;
+            this.txtbGrupoActuante.TabIndex = 6;
             this.txtbGrupoActuante.UnderlinedStyle = false;
             // 
             // lblDuracion
@@ -423,7 +423,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 40;
+            this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -443,7 +443,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(76, 43);
-            this.btnAceptar.TabIndex = 41;
+            this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.SystemColors.Window;
             this.btnAceptar.UseVisualStyleBackColor = false;

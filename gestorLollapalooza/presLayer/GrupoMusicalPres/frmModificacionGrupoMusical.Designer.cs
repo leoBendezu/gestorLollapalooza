@@ -77,7 +77,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(72, 42);
-            this.btnModificar.TabIndex = 19;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.gbxGrupoMusical.Controls.Add(this.label1);
             this.gbxGrupoMusical.Controls.Add(this.lblNombre);
             this.gbxGrupoMusical.Controls.Add(this.txtbNombre);
-            this.gbxGrupoMusical.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxGrupoMusical.ForeColor = System.Drawing.Color.White;
             this.gbxGrupoMusical.Location = new System.Drawing.Point(13, 13);
             this.gbxGrupoMusical.Margin = new System.Windows.Forms.Padding(4);
             this.gbxGrupoMusical.Name = "gbxGrupoMusical";
@@ -116,7 +116,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
             this.txtbDescripcion.PasswordChar = false;
             this.txtbDescripcion.Size = new System.Drawing.Size(352, 35);
-            this.txtbDescripcion.TabIndex = 4;
+            this.txtbDescripcion.TabIndex = 2;
             this.txtbDescripcion.UnderlinedStyle = false;
             // 
             // numCantIntegrantes

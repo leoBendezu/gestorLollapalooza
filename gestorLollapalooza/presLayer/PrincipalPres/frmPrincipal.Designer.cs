@@ -40,6 +40,7 @@ namespace gestorLollapalooza.pressLayer
             this.gestionGruposMusicalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionTipoDeEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónCentroDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionPuntoDeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grupoMusicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +49,10 @@ namespace gestorLollapalooza.pressLayer
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +95,8 @@ namespace gestorLollapalooza.pressLayer
             this.gestionUsuariosToolStripMenuItem,
             this.gestionGruposMusicalesToolStripMenuItem,
             this.gestionTipoDeEntradaToolStripMenuItem,
-            this.gestiónCentroDeVentaToolStripMenuItem});
+            this.gestiónCentroDeVentaToolStripMenuItem,
+            this.gestionPuntoDeVentaToolStripMenuItem});
             this.soporteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -125,6 +131,13 @@ namespace gestorLollapalooza.pressLayer
             this.gestiónCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.gestiónCentroDeVentaToolStripMenuItem.Text = "Gestión Centro De Venta";
             this.gestiónCentroDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestiónCentroDeVentaToolStripMenuItem_Click);
+            // 
+            // gestionPuntoDeVentaToolStripMenuItem
+            // 
+            this.gestionPuntoDeVentaToolStripMenuItem.Name = "gestionPuntoDeVentaToolStripMenuItem";
+            this.gestionPuntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.gestionPuntoDeVentaToolStripMenuItem.Text = "Gestion Punto de venta";
+            this.gestionPuntoDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestionPuntoDeVentaToolStripMenuItem_Click_1);
             // 
             // reporteToolStripMenuItem
             // 
@@ -185,12 +198,58 @@ namespace gestorLollapalooza.pressLayer
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.Color.White;
+            this.lblBienvenido.Location = new System.Drawing.Point(12, 454);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(98, 25);
+            this.lblBienvenido.TabIndex = 3;
+            this.lblBienvenido.Text = "Usuario: ";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(141, 454);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 25);
+            this.lblName.TabIndex = 4;
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.ForeColor = System.Drawing.Color.White;
+            this.lblPerfil.Location = new System.Drawing.Point(141, 497);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(0, 25);
+            this.lblPerfil.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 497);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Perfil: ";
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.Controls.Add(this.lblPerfil);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -230,5 +289,10 @@ namespace gestorLollapalooza.pressLayer
         private ToolStripMenuItem usuariosToolStripMenuItem;
         private ToolStripMenuItem festivalToolStripMenuItem;
         private ToolStripMenuItem centroDeVentaToolStripMenuItem;
+        private ToolStripMenuItem gestionPuntoDeVentaToolStripMenuItem;
+        private Label lblBienvenido;
+        private Label lblName;
+        private Label lblPerfil;
+        private Label label2;
     }
 }

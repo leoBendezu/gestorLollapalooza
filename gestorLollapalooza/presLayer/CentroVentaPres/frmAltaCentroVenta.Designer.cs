@@ -183,7 +183,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             0});
             this.numPuntoVenta.Name = "numPuntoVenta";
             this.numPuntoVenta.Size = new System.Drawing.Size(120, 20);
-            this.numPuntoVenta.TabIndex = 13;
+            this.numPuntoVenta.TabIndex = 3;
             this.numPuntoVenta.Value = new decimal(new int[] {
             1,
             0,
@@ -234,7 +234,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombrePv.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombrePv.PasswordChar = false;
             this.txtbNombrePv.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombrePv.TabIndex = 4;
+            this.txtbNombrePv.TabIndex = 2;
             this.txtbNombrePv.UnderlinedStyle = false;
             // 
             // btnQuitar
@@ -251,7 +251,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(76, 43);
-            this.btnQuitar.TabIndex = 23;
+            this.btnQuitar.TabIndex = 5;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.TextColor = System.Drawing.Color.White;
             this.btnQuitar.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(76, 43);
-            this.btnLimpiar.TabIndex = 22;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -291,7 +291,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(76, 43);
-            this.btnAgregar.TabIndex = 21;
+            this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -311,7 +311,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 17;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -331,7 +331,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(76, 43);
-            this.btnCrear.TabIndex = 19;
+            this.btnCrear.TabIndex = 7;
             this.btnCrear.Text = "Crear";
             this.btnCrear.TextColor = System.Drawing.Color.White;
             this.btnCrear.UseVisualStyleBackColor = false;

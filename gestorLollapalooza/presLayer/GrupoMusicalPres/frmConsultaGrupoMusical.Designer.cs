@@ -39,10 +39,10 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.clmDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCantIntegrantes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxFiltros = new System.Windows.Forms.GroupBox();
+            this.cbCantidadInt = new System.Windows.Forms.CheckBox();
             this.numCantIntegrantes = new System.Windows.Forms.NumericUpDown();
             this.chbTodos = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbDescripcion = new gestorLollapalooza.frmTextBoxFacha();
@@ -140,10 +140,10 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             // 
             // gbxFiltros
             // 
+            this.gbxFiltros.Controls.Add(this.cbCantidadInt);
             this.gbxFiltros.Controls.Add(this.numCantIntegrantes);
             this.gbxFiltros.Controls.Add(this.chbTodos);
             this.gbxFiltros.Controls.Add(this.label4);
-            this.gbxFiltros.Controls.Add(this.label3);
             this.gbxFiltros.Controls.Add(this.label2);
             this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.txtbDescripcion);
@@ -158,8 +158,21 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.gbxFiltros.TabStop = false;
             this.gbxFiltros.Text = "Filtros";
             // 
+            // cbCantidadInt
+            // 
+            this.cbCantidadInt.AutoSize = true;
+            this.cbCantidadInt.Location = new System.Drawing.Point(25, 178);
+            this.cbCantidadInt.Name = "cbCantidadInt";
+            this.cbCantidadInt.Size = new System.Drawing.Size(156, 17);
+            this.cbCantidadInt.TabIndex = 3;
+            this.cbCantidadInt.Text = "por Cantidad de integrantes";
+            this.cbCantidadInt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cbCantidadInt.UseVisualStyleBackColor = true;
+            this.cbCantidadInt.CheckedChanged += new System.EventHandler(this.cbCantidadInt_CheckedChanged);
+            // 
             // numCantIntegrantes
             // 
+            this.numCantIntegrantes.Enabled = false;
             this.numCantIntegrantes.Location = new System.Drawing.Point(25, 201);
             this.numCantIntegrantes.Minimum = new decimal(new int[] {
             1,
@@ -168,7 +181,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             0});
             this.numCantIntegrantes.Name = "numCantIntegrantes";
             this.numCantIntegrantes.Size = new System.Drawing.Size(120, 20);
-            this.numCantIntegrantes.TabIndex = 13;
+            this.numCantIntegrantes.TabIndex = 4;
             this.numCantIntegrantes.Value = new decimal(new int[] {
             1,
             0,
@@ -181,7 +194,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.chbTodos.Location = new System.Drawing.Point(24, 245);
             this.chbTodos.Name = "chbTodos";
             this.chbTodos.Size = new System.Drawing.Size(103, 17);
-            this.chbTodos.TabIndex = 25;
+            this.chbTodos.TabIndex = 5;
             this.chbTodos.Text = "Consultar Todos";
             this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chbTodos.UseVisualStyleBackColor = true;
@@ -195,16 +208,6 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 174);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Cantidad de integrantes:";
             // 
             // label2
             // 
@@ -241,7 +244,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
             this.txtbDescripcion.PasswordChar = false;
             this.txtbDescripcion.Size = new System.Drawing.Size(228, 35);
-            this.txtbDescripcion.TabIndex = 18;
+            this.txtbDescripcion.TabIndex = 2;
             this.txtbDescripcion.UnderlinedStyle = false;
             // 
             // txtbNombre
@@ -259,7 +262,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombre.TabIndex = 4;
+            this.txtbNombre.TabIndex = 1;
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // btnLimpiar
@@ -275,7 +278,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnLimpiar.Location = new System.Drawing.Point(13, 325);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(93, 42);
-            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.TabIndex = 7;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -294,7 +297,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnModificar.Location = new System.Drawing.Point(1088, 110);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(72, 40);
-            this.btnModificar.TabIndex = 12;
+            this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
@@ -313,7 +316,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnEliminar.Location = new System.Drawing.Point(1088, 61);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(72, 40);
-            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -332,7 +335,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnAgregar.Location = new System.Drawing.Point(1088, 12);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(72, 40);
-            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -352,7 +355,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(72, 40);
-            this.btnSalir.TabIndex = 8;
+            this.btnSalir.TabIndex = 11;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -372,7 +375,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(93, 42);
-            this.btnConsultar.TabIndex = 7;
+            this.btnConsultar.TabIndex = 6;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -415,7 +418,6 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         private System.Windows.Forms.GroupBox gbxFiltros;
         private System.Windows.Forms.CheckBox chbTodos;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private frmTextBoxFacha txtbDescripcion;
@@ -429,5 +431,6 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         private BotonFacha btnModificar;
         private System.Windows.Forms.NumericUpDown numCantIntegrantes;
         private BotonFacha btnLimpiar;
+        private System.Windows.Forms.CheckBox cbCantidadInt;
     }
 }

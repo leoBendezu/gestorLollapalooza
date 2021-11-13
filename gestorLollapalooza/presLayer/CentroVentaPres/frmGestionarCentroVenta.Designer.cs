@@ -71,7 +71,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.botonFacha4.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha4.Name = "botonFacha4";
             this.botonFacha4.Size = new System.Drawing.Size(79, 49);
-            this.botonFacha4.TabIndex = 17;
+            this.botonFacha4.TabIndex = 4;
             this.botonFacha4.Text = "Limpiar";
             this.botonFacha4.TextColor = System.Drawing.Color.White;
             this.botonFacha4.UseVisualStyleBackColor = false;
@@ -92,7 +92,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(79, 49);
-            this.btnConsultar.TabIndex = 11;
+            this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.botonFacha3.Margin = new System.Windows.Forms.Padding(4);
             this.botonFacha3.Name = "botonFacha3";
             this.botonFacha3.Size = new System.Drawing.Size(74, 49);
-            this.botonFacha3.TabIndex = 16;
+            this.botonFacha3.TabIndex = 5;
             this.botonFacha3.Text = "Agregar";
             this.botonFacha3.TextColor = System.Drawing.Color.White;
             this.botonFacha3.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.chbTodos.Location = new System.Drawing.Point(8, 88);
             this.chbTodos.Name = "chbTodos";
             this.chbTodos.Size = new System.Drawing.Size(103, 17);
-            this.chbTodos.TabIndex = 25;
+            this.chbTodos.TabIndex = 2;
             this.chbTodos.Text = "Consultar Todos";
             this.chbTodos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chbTodos.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(196, 35);
-            this.txtbNombre.TabIndex = 18;
+            this.txtbNombre.TabIndex = 1;
             this.txtbNombre.UnderlinedStyle = false;
             // 
             // btnModifcar
@@ -190,7 +190,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnModifcar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifcar.Name = "btnModifcar";
             this.btnModifcar.Size = new System.Drawing.Size(74, 49);
-            this.btnModifcar.TabIndex = 15;
+            this.btnModifcar.TabIndex = 6;
             this.btnModifcar.Text = "Modificar";
             this.btnModifcar.TextColor = System.Drawing.Color.White;
             this.btnModifcar.UseVisualStyleBackColor = false;
@@ -212,7 +212,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(74, 49);
-            this.btnEliminar.TabIndex = 14;
+            this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -292,7 +292,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(74, 49);
-            this.btnSalir.TabIndex = 12;
+            this.btnSalir.TabIndex = 8;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;

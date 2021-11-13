@@ -69,7 +69,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.gbxUsuario.Controls.Add(this.cbPerfil);
             this.gbxUsuario.Controls.Add(this.lblContraseña);
             this.gbxUsuario.Controls.Add(this.lblUsuario);
-            this.gbxUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxUsuario.ForeColor = System.Drawing.Color.White;
             this.gbxUsuario.Location = new System.Drawing.Point(29, 273);
             this.gbxUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.gbxUsuario.Name = "gbxUsuario";
@@ -93,7 +93,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbContraseña.Name = "txtbContraseña";
             this.txtbContraseña.Padding = new System.Windows.Forms.Padding(9);
             this.txtbContraseña.PasswordChar = true;
-            this.txtbContraseña.Size = new System.Drawing.Size(164, 39);
+            this.txtbContraseña.Size = new System.Drawing.Size(164, 35);
             this.txtbContraseña.TabIndex = 5;
             this.txtbContraseña.Tag = "";
             this.txtbContraseña.UnderlinedStyle = false;
@@ -112,14 +112,14 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbUsuario.Name = "txtbUsuario";
             this.txtbUsuario.Padding = new System.Windows.Forms.Padding(9);
             this.txtbUsuario.PasswordChar = false;
-            this.txtbUsuario.Size = new System.Drawing.Size(164, 39);
+            this.txtbUsuario.Size = new System.Drawing.Size(164, 35);
             this.txtbUsuario.TabIndex = 4;
             this.txtbUsuario.Tag = "";
             this.txtbUsuario.UnderlinedStyle = false;
             // 
             // lblPerfil
             // 
-            this.lblPerfil.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.lblPerfil.Location = new System.Drawing.Point(17, 186);
             this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerfil.Name = "lblPerfil";
@@ -134,7 +134,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.ckbContraseña.Location = new System.Drawing.Point(20, 162);
             this.ckbContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.ckbContraseña.Name = "ckbContraseña";
-            this.ckbContraseña.Size = new System.Drawing.Size(180, 23);
+            this.ckbContraseña.Size = new System.Drawing.Size(134, 19);
             this.ckbContraseña.TabIndex = 6;
             this.ckbContraseña.Text = "Mostrar Contraseña";
             this.ckbContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,12 +147,12 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.cbPerfil.Location = new System.Drawing.Point(17, 209);
             this.cbPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.cbPerfil.Name = "cbPerfil";
-            this.cbPerfil.Size = new System.Drawing.Size(167, 27);
+            this.cbPerfil.Size = new System.Drawing.Size(167, 23);
             this.cbPerfil.TabIndex = 7;
             // 
             // lblContraseña
             // 
-            this.lblContraseña.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.lblContraseña.Location = new System.Drawing.Point(20, 92);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
@@ -163,7 +163,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.lblUsuario.Location = new System.Drawing.Point(20, 22);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
@@ -174,7 +174,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.label2.Location = new System.Drawing.Point(20, 168);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -185,7 +185,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.label1.Location = new System.Drawing.Point(20, 100);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -196,7 +196,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // lblNombre
             // 
-            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.5F);
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.lblNombre.Location = new System.Drawing.Point(20, 30);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
@@ -219,7 +219,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbApellido.Name = "txtbApellido";
             this.txtbApellido.Padding = new System.Windows.Forms.Padding(9);
             this.txtbApellido.PasswordChar = false;
-            this.txtbApellido.Size = new System.Drawing.Size(164, 39);
+            this.txtbApellido.Size = new System.Drawing.Size(164, 35);
             this.txtbApellido.TabIndex = 2;
             this.txtbApellido.UnderlinedStyle = false;
             // 
@@ -237,7 +237,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbEmail.Name = "txtbEmail";
             this.txtbEmail.Padding = new System.Windows.Forms.Padding(9);
             this.txtbEmail.PasswordChar = false;
-            this.txtbEmail.Size = new System.Drawing.Size(164, 39);
+            this.txtbEmail.Size = new System.Drawing.Size(164, 35);
             this.txtbEmail.TabIndex = 3;
             this.txtbEmail.Tag = "";
             this.txtbEmail.UnderlinedStyle = false;
@@ -256,7 +256,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(164, 39);
+            this.txtbNombre.Size = new System.Drawing.Size(164, 35);
             this.txtbNombre.TabIndex = 1;
             this.txtbNombre.UnderlinedStyle = false;
             // 
@@ -308,7 +308,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.groupBox1.Controls.Add(this.txtbNombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(29, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -320,7 +320,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             // 
             // frmAltaUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
@@ -330,7 +330,7 @@ namespace gestorLollapalooza.presLayer.UsuarioPres
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.gbxUsuario);
-            this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

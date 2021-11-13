@@ -62,7 +62,7 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.dvgTipoEntrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -75,8 +75,8 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.Descripcion});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -118,11 +118,11 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.txtbDescripcion);
             this.gbxFiltros.Controls.Add(this.txtbNombre);
-            this.gbxFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxFiltros.ForeColor = System.Drawing.Color.White;
             this.gbxFiltros.Location = new System.Drawing.Point(13, 13);
-            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
-            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Size = new System.Drawing.Size(283, 217);
             this.gbxFiltros.TabIndex = 7;
             this.gbxFiltros.TabStop = false;
@@ -181,7 +181,7 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbDescripcion.Multiline = false;
             this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
             this.txtbDescripcion.PasswordChar = false;
             this.txtbDescripcion.Size = new System.Drawing.Size(228, 35);
             this.txtbDescripcion.TabIndex = 18;
@@ -199,7 +199,7 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(228, 35);
             this.txtbNombre.TabIndex = 4;

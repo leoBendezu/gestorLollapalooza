@@ -77,7 +77,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(348, 35);
-            this.txtbNombre.TabIndex = 18;
+            this.txtbNombre.TabIndex = 1;
             this.txtbNombre.Tag = "";
             this.txtbNombre.UnderlinedStyle = false;
             this.txtbNombre.Load += new System.EventHandler(this.txtbNombre_Load);
@@ -96,7 +96,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(85, 38);
-            this.btnSalir.TabIndex = 20;
+            this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Cancelar";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -116,7 +116,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 38);
-            this.btnEliminar.TabIndex = 19;
+            this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
