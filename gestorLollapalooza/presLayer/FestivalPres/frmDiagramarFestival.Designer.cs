@@ -44,12 +44,9 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtbDescuento = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbDevolucion = new gestorLollapalooza.frmTextBoxFacha();
             this.label2 = new System.Windows.Forms.Label();
             this.numAno = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvActuacion = new System.Windows.Forms.DataGridView();
@@ -57,33 +54,38 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.duracionEstimada = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDias = new System.Windows.Forms.DataGridView();
-            this.btnQuitar = new gestorLollapalooza.BotonFacha();
-            this.btnAgregar = new gestorLollapalooza.BotonFacha();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnSalir = new gestorLollapalooza.BotonFacha();
-            this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.fcha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechlim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numDventaAnticipada = new System.Windows.Forms.NumericUpDown();
+            this.numDevPorAnul = new System.Windows.Forms.NumericUpDown();
+            this.btnQuitar = new gestorLollapalooza.BotonFacha();
+            this.btnAgregar = new gestorLollapalooza.BotonFacha();
+            this.btnSalir = new gestorLollapalooza.BotonFacha();
+            this.btnEliminar = new gestorLollapalooza.BotonFacha();
+            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.gbxFestivales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAno)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDventaAnticipada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevPorAnul)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxFestivales
             // 
+            this.gbxFestivales.Controls.Add(this.numDevPorAnul);
+            this.gbxFestivales.Controls.Add(this.numDventaAnticipada);
             this.gbxFestivales.Controls.Add(this.pictureBox1);
             this.gbxFestivales.Controls.Add(this.dtpFechaFin);
             this.gbxFestivales.Controls.Add(this.label6);
             this.gbxFestivales.Controls.Add(this.dtpFechaInicio);
             this.gbxFestivales.Controls.Add(this.label5);
             this.gbxFestivales.Controls.Add(this.label4);
-            this.gbxFestivales.Controls.Add(this.txtbDescuento);
-            this.gbxFestivales.Controls.Add(this.txtbDevolucion);
             this.gbxFestivales.Controls.Add(this.label2);
             this.gbxFestivales.Controls.Add(this.numAno);
             this.gbxFestivales.Controls.Add(this.label1);
@@ -152,45 +154,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.label4.TabIndex = 30;
             this.label4.Text = "% Descuento Venta anticipada";
             // 
-            // txtbDescuento
-            // 
-            this.txtbDescuento.BackColor = System.Drawing.Color.White;
-            this.txtbDescuento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbDescuento.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbDescuento.BorderSize = 2;
-            this.txtbDescuento.Enabled = false;
-            this.txtbDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbDescuento.ForeColor = System.Drawing.Color.White;
-            this.txtbDescuento.Location = new System.Drawing.Point(391, 57);
-            this.txtbDescuento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbDescuento.Multiline = false;
-            this.txtbDescuento.Name = "txtbDescuento";
-            this.txtbDescuento.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbDescuento.PasswordChar = false;
-            this.txtbDescuento.Size = new System.Drawing.Size(61, 35);
-            this.txtbDescuento.TabIndex = 31;
-            this.txtbDescuento.UnderlinedStyle = false;
-            this.txtbDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmTextBoxFacha1_KeyPress);
-            // 
-            // txtbDevolucion
-            // 
-            this.txtbDevolucion.BackColor = System.Drawing.Color.White;
-            this.txtbDevolucion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbDevolucion.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbDevolucion.BorderSize = 2;
-            this.txtbDevolucion.Enabled = false;
-            this.txtbDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbDevolucion.ForeColor = System.Drawing.Color.White;
-            this.txtbDevolucion.Location = new System.Drawing.Point(391, 115);
-            this.txtbDevolucion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbDevolucion.Multiline = false;
-            this.txtbDevolucion.Name = "txtbDevolucion";
-            this.txtbDevolucion.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbDevolucion.PasswordChar = false;
-            this.txtbDevolucion.Size = new System.Drawing.Size(61, 35);
-            this.txtbDevolucion.TabIndex = 28;
-            this.txtbDevolucion.UnderlinedStyle = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -205,13 +168,23 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             // 
             this.numAno.Location = new System.Drawing.Point(20, 119);
             this.numAno.Maximum = new decimal(new int[] {
-            10000,
+            2100,
+            0,
+            0,
+            0});
+            this.numAno.Minimum = new decimal(new int[] {
+            2000,
             0,
             0,
             0});
             this.numAno.Name = "numAno";
             this.numAno.Size = new System.Drawing.Size(67, 20);
             this.numAno.TabIndex = 21;
+            this.numAno.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
@@ -222,25 +195,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Nombre (*):";
-            // 
-            // txtbNombre
-            // 
-            this.txtbNombre.BackColor = System.Drawing.Color.White;
-            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbNombre.BorderSize = 2;
-            this.txtbNombre.Enabled = false;
-            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNombre.ForeColor = System.Drawing.Color.White;
-            this.txtbNombre.Location = new System.Drawing.Point(20, 57);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbNombre.Multiline = false;
-            this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombre.TabIndex = 4;
-            this.txtbNombre.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -278,7 +232,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dgvActuacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -292,7 +246,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -343,7 +297,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dgvDias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -357,7 +311,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.Column1});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -376,44 +330,31 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.dgvDias.TabIndex = 26;
             this.dgvDias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // btnQuitar
+            // fcha
             // 
-            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnQuitar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnQuitar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnQuitar.BorderRadius = 20;
-            this.btnQuitar.BorderSize = 0;
-            this.btnQuitar.FlatAppearance.BorderSize = 0;
-            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitar.ForeColor = System.Drawing.Color.White;
-            this.btnQuitar.Location = new System.Drawing.Point(730, 108);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(76, 43);
-            this.btnQuitar.TabIndex = 26;
-            this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.TextColor = System.Drawing.Color.White;
-            this.btnQuitar.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.fcha.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fcha.HeaderText = "Fecha";
+            this.fcha.Name = "fcha";
+            this.fcha.ReadOnly = true;
             // 
-            // btnAgregar
+            // fechlim
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.btnAgregar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAgregar.BorderRadius = 20;
-            this.btnAgregar.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(730, 40);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(76, 43);
-            this.btnAgregar.TabIndex = 24;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.TextColor = System.Drawing.Color.White;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.fechlim.DefaultCellStyle = dataGridViewCellStyle5;
+            this.fechlim.HeaderText = "Fecha limite de Anulacion de entrada";
+            this.fechlim.Name = "fechlim";
+            this.fechlim.ReadOnly = true;
+            this.fechlim.Width = 300;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column1.HeaderText = "Fecha de vto de Venta Anticipada";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 300;
             // 
             // label9
             // 
@@ -434,6 +375,62 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.label8.Size = new System.Drawing.Size(103, 13);
             this.label8.TabIndex = 22;
             this.label8.Text = "Actuaciones del dia:";
+            // 
+            // numDventaAnticipada
+            // 
+            this.numDventaAnticipada.DecimalPlaces = 2;
+            this.numDventaAnticipada.Location = new System.Drawing.Point(391, 61);
+            this.numDventaAnticipada.Name = "numDventaAnticipada";
+            this.numDventaAnticipada.Size = new System.Drawing.Size(67, 20);
+            this.numDventaAnticipada.TabIndex = 39;
+            // 
+            // numDevPorAnul
+            // 
+            this.numDevPorAnul.DecimalPlaces = 2;
+            this.numDevPorAnul.Location = new System.Drawing.Point(391, 119);
+            this.numDevPorAnul.Name = "numDevPorAnul";
+            this.numDevPorAnul.Size = new System.Drawing.Size(67, 20);
+            this.numDevPorAnul.TabIndex = 40;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnQuitar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnQuitar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuitar.BorderRadius = 20;
+            this.btnQuitar.BorderSize = 0;
+            this.btnQuitar.FlatAppearance.BorderSize = 0;
+            this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitar.ForeColor = System.Drawing.Color.White;
+            this.btnQuitar.Location = new System.Drawing.Point(730, 108);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(76, 43);
+            this.btnQuitar.TabIndex = 26;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.TextColor = System.Drawing.Color.White;
+            this.btnQuitar.UseVisualStyleBackColor = false;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnAgregar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.btnAgregar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAgregar.BorderRadius = 20;
+            this.btnAgregar.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(730, 40);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(76, 43);
+            this.btnAgregar.TabIndex = 24;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextColor = System.Drawing.Color.White;
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnSalir
             // 
@@ -475,31 +472,24 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // fcha
+            // txtbNombre
             // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.fcha.DefaultCellStyle = dataGridViewCellStyle4;
-            this.fcha.HeaderText = "Fecha";
-            this.fcha.Name = "fcha";
-            this.fcha.ReadOnly = true;
-            // 
-            // fechlim
-            // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.fechlim.DefaultCellStyle = dataGridViewCellStyle5;
-            this.fechlim.HeaderText = "Fecha limite de Anulacion de entrada";
-            this.fechlim.Name = "fechlim";
-            this.fechlim.ReadOnly = true;
-            this.fechlim.Width = 300;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column1.HeaderText = "Fecha de vto de Venta Anticipada";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 300;
+            this.txtbNombre.BackColor = System.Drawing.Color.White;
+            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbNombre.BorderSize = 2;
+            this.txtbNombre.Enabled = false;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.ForeColor = System.Drawing.Color.White;
+            this.txtbNombre.Location = new System.Drawing.Point(20, 57);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNombre.Multiline = false;
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbNombre.PasswordChar = false;
+            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
+            this.txtbNombre.TabIndex = 4;
+            this.txtbNombre.UnderlinedStyle = false;
             // 
             // frmDiagramarFestival
             // 
@@ -527,6 +517,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvActuacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDventaAnticipada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevPorAnul)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -538,7 +530,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private frmTextBoxFacha txtbNombre;
         private BotonFacha btnSalir;
         private BotonFacha btnEliminar;
-        private frmTextBoxFacha txtbDevolucion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
@@ -546,7 +537,6 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private frmTextBoxFacha txtbDescuento;
         private System.Windows.Forms.NumericUpDown numAno;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
@@ -562,5 +552,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private System.Windows.Forms.DataGridViewTextBoxColumn fcha;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechlim;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.NumericUpDown numDevPorAnul;
+        private System.Windows.Forms.NumericUpDown numDventaAnticipada;
     }
 }

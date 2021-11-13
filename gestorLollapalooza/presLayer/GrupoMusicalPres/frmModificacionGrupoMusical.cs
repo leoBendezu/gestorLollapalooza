@@ -59,7 +59,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
             if (numCantIntegrantes.Value == 0)
             {
-                this.numCantIntegrantes.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
+                this.lblCantInt.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
                 band = false;
             }
 
@@ -84,7 +84,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbDescripcion.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.numCantIntegrantes.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.lblCantInt.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

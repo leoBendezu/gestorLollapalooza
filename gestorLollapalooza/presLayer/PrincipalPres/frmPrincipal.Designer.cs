@@ -55,7 +55,7 @@ namespace gestorLollapalooza.pressLayer
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.menuStrip1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.festivalesToolStripMenuItem,
@@ -74,13 +74,13 @@ namespace gestorLollapalooza.pressLayer
             this.festivalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.diagramarNuevoFestivalToolStripMenuItem});
             this.festivalesToolStripMenuItem.Name = "festivalesToolStripMenuItem";
-            this.festivalesToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.festivalesToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.festivalesToolStripMenuItem.Text = "Festivales";
             // 
             // diagramarNuevoFestivalToolStripMenuItem
             // 
             this.diagramarNuevoFestivalToolStripMenuItem.Name = "diagramarNuevoFestivalToolStripMenuItem";
-            this.diagramarNuevoFestivalToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.diagramarNuevoFestivalToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.diagramarNuevoFestivalToolStripMenuItem.Text = "Diagramar Nuevo Festival";
             this.diagramarNuevoFestivalToolStripMenuItem.Click += new System.EventHandler(this.diagramarNuevoFestivalToolStripMenuItem_Click);
             // 
@@ -93,7 +93,7 @@ namespace gestorLollapalooza.pressLayer
             this.gestiónCentroDeVentaToolStripMenuItem});
             this.soporteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
-            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.soporteToolStripMenuItem.Text = "Soporte";
             // 
             // gestionUsuariosToolStripMenuItem
@@ -101,29 +101,29 @@ namespace gestorLollapalooza.pressLayer
             this.gestionUsuariosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.gestionUsuariosToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.gestionUsuariosToolStripMenuItem.Name = "gestionUsuariosToolStripMenuItem";
-            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             this.gestionUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionUsuariosToolStripMenuItem_Click);
             // 
             // gestionGruposMusicalesToolStripMenuItem
             // 
             this.gestionGruposMusicalesToolStripMenuItem.Name = "gestionGruposMusicalesToolStripMenuItem";
-            this.gestionGruposMusicalesToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.gestionGruposMusicalesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.gestionGruposMusicalesToolStripMenuItem.Text = "Gestion Grupos Musicales";
             this.gestionGruposMusicalesToolStripMenuItem.Click += new System.EventHandler(this.gestionGruposMusicalesToolStripMenuItem_Click);
             // 
             // gestionTipoDeEntradaToolStripMenuItem
             // 
             this.gestionTipoDeEntradaToolStripMenuItem.Name = "gestionTipoDeEntradaToolStripMenuItem";
-            this.gestionTipoDeEntradaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
+            this.gestionTipoDeEntradaToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.gestionTipoDeEntradaToolStripMenuItem.Text = "Gestion Tipo de Entrada";
             this.gestionTipoDeEntradaToolStripMenuItem.Click += new System.EventHandler(this.gestionTipoDeEntradaToolStripMenuItem_Click);
             // 
             // gestiónCentroDeVentaToolStripMenuItem
             // 
             this.gestiónCentroDeVentaToolStripMenuItem.Name = "gestiónCentroDeVentaToolStripMenuItem";
-            this.gestiónCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.gestiónCentroDeVentaToolStripMenuItem.Text = "Gestión CentroDeVenta";
+            this.gestiónCentroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.gestiónCentroDeVentaToolStripMenuItem.Text = "Gestión Centro De Venta";
             this.gestiónCentroDeVentaToolStripMenuItem.Click += new System.EventHandler(this.gestiónCentroDeVentaToolStripMenuItem_Click);
             // 
             // reporteToolStripMenuItem
@@ -134,40 +134,40 @@ namespace gestorLollapalooza.pressLayer
             this.festivalToolStripMenuItem,
             this.centroDeVentaToolStripMenuItem});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
-            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.reporteToolStripMenuItem.Text = "Reporte";
             // 
             // grupoMusicalToolStripMenuItem
             // 
             this.grupoMusicalToolStripMenuItem.Name = "grupoMusicalToolStripMenuItem";
-            this.grupoMusicalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.grupoMusicalToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.grupoMusicalToolStripMenuItem.Text = "GrupoMusical";
             this.grupoMusicalToolStripMenuItem.Click += new System.EventHandler(this.grupoMusicalToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // festivalToolStripMenuItem
             // 
             this.festivalToolStripMenuItem.Name = "festivalToolStripMenuItem";
-            this.festivalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.festivalToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.festivalToolStripMenuItem.Text = "Festival";
             this.festivalToolStripMenuItem.Click += new System.EventHandler(this.festivalToolStripMenuItem_Click);
             // 
             // centroDeVentaToolStripMenuItem
             // 
             this.centroDeVentaToolStripMenuItem.Name = "centroDeVentaToolStripMenuItem";
-            this.centroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.centroDeVentaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.centroDeVentaToolStripMenuItem.Text = "Centro De Venta";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 

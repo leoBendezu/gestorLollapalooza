@@ -38,7 +38,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             {
                 if (!gmObj.existeGrupoMusical(this.txtbGrupoActuante.Text))
                 {
-                    MessageBox.Show("No existe el Grupo Musical Ingresado, puede usar el boton ? para revisar los grupos");
+                    MessageBox.Show("No existe el Grupo Musical Ingresado, puede usar el boton ? para revisar los grupos existentes");
                 }
                 else { 
                 Actuacion act = new Actuacion()
@@ -67,11 +67,16 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             {
 
 
-                var actuacion = (Actuacion)dgvActuacion.CurrentRow.DataBoundItem;
+                foreach (Actuacion act in  actuaciones) {
 
-
-                actuaciones.Remove(actuacion);
+                    if (act.NumeroOrden == Convert.ToInt32(dgvActuacion.CurrentRow.Cells[0].Value))
+                    {
+                        actuaciones.Remove(act);
+                        break;
+                    }
+                }
                 this.dgvActuacion.Rows.Remove(dgvActuacion.CurrentRow);
+                this.numOrden.Value--;
             }
         }
 
@@ -83,11 +88,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
         private bool ComprobarActuacion()
         {
             bool band = true;
-            if(this.numDuracionEstimada.Value <= 0)
-            {
-                this.lblDuracion.BackColor =  Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
-                band = false;
-            }      
+   
             if(this.txtbGrupoActuante.Text == String.Empty )
             {
                 this.txtbGrupoActuante.BorderColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
@@ -157,8 +158,8 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
         {
 
             this.txtbGrupoActuante.Text = String.Empty;
-            this.numDuracionEstimada.Value = 0;
-            this.numOrden.Value = 0;
+            this.numDuracionEstimada.Value = 30;
+            this.numOrden.Value ++;
         }
         private void Limpiar()
         {

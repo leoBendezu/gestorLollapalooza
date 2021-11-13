@@ -45,14 +45,14 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtbDescripcion = new gestorLollapalooza.frmTextBoxFacha();
+            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             this.btnLimpiar = new gestorLollapalooza.BotonFacha();
             this.btnModificar = new gestorLollapalooza.BotonFacha();
             this.btnEliminar = new gestorLollapalooza.BotonFacha();
             this.btnAgregar = new gestorLollapalooza.BotonFacha();
             this.btnSalir = new gestorLollapalooza.BotonFacha();
             this.btnConsultar = new gestorLollapalooza.BotonFacha();
-            this.txtbDescripcion = new gestorLollapalooza.frmTextBoxFacha();
-            this.txtbNombre = new gestorLollapalooza.frmTextBoxFacha();
             ((System.ComponentModel.ISupportInitialize)(this.dvgGrupoMusical)).BeginInit();
             this.gbxFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCantIntegrantes)).BeginInit();
@@ -69,7 +69,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.dvgGrupoMusical.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -84,8 +84,8 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.clmCantIntegrantes});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -148,11 +148,11 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.gbxFiltros.Controls.Add(this.label1);
             this.gbxFiltros.Controls.Add(this.txtbDescripcion);
             this.gbxFiltros.Controls.Add(this.txtbNombre);
-            this.gbxFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxFiltros.ForeColor = System.Drawing.Color.White;
             this.gbxFiltros.Location = new System.Drawing.Point(13, 12);
-            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
-            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Size = new System.Drawing.Size(283, 280);
             this.gbxFiltros.TabIndex = 6;
             this.gbxFiltros.TabStop = false;
@@ -161,9 +161,19 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             // numCantIntegrantes
             // 
             this.numCantIntegrantes.Location = new System.Drawing.Point(25, 201);
+            this.numCantIntegrantes.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numCantIntegrantes.Name = "numCantIntegrantes";
             this.numCantIntegrantes.Size = new System.Drawing.Size(120, 20);
             this.numCantIntegrantes.TabIndex = 13;
+            this.numCantIntegrantes.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // chbTodos
             // 
@@ -215,6 +225,42 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Nombre:";
+            // 
+            // txtbDescripcion
+            // 
+            this.txtbDescripcion.BackColor = System.Drawing.Color.White;
+            this.txtbDescripcion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbDescripcion.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbDescripcion.BorderSize = 2;
+            this.txtbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbDescripcion.ForeColor = System.Drawing.Color.White;
+            this.txtbDescripcion.Location = new System.Drawing.Point(25, 123);
+            this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbDescripcion.Multiline = false;
+            this.txtbDescripcion.Name = "txtbDescripcion";
+            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbDescripcion.PasswordChar = false;
+            this.txtbDescripcion.Size = new System.Drawing.Size(228, 35);
+            this.txtbDescripcion.TabIndex = 18;
+            this.txtbDescripcion.UnderlinedStyle = false;
+            // 
+            // txtbNombre
+            // 
+            this.txtbNombre.BackColor = System.Drawing.Color.White;
+            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtbNombre.BorderSize = 2;
+            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbNombre.ForeColor = System.Drawing.Color.White;
+            this.txtbNombre.Location = new System.Drawing.Point(25, 54);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNombre.Multiline = false;
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbNombre.PasswordChar = false;
+            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
+            this.txtbNombre.TabIndex = 4;
+            this.txtbNombre.UnderlinedStyle = false;
             // 
             // btnLimpiar
             // 
@@ -331,42 +377,6 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnConsultar.TextColor = System.Drawing.Color.White;
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click_1);
-            // 
-            // txtbDescripcion
-            // 
-            this.txtbDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtbDescripcion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbDescripcion.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbDescripcion.BorderSize = 2;
-            this.txtbDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbDescripcion.ForeColor = System.Drawing.Color.White;
-            this.txtbDescripcion.Location = new System.Drawing.Point(25, 123);
-            this.txtbDescripcion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbDescripcion.Multiline = false;
-            this.txtbDescripcion.Name = "txtbDescripcion";
-            this.txtbDescripcion.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbDescripcion.PasswordChar = false;
-            this.txtbDescripcion.Size = new System.Drawing.Size(228, 35);
-            this.txtbDescripcion.TabIndex = 18;
-            this.txtbDescripcion.UnderlinedStyle = false;
-            // 
-            // txtbNombre
-            // 
-            this.txtbNombre.BackColor = System.Drawing.Color.White;
-            this.txtbNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbNombre.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtbNombre.BorderSize = 2;
-            this.txtbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbNombre.ForeColor = System.Drawing.Color.White;
-            this.txtbNombre.Location = new System.Drawing.Point(25, 54);
-            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbNombre.Multiline = false;
-            this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
-            this.txtbNombre.PasswordChar = false;
-            this.txtbNombre.Size = new System.Drawing.Size(228, 35);
-            this.txtbNombre.TabIndex = 4;
-            this.txtbNombre.UnderlinedStyle = false;
             // 
             // frmConsultaGrupoMusical
             // 

@@ -72,6 +72,8 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // Devuelve el color original a los campos que hayan sido cmabiados por Comprobar()
 
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.txtbNombrePv.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.lblPv.BackColor = Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -115,7 +117,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
                 }
                 else
                 {
-                    MessageBox.Show("Ya existe dicho Centro de Venta");
+                    MessageBox.Show("Ya existe dicho Centro de Venta, recomendamos volver al apartado de MODIFICACION");
                     this.LimpiarTxtCentroVenta();
                     this.resetearColor();
                 }
@@ -129,16 +131,80 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            PuntoVenta puntoVenta = new PuntoVenta()
+            if (ComprobarPV())
             {
-                NombrePuntoVenta = this.txtbNombrePv.Text,
-                NumeroPuntoVenta = (int) this.numPuntoVenta.Value
-            };
+                PuntoVenta puntoVenta = new PuntoVenta()
+                {
+                    NombrePuntoVenta = this.txtbNombrePv.Text,
+                    NumeroPuntoVenta = (int)this.numPuntoVenta.Value
+                };
 
-            puntosVentaAgregados.Add(puntoVenta);
+                puntosVentaAgregados.Add(puntoVenta);
 
-            this.dgvPuntoVenta.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta);
+                this.dgvPuntoVenta.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta);
+                this.limpiarPv();
+                this.resetearColor();
+            } else 
+            {
+                MessageBox.Show("Los campos en rojo son incorrrectos");
+            }
+
                 
+        }
+
+        private bool ComprobarPV()
+        {
+            bool band = true;
+
+            if (String.IsNullOrEmpty(this.txtbNombrePv.Text)) {
+                this.txtbNombrePv.BorderColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
+                band = false;
+            }
+            if (!ValidarNumPv())
+            {
+                this.lblPv.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
+                band = false;
+            }
+
+            return band;
+        }
+
+
+        private bool ValidarNumPv()
+        {
+            bool band = true;
+            if (this.numPuntoVenta.Value == 0)
+            {
+                band = false;
+
+            }
+            else
+            {
+
+                foreach (PuntoVenta punt in puntosVentaAgregados)
+                {
+                    if (punt.NumeroPuntoVenta == numPuntoVenta.Value)
+                    {
+                        MessageBox.Show("El numero de orden ya fue registrado");
+                        break;
+                    }
+                }
+            }
+            return band;
+        }
+
+
+
+        public void limpiarPv()
+        {
+            if(puntosVentaAgregados.Count == 0)
+            {
+                numPuntoVenta.Value = 1;
+            } else 
+            {
+                numPuntoVenta.Value++;
+            }
+            txtbNombrePv.Text = String.Empty;
         }
 
         private void btnQuitar_Click(object sender, EventArgs e)
@@ -147,11 +213,17 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             {
 
 
-                var puntoVenta = (PuntoVenta)dgvPuntoVenta.CurrentRow.DataBoundItem;
-                   
+                foreach(PuntoVenta punt in puntosVentaAgregados)
+                {
+                    if(punt.NumeroPuntoVenta == Convert.ToInt32(dgvPuntoVenta.CurrentRow.Cells[1].Value))
+                    {
+                        puntosVentaAgregados.Remove(punt);
+                        break;
+                    }
+                }
                 
-                puntosVentaAgregados.Remove(puntoVenta);
                 this.dgvPuntoVenta.Rows.Remove(dgvPuntoVenta.CurrentRow);
+                this.numPuntoVenta.Value--;
             }
             
         }

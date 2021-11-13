@@ -32,19 +32,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnEliminar.Enabled = false;
             this.btnModificar.Enabled = false;
         }
-        /*
-        private void CargarGrilla(DataGridView grilla, DataTable tabla)
-        {
-            grilla.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grilla.Rows.Add(tabla.Rows[i]["idGrupoMusical"],
-                                tabla.Rows[i]["nombre"],
-                                tabla.Rows[i]["descripcion"],
-                                tabla.Rows[i]["cantIntegrantes"]);
-            }
-        }
-        */
+
 
         private void CargarGrilla(DataGridView grilla, IList<GrupoMusical> fuente)
         {
@@ -69,7 +57,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             {
                 if (!string.IsNullOrEmpty(this.txtbNombre.Text))
                 {
-                    _consulta += "AND nombre like '" + this.txtbNombre.Text + "' ";
+                    _consulta += "AND nombre like '%" + this.txtbNombre.Text + "%' ";
                 }
                 if (!string.IsNullOrEmpty(this.txtbDescripcion.Text))
                 {
@@ -132,7 +120,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         {
             this.txtbDescripcion.Text = String.Empty;
             this.txtbNombre.Text = String.Empty;
-            this.numCantIntegrantes.Value = 0;
+            this.numCantIntegrantes.Value = 1;
         }
 
         private void Habilitar(bool x)

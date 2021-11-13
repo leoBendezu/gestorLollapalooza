@@ -42,7 +42,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.numPuntoVenta = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPv = new System.Windows.Forms.Label();
             this.txtbNombrePv = new gestorLollapalooza.frmTextBoxFacha();
             this.btnQuitar = new gestorLollapalooza.BotonFacha();
             this.btnLimpiar = new gestorLollapalooza.BotonFacha();
@@ -59,11 +59,11 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             this.gbxGrupoMusical.Controls.Add(this.lblNombre);
             this.gbxGrupoMusical.Controls.Add(this.txtbNombre);
-            this.gbxGrupoMusical.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxGrupoMusical.ForeColor = System.Drawing.Color.White;
             this.gbxGrupoMusical.Location = new System.Drawing.Point(55, 16);
-            this.gbxGrupoMusical.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxGrupoMusical.Margin = new System.Windows.Forms.Padding(4);
             this.gbxGrupoMusical.Name = "gbxGrupoMusical";
-            this.gbxGrupoMusical.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxGrupoMusical.Padding = new System.Windows.Forms.Padding(4);
             this.gbxGrupoMusical.Size = new System.Drawing.Size(213, 114);
             this.gbxGrupoMusical.TabIndex = 18;
             this.gbxGrupoMusical.TabStop = false;
@@ -72,7 +72,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // 
             // lblNombre
             // 
-            this.lblNombre.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(11, 17);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
@@ -93,7 +93,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombre.Multiline = false;
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtbNombre.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombre.PasswordChar = false;
             this.txtbNombre.Size = new System.Drawing.Size(185, 35);
             this.txtbNombre.TabIndex = 1;
@@ -109,7 +109,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.dgvPuntoVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -122,8 +122,8 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.numero});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -161,13 +161,13 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.gbxFiltros.Controls.Add(this.numPuntoVenta);
             this.gbxFiltros.Controls.Add(this.label4);
             this.gbxFiltros.Controls.Add(this.label3);
-            this.gbxFiltros.Controls.Add(this.label1);
+            this.gbxFiltros.Controls.Add(this.lblPv);
             this.gbxFiltros.Controls.Add(this.txtbNombrePv);
-            this.gbxFiltros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.gbxFiltros.ForeColor = System.Drawing.Color.White;
             this.gbxFiltros.Location = new System.Drawing.Point(369, 13);
-            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Margin = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Name = "gbxFiltros";
-            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFiltros.Padding = new System.Windows.Forms.Padding(4);
             this.gbxFiltros.Size = new System.Drawing.Size(283, 157);
             this.gbxFiltros.TabIndex = 20;
             this.gbxFiltros.TabStop = false;
@@ -176,9 +176,19 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             // numPuntoVenta
             // 
             this.numPuntoVenta.Location = new System.Drawing.Point(21, 109);
+            this.numPuntoVenta.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPuntoVenta.Name = "numPuntoVenta";
             this.numPuntoVenta.Size = new System.Drawing.Size(120, 20);
             this.numPuntoVenta.TabIndex = 13;
+            this.numPuntoVenta.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label4
             // 
@@ -199,15 +209,15 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.label3.TabIndex = 22;
             this.label3.Text = "Numero (*):";
             // 
-            // label1
+            // lblPv
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Nombre (*):";
+            this.lblPv.AutoSize = true;
+            this.lblPv.Location = new System.Drawing.Point(21, 18);
+            this.lblPv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPv.Name = "lblPv";
+            this.lblPv.Size = new System.Drawing.Size(60, 13);
+            this.lblPv.TabIndex = 20;
+            this.lblPv.Text = "Nombre (*):";
             // 
             // txtbNombrePv
             // 
@@ -221,7 +231,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.txtbNombrePv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtbNombrePv.Multiline = false;
             this.txtbNombrePv.Name = "txtbNombrePv";
-            this.txtbNombrePv.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtbNombrePv.Padding = new System.Windows.Forms.Padding(9);
             this.txtbNombrePv.PasswordChar = false;
             this.txtbNombrePv.Size = new System.Drawing.Size(228, 35);
             this.txtbNombrePv.TabIndex = 4;
@@ -238,7 +248,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.Color.White;
             this.btnQuitar.Location = new System.Drawing.Point(723, 73);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(76, 43);
             this.btnQuitar.TabIndex = 23;
@@ -258,7 +268,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Location = new System.Drawing.Point(723, 130);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(76, 43);
             this.btnLimpiar.TabIndex = 22;
@@ -278,7 +288,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(723, 16);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(76, 43);
             this.btnAgregar.TabIndex = 21;
@@ -298,7 +308,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(55, 160);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(76, 43);
             this.btnSalir.TabIndex = 17;
@@ -318,7 +328,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.ForeColor = System.Drawing.Color.White;
             this.btnCrear.Location = new System.Drawing.Point(192, 160);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(76, 43);
             this.btnCrear.TabIndex = 19;
@@ -370,7 +380,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
         private System.Windows.Forms.NumericUpDown numPuntoVenta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPv;
         private frmTextBoxFacha txtbNombrePv;
         private BotonFacha btnAgregar;
         private BotonFacha btnLimpiar;

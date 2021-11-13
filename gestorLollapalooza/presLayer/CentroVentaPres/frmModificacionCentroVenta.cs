@@ -100,12 +100,12 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
                 if (centroService.modificarCentroVenta(centroVentaSeleccionado))
                 {
-                    MessageBox.Show("Se ha modificado el CentroVenta", "Advertencia");
+                    MessageBox.Show("Se ha modificado el Centro de Venta", "Advertencia");
                     resetearColor();
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido modificar el CentroVenta", "Advertencia");
+                    MessageBox.Show("No se ha podido modificar el Centro de Venta", "Advertencia");
                     resetearColor();
                 }
             }
