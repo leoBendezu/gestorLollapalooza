@@ -26,9 +26,12 @@ namespace gestorLollapalooza.pressLayer
             frmLogin login = new frmLogin();
             login.ShowDialog();
 
-            if(login.UsuarioLoggeado == null) { this.Close(); }
-            this.lblName.Text = login.UsuarioLoggeado.Nombre;
-            this.lblPerfil.Text = login.UsuarioLoggeado.PerfilUsuario.NombrePerfil;
+            if (login.UsuarioLoggeado == null) { this.Close(); }
+            else
+            {
+                this.lblName.Text = login.UsuarioLoggeado.Nombre;
+                this.lblPerfil.Text = login.UsuarioLoggeado.PerfilUsuario.NombrePerfil;
+            }
             login.Dispose(); 
         }
 
