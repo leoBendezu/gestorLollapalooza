@@ -39,6 +39,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.botonFacha1 = new gestorLollapalooza.BotonFacha();
             this.txtbPassword = new gestorLollapalooza.frmTextBoxFacha();
             this.txtbUsuario = new gestorLollapalooza.frmTextBoxFacha();
+            this.cbContra = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,9 +49,9 @@ namespace gestorLollapalooza.presLayer.LoginPres
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(43, 313);
+            this.label1.Location = new System.Drawing.Point(43, 298);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 18);
@@ -61,9 +62,9 @@ namespace gestorLollapalooza.presLayer.LoginPres
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(44, 244);
+            this.label2.Location = new System.Drawing.Point(44, 229);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 18);
@@ -84,7 +85,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(45, 336);
+            this.pictureBox2.Location = new System.Drawing.Point(45, 321);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 22);
@@ -95,7 +96,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 267);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 252);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
@@ -114,11 +115,11 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.botonFacha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.botonFacha2.ForeColor = System.Drawing.Color.White;
             this.botonFacha2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.botonFacha2.Location = new System.Drawing.Point(45, 388);
+            this.botonFacha2.Location = new System.Drawing.Point(45, 399);
             this.botonFacha2.Margin = new System.Windows.Forms.Padding(2);
             this.botonFacha2.Name = "botonFacha2";
             this.botonFacha2.Size = new System.Drawing.Size(80, 35);
-            this.botonFacha2.TabIndex = 14;
+            this.botonFacha2.TabIndex = 4;
             this.botonFacha2.Text = "Salir";
             this.botonFacha2.TextColor = System.Drawing.Color.White;
             this.botonFacha2.UseVisualStyleBackColor = false;
@@ -136,11 +137,11 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.botonFacha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.botonFacha1.ForeColor = System.Drawing.Color.White;
             this.botonFacha1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.botonFacha1.Location = new System.Drawing.Point(147, 388);
+            this.botonFacha1.Location = new System.Drawing.Point(147, 399);
             this.botonFacha1.Margin = new System.Windows.Forms.Padding(2);
             this.botonFacha1.Name = "botonFacha1";
             this.botonFacha1.Size = new System.Drawing.Size(80, 35);
-            this.botonFacha1.TabIndex = 12;
+            this.botonFacha1.TabIndex = 3;
             this.botonFacha1.Text = "Ingresar";
             this.botonFacha1.TextColor = System.Drawing.Color.White;
             this.botonFacha1.UseVisualStyleBackColor = false;
@@ -154,14 +155,14 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbPassword.BorderSize = 2;
             this.txtbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.txtbPassword.ForeColor = System.Drawing.Color.White;
-            this.txtbPassword.Location = new System.Drawing.Point(70, 329);
+            this.txtbPassword.Location = new System.Drawing.Point(70, 314);
             this.txtbPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbPassword.Multiline = false;
             this.txtbPassword.Name = "txtbPassword";
             this.txtbPassword.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtbPassword.PasswordChar = true;
             this.txtbPassword.Size = new System.Drawing.Size(157, 29);
-            this.txtbPassword.TabIndex = 11;
+            this.txtbPassword.TabIndex = 2;
             this.txtbPassword.UnderlinedStyle = true;
             // 
             // txtbUsuario
@@ -172,15 +173,26 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.txtbUsuario.BorderSize = 2;
             this.txtbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.txtbUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtbUsuario.Location = new System.Drawing.Point(70, 261);
+            this.txtbUsuario.Location = new System.Drawing.Point(70, 246);
             this.txtbUsuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtbUsuario.Multiline = false;
             this.txtbUsuario.Name = "txtbUsuario";
             this.txtbUsuario.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtbUsuario.PasswordChar = false;
             this.txtbUsuario.Size = new System.Drawing.Size(157, 29);
-            this.txtbUsuario.TabIndex = 10;
+            this.txtbUsuario.TabIndex = 1;
             this.txtbUsuario.UnderlinedStyle = true;
+            // 
+            // cbContra
+            // 
+            this.cbContra.AutoSize = true;
+            this.cbContra.Location = new System.Drawing.Point(45, 366);
+            this.cbContra.Name = "cbContra";
+            this.cbContra.Size = new System.Drawing.Size(118, 17);
+            this.cbContra.TabIndex = 15;
+            this.cbContra.Text = "Mostrar Contraseña";
+            this.cbContra.UseVisualStyleBackColor = true;
+            this.cbContra.CheckedChanged += new System.EventHandler(this.cbContra_CheckedChanged);
             // 
             // frmLogin
             // 
@@ -188,6 +200,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(270, 467);
+            this.Controls.Add(this.cbContra);
             this.Controls.Add(this.botonFacha2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.botonFacha1);
@@ -223,6 +236,7 @@ namespace gestorLollapalooza.presLayer.LoginPres
         private BotonFacha botonFacha1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private BotonFacha botonFacha2;
+        private System.Windows.Forms.CheckBox cbContra;
     }
 }
 

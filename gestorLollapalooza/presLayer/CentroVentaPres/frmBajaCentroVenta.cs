@@ -32,7 +32,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se eliminara este Grupo Musical", "Advertencia");
+            MessageBox.Show("Se eliminara este Centro de venta", "Advertencia");
 
           
 

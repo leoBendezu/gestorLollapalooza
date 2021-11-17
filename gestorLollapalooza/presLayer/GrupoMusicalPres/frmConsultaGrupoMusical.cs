@@ -32,19 +32,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             this.btnEliminar.Enabled = false;
             this.btnModificar.Enabled = false;
         }
-        /*
-        private void CargarGrilla(DataGridView grilla, DataTable tabla)
-        {
-            grilla.Rows.Clear();
-            for (int i = 0; i < tabla.Rows.Count; i++)
-            {
-                grilla.Rows.Add(tabla.Rows[i]["idGrupoMusical"],
-                                tabla.Rows[i]["nombre"],
-                                tabla.Rows[i]["descripcion"],
-                                tabla.Rows[i]["cantIntegrantes"]);
-            }
-        }
-        */
+
 
         private void CargarGrilla(DataGridView grilla, IList<GrupoMusical> fuente)
         {
@@ -69,13 +57,13 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
             {
                 if (!string.IsNullOrEmpty(this.txtbNombre.Text))
                 {
-                    _consulta += "AND nombre like '" + this.txtbNombre.Text + "' ";
+                    _consulta += "AND nombre like '%" + this.txtbNombre.Text + "%' ";
                 }
                 if (!string.IsNullOrEmpty(this.txtbDescripcion.Text))
                 {
-                    _consulta += "AND descripcion = '%" + this.txtbDescripcion.Text + "%' ";
+                    _consulta += "AND descripcion like '%" + this.txtbDescripcion.Text + "%' ";
                 }
-                if (!(this.numCantIntegrantes.Value == 0))
+                if (!(this.numCantIntegrantes.Value == 0) && this.numCantIntegrantes.Enabled)
                 {
                     _consulta += "AND cantIntegrantes = " + this.numCantIntegrantes.Text;
                 }
@@ -132,7 +120,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         {
             this.txtbDescripcion.Text = String.Empty;
             this.txtbNombre.Text = String.Empty;
-            this.numCantIntegrantes.Value = 0;
+            this.numCantIntegrantes.Value = 1;
         }
 
         private void Habilitar(bool x)
@@ -144,7 +132,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
         private void chbTodos_CheckedChanged(object sender, EventArgs e)
         {
-            {
+            
                 if (chbTodos.CheckState == CheckState.Checked)
                 {
                     this.LimpiarTxt();
@@ -154,6 +142,20 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
                 {
                     this.Habilitar(true);
                 }
+            
+        }
+
+        private void cbCantidadInt_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (cbCantidadInt.CheckState == CheckState.Checked)
+            {
+                this.numCantIntegrantes.Enabled = true;
+            }
+            else
+            {
+                this.numCantIntegrantes.Enabled = false;
+                this.numCantIntegrantes.Value = 1;
             }
         }
     }

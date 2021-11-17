@@ -51,7 +51,7 @@ namespace gestorLollapalooza.presLayer.CentroVentaPres
             grilla.Rows.Clear();
             foreach (PuntoVenta puntoVenta in fuente)
             {
-                grilla.Rows.Add(puntoVenta.NombrePuntoVenta, puntoVenta.NumeroPuntoVenta, puntoVenta.IdCentroVenta);
+                grilla.Rows.Add(puntoVenta.IdPuntoVenta,puntoVenta.NombrePuntoVenta ,puntoVenta.NumeroPuntoVenta );
             }
 
         }

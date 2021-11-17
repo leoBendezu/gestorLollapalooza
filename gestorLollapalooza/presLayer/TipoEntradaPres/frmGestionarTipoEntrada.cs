@@ -27,11 +27,6 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
             string _consulta;
             _consulta = string.Empty;
 
-            // Comprueba si el checkbox de todos esta selecionado, en caso de estarlo recupera todos los 
-            // usuarios y los carga en la grilla.
-            // en caso de no estarlo comprueba cada campo si esta vacio o es nulo y va agregando informacion a la consulta
-            // si es necesario.
-
             if (!chbTodos.Checked)
             {
                 if (!string.IsNullOrEmpty(this.txtbDescripcion.Text))
@@ -43,8 +38,6 @@ namespace gestorLollapalooza.presLayer.TipoEntradaPres
                 {
                     _consulta += "AND te.nombre like '%" + this.txtbNombre.Text + "%'";
                 }
-
-                // Si la consulta no es nula ni vacia carga la grilla con los usuarios filtrados
 
                 if (!string.IsNullOrEmpty(_consulta))
                 {

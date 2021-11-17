@@ -46,10 +46,11 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // rvFestival
             // 
             this.rvFestival.LocalReport.ReportEmbeddedResource = "gestorLollapalooza.ReportLayer.ReportFestival.rdlc";
-            this.rvFestival.Location = new System.Drawing.Point(44, 201);
+            this.rvFestival.Location = new System.Drawing.Point(59, 247);
+            this.rvFestival.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rvFestival.Name = "rvFestival";
             this.rvFestival.ServerReport.BearerToken = null;
-            this.rvFestival.Size = new System.Drawing.Size(923, 435);
+            this.rvFestival.Size = new System.Drawing.Size(1230, 535);
             this.rvFestival.TabIndex = 0;
             // 
             // groupBox1
@@ -62,9 +63,11 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.groupBox1.Controls.Add(this.chTodos);
             this.groupBox1.Controls.Add(this.cbVigentes);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(179, 38);
+            this.groupBox1.Location = new System.Drawing.Point(239, 47);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(654, 136);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(872, 167);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
@@ -79,9 +82,10 @@ namespace gestorLollapalooza.presLayer.ReportPres
             this.btnConsultar.FlatAppearance.BorderSize = 0;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(505, 38);
+            this.btnConsultar.Location = new System.Drawing.Point(673, 47);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(117, 49);
+            this.btnConsultar.Size = new System.Drawing.Size(156, 60);
             this.btnConsultar.TabIndex = 8;
             this.btnConsultar.Text = "Generar Reporte";
             this.btnConsultar.TextColor = System.Drawing.Color.White;
@@ -90,7 +94,8 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // 
             // numHasta
             // 
-            this.numHasta.Location = new System.Drawing.Point(129, 74);
+            this.numHasta.Location = new System.Drawing.Point(172, 91);
+            this.numHasta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numHasta.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -102,7 +107,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             0,
             0});
             this.numHasta.Name = "numHasta";
-            this.numHasta.Size = new System.Drawing.Size(120, 20);
+            this.numHasta.Size = new System.Drawing.Size(160, 22);
             this.numHasta.TabIndex = 49;
             this.numHasta.Value = new decimal(new int[] {
             2050,
@@ -113,15 +118,17 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 74);
+            this.label1.Location = new System.Drawing.Point(41, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 48;
             this.label1.Text = "Hasta el año:";
             // 
             // numa
             // 
-            this.numa.Location = new System.Drawing.Point(129, 36);
+            this.numa.Location = new System.Drawing.Point(172, 44);
+            this.numa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numa.Maximum = new decimal(new int[] {
             2100,
             0,
@@ -133,7 +140,7 @@ namespace gestorLollapalooza.presLayer.ReportPres
             0,
             0});
             this.numa.Name = "numa";
-            this.numa.Size = new System.Drawing.Size(120, 20);
+            this.numa.Size = new System.Drawing.Size(160, 22);
             this.numa.TabIndex = 47;
             this.numa.Value = new decimal(new int[] {
             2021,
@@ -144,18 +151,20 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 38);
+            this.label2.Location = new System.Drawing.Point(41, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.Size = new System.Drawing.Size(109, 17);
             this.label2.TabIndex = 46;
-            this.label2.Text = "Apartir del año:";
+            this.label2.Text = "A partir del año:";
             // 
             // chTodos
             // 
             this.chTodos.AutoSize = true;
-            this.chTodos.Location = new System.Drawing.Point(276, 57);
+            this.chTodos.Location = new System.Drawing.Point(368, 70);
+            this.chTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chTodos.Name = "chTodos";
-            this.chTodos.Size = new System.Drawing.Size(117, 17);
+            this.chTodos.Size = new System.Drawing.Size(152, 21);
             this.chTodos.TabIndex = 43;
             this.chTodos.Text = "Todos los exitentes";
             this.chTodos.UseVisualStyleBackColor = true;
@@ -163,21 +172,23 @@ namespace gestorLollapalooza.presLayer.ReportPres
             // cbVigentes
             // 
             this.cbVigentes.AutoSize = true;
-            this.cbVigentes.Location = new System.Drawing.Point(276, 34);
+            this.cbVigentes.Location = new System.Drawing.Point(368, 42);
+            this.cbVigentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbVigentes.Name = "cbVigentes";
-            this.cbVigentes.Size = new System.Drawing.Size(90, 17);
+            this.cbVigentes.Size = new System.Drawing.Size(115, 21);
             this.cbVigentes.TabIndex = 40;
             this.cbVigentes.Text = "Solo vigentes";
             this.cbVigentes.UseVisualStyleBackColor = true;
             // 
             // frmReporteFestival
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(1005, 662);
+            this.ClientSize = new System.Drawing.Size(1340, 815);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rvFestival);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReporteFestival";
             this.Text = "Reporte Festivales";
             this.Load += new System.EventHandler(this.frmReporteFestival_Load);

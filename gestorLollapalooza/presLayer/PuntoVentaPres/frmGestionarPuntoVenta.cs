@@ -79,8 +79,8 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
 
         private void LimpiarTxt()
         {
-            this.numCentroVenta.Value = 0;
-            this.numPuntoVenta.Value = 0;
+            this.numCentroVenta.Value = 1;
+            this.numPuntoVenta.Value = 1;
             this.txtbNombre.Text = String.Empty;
         }
 
@@ -139,6 +139,7 @@ namespace gestorLollapalooza.presLayer.PuntoVentaPres
         {
             frmBajaPuntoVenta formularioBaja = new frmBajaPuntoVenta(this.dvgPuntoVenta.CurrentRow.Cells[0].Value.ToString());
             formularioBaja.ShowDialog();
+            this.cargarGrilla(dvgPuntoVenta, puntoVentaService.RecuperarTodos());
         } 
     }
 }

@@ -13,9 +13,6 @@ namespace gestorLollapalooza.bussinesLayer
         public int NumeroOrden { get; set; }
         public GrupoMusical GrupoMusical { get; set; }
 
-        public override string ToString()
-        {
-            return "Numero de orden " + NumeroOrden;
-        }
+
     }
 }

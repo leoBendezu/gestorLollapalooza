@@ -10,7 +10,7 @@ namespace gestorLollapalooza.dataAccessLayer
 {
     class CentroVentaDao
     {
-        private PuntoVentaDao oPuntoVenta;
+       
 
         public IList<CentroVenta> obtenerTodos()
         {

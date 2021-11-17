@@ -78,75 +78,82 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.gbxFestivales.Controls.Add(this.label1);
             this.gbxFestivales.Controls.Add(this.label3);
             this.gbxFestivales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.gbxFestivales.Location = new System.Drawing.Point(10, 21);
+            this.gbxFestivales.Location = new System.Drawing.Point(13, 26);
+            this.gbxFestivales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxFestivales.Name = "gbxFestivales";
-            this.gbxFestivales.Size = new System.Drawing.Size(576, 170);
+            this.gbxFestivales.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxFestivales.Size = new System.Drawing.Size(768, 209);
             this.gbxFestivales.TabIndex = 9;
             this.gbxFestivales.TabStop = false;
-            this.gbxFestivales.Text = "Informacion del dia";
+            this.gbxFestivales.Text = "Información del día";
+            this.gbxFestivales.Enter += new System.EventHandler(this.gbxFestivales_Enter);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::gestorLollapalooza.Properties.Resources.logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(404, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(539, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(207, 170);
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
             // dtpAnticipa
             // 
             this.dtpAnticipa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAnticipa.Location = new System.Drawing.Point(235, 64);
+            this.dtpAnticipa.Location = new System.Drawing.Point(313, 79);
+            this.dtpAnticipa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpAnticipa.Name = "dtpAnticipa";
-            this.dtpAnticipa.Size = new System.Drawing.Size(95, 20);
-            this.dtpAnticipa.TabIndex = 38;
+            this.dtpAnticipa.Size = new System.Drawing.Size(125, 22);
+            this.dtpAnticipa.TabIndex = 3;
             // 
             // dtpAnulacion
             // 
             this.dtpAnulacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpAnulacion.Location = new System.Drawing.Point(20, 123);
+            this.dtpAnulacion.Location = new System.Drawing.Point(27, 151);
+            this.dtpAnulacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpAnulacion.Name = "dtpAnulacion";
-            this.dtpAnulacion.Size = new System.Drawing.Size(95, 20);
-            this.dtpAnulacion.TabIndex = 37;
+            this.dtpAnulacion.Size = new System.Drawing.Size(125, 22);
+            this.dtpAnulacion.TabIndex = 2;
             // 
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(20, 64);
+            this.dtpFecha.Location = new System.Drawing.Point(27, 79);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(95, 20);
-            this.dtpFecha.TabIndex = 35;
+            this.dtpFecha.Size = new System.Drawing.Size(125, 22);
+            this.dtpFecha.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 39);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(309, 48);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 13);
+            this.label4.Size = new System.Drawing.Size(198, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Fecha vto de venta anticipada";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(23, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 20;
             this.label1.Text = "Fecha";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 97);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(23, 119);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 13);
+            this.label3.Size = new System.Drawing.Size(246, 17);
             this.label3.TabIndex = 22;
-            this.label3.Text = "Fecha Limite de anulacion de entrada";
+            this.label3.Text = "Fecha Límite de anulación de entrada";
             // 
             // groupBox1
             // 
@@ -161,19 +168,37 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.groupBox1.Controls.Add(this.txtbGrupoActuante);
             this.groupBox1.Controls.Add(this.lblDuracion);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(10, 197);
+            this.groupBox1.Location = new System.Drawing.Point(13, 242);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(576, 170);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(768, 209);
             this.groupBox1.TabIndex = 38;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Actuacion";
+            this.groupBox1.Text = "Actuación";
             // 
             // numDuracionEstimada
             // 
-            this.numDuracionEstimada.Location = new System.Drawing.Point(20, 56);
+            this.numDuracionEstimada.Location = new System.Drawing.Point(27, 69);
+            this.numDuracionEstimada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numDuracionEstimada.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numDuracionEstimada.Minimum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.numDuracionEstimada.Name = "numDuracionEstimada";
-            this.numDuracionEstimada.Size = new System.Drawing.Size(67, 20);
-            this.numDuracionEstimada.TabIndex = 44;
+            this.numDuracionEstimada.Size = new System.Drawing.Size(89, 22);
+            this.numDuracionEstimada.TabIndex = 4;
+            this.numDuracionEstimada.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             // 
             // botonFacha2
             // 
@@ -185,11 +210,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.botonFacha2.FlatAppearance.BorderSize = 0;
             this.botonFacha2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonFacha2.ForeColor = System.Drawing.Color.White;
-            this.botonFacha2.Location = new System.Drawing.Point(483, 66);
-            this.botonFacha2.Margin = new System.Windows.Forms.Padding(4);
+            this.botonFacha2.Location = new System.Drawing.Point(644, 81);
+            this.botonFacha2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.botonFacha2.Name = "botonFacha2";
-            this.botonFacha2.Size = new System.Drawing.Size(76, 43);
-            this.botonFacha2.TabIndex = 43;
+            this.botonFacha2.Size = new System.Drawing.Size(101, 53);
+            this.botonFacha2.TabIndex = 9;
             this.botonFacha2.Text = "Quitar";
             this.botonFacha2.TextColor = System.Drawing.Color.White;
             this.botonFacha2.UseVisualStyleBackColor = false;
@@ -205,11 +230,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.botonFacha1.FlatAppearance.BorderSize = 0;
             this.botonFacha1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonFacha1.ForeColor = System.Drawing.Color.White;
-            this.botonFacha1.Location = new System.Drawing.Point(214, 110);
-            this.botonFacha1.Margin = new System.Windows.Forms.Padding(4);
+            this.botonFacha1.Location = new System.Drawing.Point(285, 135);
+            this.botonFacha1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.botonFacha1.Name = "botonFacha1";
-            this.botonFacha1.Size = new System.Drawing.Size(43, 39);
-            this.botonFacha1.TabIndex = 42;
+            this.botonFacha1.Size = new System.Drawing.Size(57, 48);
+            this.botonFacha1.TabIndex = 7;
             this.botonFacha1.Text = "?";
             this.botonFacha1.TextColor = System.Drawing.Color.White;
             this.botonFacha1.UseVisualStyleBackColor = false;
@@ -225,11 +250,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnQuitar.FlatAppearance.BorderSize = 0;
             this.btnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitar.ForeColor = System.Drawing.Color.White;
-            this.btnQuitar.Location = new System.Drawing.Point(481, 117);
-            this.btnQuitar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuitar.Location = new System.Drawing.Point(641, 144);
+            this.btnQuitar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(76, 43);
-            this.btnQuitar.TabIndex = 41;
+            this.btnQuitar.Size = new System.Drawing.Size(101, 53);
+            this.btnQuitar.TabIndex = 10;
             this.btnQuitar.Text = "Limpiar";
             this.btnQuitar.TextColor = System.Drawing.Color.White;
             this.btnQuitar.UseVisualStyleBackColor = false;
@@ -245,11 +270,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(483, 15);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregar.Location = new System.Drawing.Point(644, 18);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(76, 43);
-            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.Size = new System.Drawing.Size(101, 53);
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextColor = System.Drawing.Color.White;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -257,28 +282,44 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             // numOrden
             // 
-            this.numOrden.Location = new System.Drawing.Point(288, 56);
+            this.numOrden.Location = new System.Drawing.Point(384, 69);
+            this.numOrden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numOrden.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numOrden.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numOrden.Name = "numOrden";
-            this.numOrden.Size = new System.Drawing.Size(67, 20);
-            this.numOrden.TabIndex = 39;
+            this.numOrden.Size = new System.Drawing.Size(89, 22);
+            this.numOrden.TabIndex = 5;
+            this.numOrden.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblNumeroOrden
             // 
             this.lblNumeroOrden.AutoSize = true;
-            this.lblNumeroOrden.Location = new System.Drawing.Point(285, 29);
-            this.lblNumeroOrden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumeroOrden.Location = new System.Drawing.Point(380, 36);
+            this.lblNumeroOrden.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNumeroOrden.Name = "lblNumeroOrden";
-            this.lblNumeroOrden.Size = new System.Drawing.Size(76, 13);
+            this.lblNumeroOrden.Size = new System.Drawing.Size(102, 17);
             this.lblNumeroOrden.TabIndex = 33;
-            this.lblNumeroOrden.Text = "Numero Orden";
+            this.lblNumeroOrden.Text = "Número Orden";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 96);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(23, 118);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 13);
+            this.label9.Size = new System.Drawing.Size(159, 17);
             this.label9.TabIndex = 30;
             this.label9.Text = "Grupo musical Actuante";
             // 
@@ -290,25 +331,25 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.txtbGrupoActuante.BorderSize = 2;
             this.txtbGrupoActuante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbGrupoActuante.ForeColor = System.Drawing.Color.White;
-            this.txtbGrupoActuante.Location = new System.Drawing.Point(20, 114);
-            this.txtbGrupoActuante.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbGrupoActuante.Location = new System.Drawing.Point(27, 140);
+            this.txtbGrupoActuante.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtbGrupoActuante.Multiline = false;
             this.txtbGrupoActuante.Name = "txtbGrupoActuante";
-            this.txtbGrupoActuante.Padding = new System.Windows.Forms.Padding(9);
+            this.txtbGrupoActuante.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
             this.txtbGrupoActuante.PasswordChar = false;
-            this.txtbGrupoActuante.Size = new System.Drawing.Size(186, 35);
-            this.txtbGrupoActuante.TabIndex = 31;
+            this.txtbGrupoActuante.Size = new System.Drawing.Size(248, 43);
+            this.txtbGrupoActuante.TabIndex = 6;
             this.txtbGrupoActuante.UnderlinedStyle = false;
             // 
             // lblDuracion
             // 
             this.lblDuracion.AutoSize = true;
-            this.lblDuracion.Location = new System.Drawing.Point(17, 29);
-            this.lblDuracion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDuracion.Location = new System.Drawing.Point(23, 36);
+            this.lblDuracion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(150, 13);
+            this.lblDuracion.Size = new System.Drawing.Size(200, 17);
             this.lblDuracion.TabIndex = 20;
-            this.lblDuracion.Text = "Duracion Estimada en minutos";
+            this.lblDuracion.Text = "Duración Estimada en minutos";
             // 
             // dgvActuacion
             // 
@@ -320,7 +361,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dgvActuacion.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -334,7 +375,7 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.Column4});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(159)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -342,14 +383,15 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.dgvActuacion.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvActuacion.EnableHeadersVisualStyles = false;
             this.dgvActuacion.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.dgvActuacion.Location = new System.Drawing.Point(69, 382);
+            this.dgvActuacion.Location = new System.Drawing.Point(92, 470);
+            this.dgvActuacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvActuacion.Name = "dgvActuacion";
             this.dgvActuacion.ReadOnly = true;
             this.dgvActuacion.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvActuacion.RowHeadersVisible = false;
             this.dgvActuacion.RowHeadersWidth = 51;
             this.dgvActuacion.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvActuacion.Size = new System.Drawing.Size(473, 163);
+            this.dgvActuacion.Size = new System.Drawing.Size(631, 201);
             this.dgvActuacion.TabIndex = 39;
             // 
             // btnSalir
@@ -362,11 +404,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(407, 561);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Location = new System.Drawing.Point(543, 690);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(76, 43);
-            this.btnSalir.TabIndex = 40;
+            this.btnSalir.Size = new System.Drawing.Size(101, 53);
+            this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextColor = System.Drawing.Color.White;
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -382,11 +424,11 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAceptar.Location = new System.Drawing.Point(499, 561);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAceptar.Location = new System.Drawing.Point(665, 690);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(76, 43);
-            this.btnAceptar.TabIndex = 41;
+            this.btnAceptar.Size = new System.Drawing.Size(101, 53);
+            this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextColor = System.Drawing.SystemColors.Window;
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -396,7 +438,8 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column3.HeaderText = "numero orden";
+            this.Column3.HeaderText = "Número orden";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 120;
@@ -405,7 +448,8 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             // 
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             this.duracionEstimada.DefaultCellStyle = dataGridViewCellStyle3;
-            this.duracionEstimada.HeaderText = "Duracion Estimada (min)";
+            this.duracionEstimada.HeaderText = "Duración Estimada (min)";
+            this.duracionEstimada.MinimumWidth = 6;
             this.duracionEstimada.Name = "duracionEstimada";
             this.duracionEstimada.ReadOnly = true;
             this.duracionEstimada.Width = 170;
@@ -415,28 +459,29 @@ namespace gestorLollapalooza.presLayer.DiaFestivalPres
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Grupo Musical Actuante";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 180;
             // 
             // frmDiaFestival
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(47)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(601, 617);
+            this.ClientSize = new System.Drawing.Size(801, 759);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvActuacion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxFestivales);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDiaFestival";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Dias Festival";
+            this.Text = "Días Festival";
             this.gbxFestivales.ResumeLayout(false);
             this.gbxFestivales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

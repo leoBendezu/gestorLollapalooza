@@ -20,8 +20,6 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         public frmAltaGrupoMusical()
         {
             InitializeComponent();
-            this.numCantIntegrantes.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -33,24 +31,16 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
         {
             if (this.Comprobar())
             {
-                // Se valida que el usuario a crear no existe en la BD
+
 
                 if (oGrupoMusical.existeGrupoMusical(this.txtbNombre.Text) == false)
                 {
-
-                    // Recupera los datos del formulario 
 
                     string nombreGrupoMusical = this.txtbNombre.Text;
                     string descripcion = this.txtbDescripcion.Text;
                     int cantIntegrantes = (int)this.numCantIntegrantes.Value;
 
-
-
-                    // Se instancia el nuevo grupo musical
-
                     GrupoMusical grupoMusicalN = oGrupoMusical.crear(nombreGrupoMusical, descripcion, cantIntegrantes);
-
-                    // Se intenta persistir el usuario en caso de lograrlo se informa y se limpian los txtBox
 
 
                     if (oGrupoMusical.persistirGrupoMusical(grupoMusicalN))
@@ -99,9 +89,9 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
                 band = false;
             }
 
-            if (numCantIntegrantes.Value == 0)
+            if (numCantIntegrantes.Value <= 0)
             {
-                this.numCantIntegrantes.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
+                this.lblCantInt.BackColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
                 band = false;
             }
 
@@ -126,7 +116,7 @@ namespace gestorLollapalooza.presLayer.GrupoMusicalPres
 
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.txtbDescripcion.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.numCantIntegrantes.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+            this.lblCantInt.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
         }   
     }
 }

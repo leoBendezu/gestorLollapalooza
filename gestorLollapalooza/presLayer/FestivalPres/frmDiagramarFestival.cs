@@ -67,8 +67,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             this.numAno.Enabled = true;
             this.dtpFechaInicio.Enabled = true;
             this.dtpFechaFin.Enabled = true;
-            this.txtbDescuento.Enabled = true;
-            this.txtbDevolucion.Enabled = true;
+            this.numAno.Value = DateTime.Today.Year;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -95,35 +94,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                 MessageBox.Show("Ingrese correctamente el periodo del festival...");
                 return false; 
             }
-            if (string.IsNullOrEmpty(this.txtbDescuento.Text))
-            {
-                this.txtbDescuento.Text = "0";
-            }
-            string caracteres = "0123456789";
-            for (int i =0; i< this.txtbDescuento.Text.Length; i++)
-            {
-                char letra = this.txtbDescuento.Text[i];
-                if (!(caracteres.Contains(letra)))
-                {
-                    MessageBox.Show("Ingrese un porcentaje de descuento valido...");
-                    this.txtbDescuento.BorderColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
-                    return false;
-                }
-            }
-            if (string.IsNullOrEmpty(this.txtbDevolucion.Text))
-            {
-                this.txtbDevolucion.Text = "0";
-            }
-            for (int i = 0; i < this.txtbDevolucion.Text.Length; i++)
-            {
-                char letra = this.txtbDevolucion.Text[i];
-                if (!(caracteres.Contains(letra)))
-                {
-                    MessageBox.Show("Ingrese un porcentaje de devolucion valido...");
-                    this.txtbDevolucion.BorderColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(66)))), ((int)(((byte)(56)))));
-                    return false;
-                }
-            }
+            
 
             return true;
         }
@@ -134,8 +105,7 @@ namespace gestorLollapalooza.presLayer.FestivalPres
 
             this.txtbNombre.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
             this.numAno.BackColor = Color.White;
-            this.txtbDescuento.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
-            this.txtbDevolucion.BorderColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(154)))));
+     
 
         }
 
@@ -159,14 +129,15 @@ namespace gestorLollapalooza.presLayer.FestivalPres
                     {
                         Nombre = this.txtbNombre.Text,
                         AnoEdicion = (int)this.numAno.Value,
-                        DescuentoVentaAnticipada = Convert.ToInt32(this.txtbDescuento.Text),
-                        PorcentajeDevolucionPorAnulacion = Convert.ToInt32(this.txtbDevolucion.Text),
+                        DescuentoVentaAnticipada = Convert.ToInt32(this.numDventaAnticipada.Value),
+                        PorcentajeDevolucionPorAnulacion = Convert.ToInt32(this.numDevPorAnul.Value),
                         FechaFin = dtpFechaFin.Value,
                         FechaInicio = dtpFechaInicio.Value,
                         Dias = this.dias
                     };
 
                     oFestival.persistirFestival(festival);
+                    limpiar();
                 }
             }
             else
@@ -178,8 +149,8 @@ namespace gestorLollapalooza.presLayer.FestivalPres
             string filtros = "and nombre = '" + this.txtbNombre.Text +
                              "' and fechaInicio = '" + this.dtpFechaInicio.Value.ToString("yyyy-MM-dd") +
                              "' and fechaFin = '" + this.dtpFechaFin.Value.ToString("yyyy-MM-dd") +
-                             "' and descuentoVentaAnticipada = " + this.txtbDescuento.Text +
-                             " and porcentajeDevolucionPorAnulacion = " + this.txtbDevolucion.Text +
+                             "' and descuentoVentaAnticipada = " + this.numDventaAnticipada.Value +
+                             " and porcentajeDevolucionPorAnulacion = " + this.numDevPorAnul.Value +
                              " and anoEdicion = " + this.numAno.Value +
                              "";
             if (oFestival.recuperarFiltrados(filtros).Count != 0)
@@ -192,17 +163,32 @@ namespace gestorLollapalooza.presLayer.FestivalPres
         private void limpiar()
         {
             this.txtbNombre.Text = string.Empty;
-            this.txtbDescuento.Text = string.Empty;
-            this.txtbDevolucion.Text = string.Empty;
-            this.numAno.Value = 0;
+            this.numDventaAnticipada.Value = 0;
+            this.numDevPorAnul.Value = 0;
+            this.numAno.Value = 2021;
             this.dtpFechaFin.Value = DateTime.Today;
             this.dtpFechaInicio.Value = DateTime.Today;
-
             this.dgvDias.Rows.Clear();
             this.dgvActuacion.Rows.Clear();
             this.dias.Clear();
         }
-            
-    
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            if (this.dgvDias.CurrentRow != null)
+            {
+       
+                foreach (DiaFestival dia in dias) {
+                    String fecha = dia.Fecha.ToString("MM-dd-yy");
+                    if (fecha.Equals((dgvDias.CurrentRow.Cells[0].Value).ToString()))
+                    {
+                        dias.Remove(dia);
+                        break;
+                    }
+                }
+
+                this.dgvDias.Rows.Remove(dgvDias.CurrentRow);
+            }
+        }
     }
 }
