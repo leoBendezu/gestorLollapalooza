@@ -383,6 +383,8 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Documentos\Formulario_presentacion_proyecto_PAVI_2020.pdf" />
+    <None Include="Documentos\TrabajoFinal.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -426,6 +428,7 @@
     <None Include="Resources\logo1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Documentos\Script_BaseDeDatos.sql" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
