@@ -384,7 +384,7 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Documentos\Formulario_presentacion_proyecto_PAVI_2020.pdf" />
-    <None Include="Documentos\TrabajoFinal.pdf" />
+    <None Include="Documentos\Manual de usuario.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
